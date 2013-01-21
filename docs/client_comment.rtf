@@ -1,0 +1,201 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww25100\viewh13500\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf0 HI Kaushik,\
+\
+See attached JPEG with changes. It should help. I made screens for creating all question types and clarified some points. I do not understand what web services will need to be created? I do not need an admin section. If I want to edit something I will do it using Phpmyadmin. so no need to cost for that. See your text below. Let me know if you have any other questions\
+\
+\
+-- Webservice is needed to transfer/add/edit/delete data from phpmyadmin(database) to user device.\
+\
+1.Screen:
+\b Welcome/Login
+\b0 \
+\
+-- There are several options here,but I think this options are only available after user login.\
+Need to provide way to enter as a guest,or apple may reject the app.(The app is for limited group of set and seeking user information like birthday,email address etc...)\
+\
+
+\b OK allow user registration via email. No verification necessary.Allow guest play as well. (if guest when user submits a rating or a review name will show as (guest)
+\b0 \
+\
+\
+-- Ok.\
+\
+2.Screen:
+\b Race Select.
+\b0 \
+\
+-- If there is no race near 20 km from users current location,no race will be display.\'a0\
+\
+
+\b Display nothing. send message to screen. "There are no races in your area. Click here to create one"
+\b0 \
+\
+-- Ok.\
+\
+3.Screen: 
+\b Race Detail Screen.
+\b0 \
+\
+- From where user can give rate to game?\
+\
+
+\b After the user finishes the race. He can give a rating to the game using the scale see new image on jpg
+\b0 \
+\
+-- Ok.\
+\
+4:screen: 
+\b Game Race Screen
+\b0 \
+\
+-- Ok\
+\
+5:Screen: 
+\b Question Type-1
+\b0 \
+\
+-- Ok.\
+\
+5.1 screen :
+\b  Question Type-2
+\b0 \
+\
+-- Whether we want to implement Hint kind of functionality,as once we do coding for this it would be difficult for us to implement.\
+\
+
+\b Show 1 random letters based on creators choice. 1, 2, 3, 4 or 5. \'a0if 1 is chosen, show 1 letter at random, if 2 show 2\'85..see revised screen
+\b0 \
+\
+\'a0-- Ok.\
+\
+6.Screen: 
+\b Completed Race
+\b0 \
+\
+-- We need to decide some common way to count time/points as there may be different question for different races,so when we save time in leader board the person who played game with less question will have less time and will be placed at top.Even for same race user may change number of questions in future,so completion time may differ.(Please refer screen 11(Edit my race))\
+\
+
+\b Score is per race.\'a0 Yes it is possible that the owner of the race will change the number of questions. and the score will be lower that is ok. not a problem. People will cheat anyway so there is nothing we can do here.
+\b0 \
+\
+-- Ok.\
+\
+-- There is an option for add review,but not for rating.\'a0\
+
+\b See new screen 1-6 completed race screen submit for this. see sliding scale for rating
+\b0 \
+\
+-- Ok.\
+\
+7.Screen:
+\b My Account
+\b0 \
+\
+
+\b - 
+\b0 Facebook doesn't provide username when we login through fb.Not sure about city.If user has set email address private,we can't also get it.\'a0\
+\
+
+\b OK when user joins or registers either via facebook or via email address bring to My account screen and user fills out information missing. Whatever is missing user can enter. We can remove city.
+\b0 \
+\
+-- Ok.\
+\
+- How we 'll manage rank?i.e on which basis user's rank will be decided.\'a0\
+
+\b # of games played X of games created = points/rank for user
+\b0 \
+\
+-- Ok.\
+\
+8:screen: 
+\b Create Race
+\b0 \
+\
+--
+\b  
+\b0 Ok.(''ll need you tube video link.)\'a0\
+
+\b Yes I will provide later use any link for now I will change in xcode myself
+\b0 \
+\
+-- Ok.\
+\
+9.1: Screen:
+\b Create GPS race.(Location selection)
+\b0 \
+\
+--
+\b  
+\b0 Whether user's current location or user can choose location?(i.e I can create race for baroda even thing my current location is in Ahmedabd?)\
+
+\b MUST BE USERS CURRENT LOCATION to create a question.
+\b0 \
+\
+\
+9.2:Screen:
+\b Create Race(Questioin)
+\b0 \
+\
+--
+\b  
+\b0 Ok.\
+\
+9.3:Screen:
+\b Create Race
+\b0 \
+\
+-- When there is no question,no option for creating race.\
+
+\b This screen is for creating question 2 and 3 and 4 and 5\'85.. the create race screen is screen 8.
+\b0 \
+\
+-- Ok.\
+\
+9.4:Screen:
+\b Create Race
+\b0 \
+\
+-- Ok\
+
+\b Add Option to share created race on FB see image
+\b0 \
+\
+10.Screen:
+\b Leaderboards
+\b0 \
+\
+(Please also refers 6th screen)\
+\
+-- What it meant by "By race with completed sort".i.e race which played most by user?\
+
+\b User can sort races\'a0 by most completed race
+\b0 \
+
+\b user can sort races by best rating
+\b0 \
+\
+--Ok.\
+\
+11.Screen:Edit my race.\
+\
+\
+-- Ok.\'a0\
+\
+12.
+\b Screen:Read/Add race review
+\b0 \
+\
+-- From where we can pull star rating?\
+\
+
+\b User will add using sliding scale. See updated image\
+\
+
+\b0 -- Ok.}
