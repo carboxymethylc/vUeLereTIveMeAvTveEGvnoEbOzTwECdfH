@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		469460AB16ADA3A60013F3D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AA16ADA3A60013F3D6 /* UIKit.framework */; };
+		469460AD16ADA3A60013F3D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AC16ADA3A60013F3D6 /* Foundation.framework */; };
+		469460AF16ADA3A60013F3D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AE16ADA3A60013F3D6 /* CoreGraphics.framework */; };
+		469460B516ADA3A60013F3D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 469460B316ADA3A60013F3D6 /* InfoPlist.strings */; };
+		469460B716ADA3A60013F3D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460B616ADA3A60013F3D6 /* main.m */; };
+		469460BD16ADA3A60013F3D6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460BC16ADA3A60013F3D6 /* Default.png */; };
+		469460BF16ADA3A60013F3D6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460BE16ADA3A60013F3D6 /* Default@2x.png */; };
+		469460C116ADA3A70013F3D6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460C016ADA3A70013F3D6 /* Default-568h@2x.png */; };
+		469460DE16ADB2D80013F3D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460D516ADB2D80013F3D6 /* AppDelegate.m */; };
+		469460DF16ADB2D80013F3D6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460D816ADB2D80013F3D6 /* DetailViewController.m */; };
+		469460E016ADB2D80013F3D6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469460D916ADB2D80013F3D6 /* DetailViewController.xib */; };
+		469460E116ADB2D80013F3D6 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460DC16ADB2D80013F3D6 /* MasterViewController.m */; };
+		469460E216ADB2D80013F3D6 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469460DD16ADB2D80013F3D6 /* MasterViewController.xib */; };
+		469460EF16ADBDC20013F3D6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460EE16ADBDC20013F3D6 /* background.png */; };
+		469460F116ADBEC40013F3D6 /* top_navigation_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460F016ADBEC40013F3D6 /* top_navigation_bar.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		469460A616ADA3A60013F3D6 /* UltimageGeoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimageGeoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		469460AA16ADA3A60013F3D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		469460AC16ADA3A60013F3D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		469460AE16ADA3A60013F3D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		469460B216ADA3A60013F3D6 /* UltimageGeoTech-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UltimageGeoTech-Info.plist"; sourceTree = "<group>"; };
+		469460B416ADA3A60013F3D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		469460B616ADA3A60013F3D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		469460B816ADA3A60013F3D6 /* UltimageGeoTech-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UltimageGeoTech-Prefix.pch"; sourceTree = "<group>"; };
+		469460BC16ADA3A60013F3D6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		469460BE16ADA3A60013F3D6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		469460C016ADA3A70013F3D6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		469460D416ADB2D80013F3D6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		469460D516ADB2D80013F3D6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		469460D716ADB2D80013F3D6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		469460D816ADB2D80013F3D6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		469460D916ADB2D80013F3D6 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		469460DB16ADB2D80013F3D6 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		469460DC16ADB2D80013F3D6 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		469460DD16ADB2D80013F3D6 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+		469460EE16ADBDC20013F3D6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		469460F016ADBEC40013F3D6 /* top_navigation_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_navigation_bar.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		469460A316ADA3A60013F3D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469460AB16ADA3A60013F3D6 /* UIKit.framework in Frameworks */,
+				469460AD16ADA3A60013F3D6 /* Foundation.framework in Frameworks */,
+				469460AF16ADA3A60013F3D6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4694609B16ADA3A60013F3D6 = {
+			isa = PBXGroup;
+			children = (
+				469460B016ADA3A60013F3D6 /* UltimageGeoTech */,
+				469460A916ADA3A60013F3D6 /* Frameworks */,
+				469460A716ADA3A60013F3D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		469460A716ADA3A60013F3D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				469460A616ADA3A60013F3D6 /* UltimageGeoTech.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		469460A916ADA3A60013F3D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				469460AA16ADA3A60013F3D6 /* UIKit.framework */,
+				469460AC16ADA3A60013F3D6 /* Foundation.framework */,
+				469460AE16ADA3A60013F3D6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		469460B016ADA3A60013F3D6 /* UltimageGeoTech */ = {
+			isa = PBXGroup;
+			children = (
+				469460D316ADB2D80013F3D6 /* AppDelegate */,
+				469460D616ADB2D80013F3D6 /* HomeScreenViewController */,
+				469460DA16ADB2D80013F3D6 /* LoginViewController */,
+				469460B116ADA3A60013F3D6 /* Supporting Files */,
+			);
+			path = UltimageGeoTech;
+			sourceTree = "<group>";
+		};
+		469460B116ADA3A60013F3D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				469460ED16ADBDC20013F3D6 /* images */,
+				469460B216ADA3A60013F3D6 /* UltimageGeoTech-Info.plist */,
+				469460B316ADA3A60013F3D6 /* InfoPlist.strings */,
+				469460B616ADA3A60013F3D6 /* main.m */,
+				469460B816ADA3A60013F3D6 /* UltimageGeoTech-Prefix.pch */,
+				469460BC16ADA3A60013F3D6 /* Default.png */,
+				469460BE16ADA3A60013F3D6 /* Default@2x.png */,
+				469460C016ADA3A70013F3D6 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		469460D316ADB2D80013F3D6 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				469460D416ADB2D80013F3D6 /* AppDelegate.h */,
+				469460D516ADB2D80013F3D6 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		469460D616ADB2D80013F3D6 /* HomeScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				469460D716ADB2D80013F3D6 /* DetailViewController.h */,
+				469460D816ADB2D80013F3D6 /* DetailViewController.m */,
+				469460D916ADB2D80013F3D6 /* DetailViewController.xib */,
+			);
+			path = HomeScreenViewController;
+			sourceTree = "<group>";
+		};
+		469460DA16ADB2D80013F3D6 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				469460DB16ADB2D80013F3D6 /* MasterViewController.h */,
+				469460DC16ADB2D80013F3D6 /* MasterViewController.m */,
+				469460DD16ADB2D80013F3D6 /* MasterViewController.xib */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		469460ED16ADBDC20013F3D6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				469460F016ADBEC40013F3D6 /* top_navigation_bar.png */,
+				469460EE16ADBDC20013F3D6 /* background.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		469460A516ADA3A60013F3D6 /* UltimageGeoTech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 469460D016ADA3A70013F3D6 /* Build configuration list for PBXNativeTarget "UltimageGeoTech" */;
+			buildPhases = (
+				469460A216ADA3A60013F3D6 /* Sources */,
+				469460A316ADA3A60013F3D6 /* Frameworks */,
+				469460A416ADA3A60013F3D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UltimageGeoTech;
+			productName = UltimageGeoTech;
+			productReference = 469460A616ADA3A60013F3D6 /* UltimageGeoTech.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4694609D16ADA3A60013F3D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = LD.Chirag;
+			};
+			buildConfigurationList = 469460A016ADA3A60013F3D6 /* Build configuration list for PBXProject "UltimageGeoTech" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4694609B16ADA3A60013F3D6;
+			productRefGroup = 469460A716ADA3A60013F3D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				469460A516ADA3A60013F3D6 /* UltimageGeoTech */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		469460A416ADA3A60013F3D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469460B516ADA3A60013F3D6 /* InfoPlist.strings in Resources */,
+				469460BD16ADA3A60013F3D6 /* Default.png in Resources */,
+				469460BF16ADA3A60013F3D6 /* Default@2x.png in Resources */,
+				469460C116ADA3A70013F3D6 /* Default-568h@2x.png in Resources */,
+				469460E016ADB2D80013F3D6 /* DetailViewController.xib in Resources */,
+				469460E216ADB2D80013F3D6 /* MasterViewController.xib in Resources */,
+				469460EF16ADBDC20013F3D6 /* background.png in Resources */,
+				469460F116ADBEC40013F3D6 /* top_navigation_bar.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		469460A216ADA3A60013F3D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469460B716ADA3A60013F3D6 /* main.m in Sources */,
+				469460DE16ADB2D80013F3D6 /* AppDelegate.m in Sources */,
+				469460DF16ADB2D80013F3D6 /* DetailViewController.m in Sources */,
+				469460E116ADB2D80013F3D6 /* MasterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		469460B316ADA3A60013F3D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				469460B416ADA3A60013F3D6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		469460CE16ADA3A70013F3D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		469460CF16ADA3A70013F3D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		469460D116ADA3A70013F3D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UltimageGeoTech/UltimageGeoTech-Prefix.pch";
+				INFOPLIST_FILE = "UltimageGeoTech/UltimageGeoTech-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		469460D216ADA3A70013F3D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UltimageGeoTech/UltimageGeoTech-Prefix.pch";
+				INFOPLIST_FILE = "UltimageGeoTech/UltimageGeoTech-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		469460A016ADA3A60013F3D6 /* Build configuration list for PBXProject "UltimageGeoTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469460CE16ADA3A70013F3D6 /* Debug */,
+				469460CF16ADA3A70013F3D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		469460D016ADA3A70013F3D6 /* Build configuration list for PBXNativeTarget "UltimageGeoTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469460D116ADA3A70013F3D6 /* Debug */,
+				469460D216ADA3A70013F3D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4694609D16ADA3A60013F3D6 /* Project object */;
+}

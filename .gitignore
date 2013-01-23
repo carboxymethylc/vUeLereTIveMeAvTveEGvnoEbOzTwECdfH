@@ -2,3 +2,7 @@
 .DS_Store
 
 *.db
+
+ios/UltimageGeoTech/build/UltimageGeoTech.build/Debug-iphonesimulator/UltimageGeoTech.build/build-state~.dat
+
+ios/UltimageGeoTech/build/
