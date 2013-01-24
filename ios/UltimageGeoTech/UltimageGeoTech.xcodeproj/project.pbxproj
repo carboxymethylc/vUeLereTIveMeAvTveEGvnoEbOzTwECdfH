@@ -92,6 +92,8 @@
 		469AA52B16B0D6CA006F931E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52A16B0D6CA006F931E /* Accounts.framework */; };
 		469AA52D16B0D6D0006F931E /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52C16B0D6D0006F931E /* Twitter.framework */; };
 		469AA52F16B0D6D7006F931E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52E16B0D6D7006F931E /* Social.framework */; };
+		ED49ABB616B0F30700FF0D85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */; };
+		ED49ABB816B0F30B00FF0D85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB716B0F30B00FF0D85 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +239,8 @@
 		469AA52A16B0D6CA006F931E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		469AA52C16B0D6D0006F931E /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		469AA52E16B0D6D7006F931E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		ED49ABB716B0F30B00FF0D85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED49ABB816B0F30B00FF0D85 /* Security.framework in Frameworks */,
+				ED49ABB616B0F30700FF0D85 /* SystemConfiguration.framework in Frameworks */,
 				469AA52F16B0D6D7006F931E /* Social.framework in Frameworks */,
 				469AA52D16B0D6D0006F931E /* Twitter.framework in Frameworks */,
 				469AA52B16B0D6CA006F931E /* Accounts.framework in Frameworks */,
@@ -259,6 +265,8 @@
 		4694609B16ADA3A60013F3D6 = {
 			isa = PBXGroup;
 			children = (
+				ED49ABB716B0F30B00FF0D85 /* Security.framework */,
+				ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */,
 				469AA52E16B0D6D7006F931E /* Social.framework */,
 				469AA52C16B0D6D0006F931E /* Twitter.framework */,
 				469AA52A16B0D6CA006F931E /* Accounts.framework */,
@@ -799,7 +807,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Smitkumar Nebhwani (4J829HWAFZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Smitkumar Nebhwani (4J829HWAFZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -812,31 +821,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "09DDAEFA-9B78-42DE-83A9-77F24C57B097";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "09DDAEFA-9B78-42DE-83A9-77F24C57B097";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
-		};
-		469460CF16ADA3A70013F3D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		469460D116ADA3A70013F3D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -853,21 +843,6 @@
 			};
 			name = Debug;
 		};
-		469460D216ADA3A70013F3D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UltimageGeoTech/UltimageGeoTech-Prefix.pch";
-				INFOPLIST_FILE = "UltimageGeoTech/UltimageGeoTech-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/UltimageGeoTech/facebook/build/Debug-iphoneos\"",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -875,19 +850,17 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				469460CE16ADA3A70013F3D6 /* Debug */,
-				469460CF16ADA3A70013F3D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		469460D016ADA3A70013F3D6 /* Build configuration list for PBXNativeTarget "UltimageGeoTech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				469460D116ADA3A70013F3D6 /* Debug */,
-				469460D216ADA3A70013F3D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

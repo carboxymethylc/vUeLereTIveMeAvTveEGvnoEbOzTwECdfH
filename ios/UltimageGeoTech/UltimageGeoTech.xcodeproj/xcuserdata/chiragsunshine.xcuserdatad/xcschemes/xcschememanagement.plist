@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>facebook-ios-sdk.xcscheme</key>
+		<key>UltimageGeoTech.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D2AAC07D0554694100DB518D</key>
+		<key>469460A516ADA3A60013F3D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

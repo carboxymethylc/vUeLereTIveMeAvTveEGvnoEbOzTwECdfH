@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FBConnect.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    Facebook *facebook;
+    NSUserDefaults *user_defaults;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UINavigationController *navigationController;
 
+@property (nonatomic, retain) Facebook *facebook;
+@property (nonatomic, retain) NSUserDefaults *user_defaults;
++(BOOL)hasConnectivity;
 @end
