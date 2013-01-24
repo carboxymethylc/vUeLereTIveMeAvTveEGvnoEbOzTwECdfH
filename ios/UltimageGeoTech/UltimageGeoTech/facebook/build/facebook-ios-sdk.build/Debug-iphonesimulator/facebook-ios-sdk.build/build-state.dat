@@ -1,0 +1,593 @@
+Tfacebook-ios-sdk
+v5
+r1
+cCheck dependencies
+cCpHeader FBConnect.h build/Debug-iphonesimulator/facebook-ios-sdk/FBConnect.h
+cCpHeader Facebook.h build/Debug-iphonesimulator/facebook-ios-sdk/Facebook.h
+cCpHeader FBLoginDialog.h build/Debug-iphonesimulator/facebook-ios-sdk/FBLoginDialog.h
+cCpHeader FBRequest.h build/Debug-iphonesimulator/facebook-ios-sdk/FBRequest.h
+cCpHeader FBDialog.h build/Debug-iphonesimulator/facebook-ios-sdk/FBDialog.h
+cCpHeader JSON/JSON.h build/Debug-iphonesimulator/facebook-ios-sdk/JSON.h
+cCpHeader JSON/NSObject+SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/NSObject+SBJSON.h
+cCpHeader JSON/SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJSON.h
+cCpHeader JSON/NSString+SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/NSString+SBJSON.h
+cCpHeader JSON/SBJsonBase.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonBase.h
+cCpHeader JSON/SBJsonParser.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonParser.h
+cCpHeader JSON/SBJsonWriter.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonWriter.h
+cProcessPCH /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.pth facebook_ios_sdk_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/libfacebook_ios_sdk.a" normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
+c00000000505A928E0000000000000110
+t1348113038
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000505EC51B00000000003DCEF0
+t1348388123
+s4050672
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c00000000505EC51A00000000000015F7
+t1348388122
+s5623
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBConnect.h
+c000000004F69AEEA00000000000002C2
+t1332326122
+s706
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.h
+c000000004F69AEEA00000000000012BD
+t1332326122
+s4797
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m
+c000000004F69AEEA00000000000065C3
+t1332326122
+s26051
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.m
+c000000004F69AEEA000000000000164B
+t1332326122
+s5707
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.h
+c000000004F69AEEA0000000000000571
+t1332326122
+s1393
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.m
+c000000004F69AEEA0000000000000C40
+t1332326122
+s3136
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.h
+c000000004F938B290000000000001016
+t1335069481
+s4118
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m
+c000000004F7039170000000000003340
+t1332754711
+s13120
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.h
+c000000004F938E70000000000000139C
+t1335070320
+s5020
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m
+c0000000051009ECC00000000000081A2
+t1358995148
+s33186
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/JSON.h
+c000000005034822600000000000008F9
+t1345618470
+s2297
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.h
+c000000004F69AEEA0000000000000A01
+t1332326122
+s2561
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m
+c000000004F69AEEA000000000000089E
+t1332326122
+s2206
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.h
+c000000004F69AEEA0000000000000916
+t1332326122
+s2326
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.m
+c000000004F69AEEA000000000000087D
+t1332326122
+s2173
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.h
+c000000004F69AEEA0000000000000AED
+t1332326122
+s2797
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m
+c000000004F69AEEA0000000000001ABC
+t1332326122
+s6844
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.h
+c000000004F69AEEA0000000000000B82
+t1332326122
+s2946
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m
+c000000004F69AEEA0000000000000AC1
+t1332326122
+s2753
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.h
+c000000004F69AEEA0000000000000C0B
+t1332326122
+s3083
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.m
+c000000004F69AEEA00000000000036D0
+t1332326122
+s14032
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.h
+c000000004F69AEEA0000000000001140
+t1332326122
+s4416
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m
+c000000004F69AEEA0000000000001F26
+t1332326122
+s7974
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBConnect.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBDialog.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBLoginDialog.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBRequest.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/Facebook.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/JSON.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/NSObject+SBJSON.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/NSString+SBJSON.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJSON.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonBase.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonParser.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonWriter.h
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/libfacebook_ios_sdk.a
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.o
+t2
+s0
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/facebook_ios_sdk.LinkFileList
+c0000000051009ED400000000000009BB
+t1358995156
+s2491
+
+N/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/facebook_ios_sdk_Prefix.pch
+c000000004F69AEEA00000000000000BC
+t1332326122
+s188
+i<Foundation/Foundation.h>
+
+N/var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.pth
+t2
+s0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.m"
+r0
+
+CBuild AST from "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m"
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies72706954d6b0b641^01bf9e54d6b0b641^---0#1#0#--18"Check dependencies36"A4039E27-70A5-4B40-8F24-1D88CB45EB4E-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687957.088084
+e380687957.422012
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m43c71655d6b0b641^1e4e6c55d6b0b641^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m0000000000000000^4719"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.o FBDialog.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBDialog.o"36"596AA143-EB67-4A33-B94D-BA3D52CA34F3-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687957.419630
+e380687957.595723
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection156"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.md0626d55d6b0b641^b0569955d6b0b641^---0#0#0#-19%DVTDocumentLocation2@168"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.m0000000000000000^4845"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.o FBFrictionlessRequestSettings.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBFrictionlessRequestSettings.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBFrictionlessRequestSettings.o"36"2A96D506-4A9F-40CC-890C-6387C18F4566-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687956.965610
+e380687957.272795
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection140"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.mf168f754d6b0b641^a9a44655d6b0b641^---0#0#0#-19%DVTDocumentLocation2@152"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.m0000000000000000^4749"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.o FBLoginDialog.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBLoginDialog.o"36"3B457A69-74EE-4CBD-AF02-1A35C8E1E946-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687956.965686
+e380687957.291727
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m:156:37: warning: using 'stringWithString:' with a literal is redundant [-Wobjc-redundant-literal-use]
+o                               data:[NSString stringWithString:@"Content-Type: image/png\r\n\r\n"]];
+o                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m:165:37: warning: using 'stringWithString:' with a literal is redundant [-Wobjc-redundant-literal-use]
+o                               data:[NSString stringWithString:@"Content-Type: content/unknown\r\n\r\n"]];
+o                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.mf06cf754d6b0b641^3bc54a55d6b0b641^-896"/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m:156:37: warning: using 'stringWithString:' with a literal is redundant [-Wobjc-redundant-literal-use]                               data:[NSString stringWithString:@"Content-Type: image/png\r\n\r\n"]];                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m:165:37: warning: using 'stringWithString:' with a literal is redundant [-Wobjc-redundant-literal-use]                               data:[NSString stringWithString:@"Content-Type: content/unknown\r\n\r\n"]];                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@53"Using 'stringWithString:' with a literal is redundant-380687957#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^155#36#155#36#6057#0#15"Cocoa API Issue3(3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^155#36#155#98#6057#61#3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^155#36#155#63#6057#27#3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^155#97#155#98#6118#1#-2@53"Using 'stringWithString:' with a literal is redundant-380687957#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^164#36#164#36#6605#0#15"Cocoa API Issue3(3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^164#36#164#104#6605#67#3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^164#36#164#63#6605#27#3@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^164#103#164#104#6672#1#-0#0#0#-19%DVTDocumentLocation4@148"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m0000000000000000^4725"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.o FBRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/FBRequest.o"36"155C3D08-3BC7-49FA-A529-BB3051978E44-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687957.086143
+e380687957.440503
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m80451655d6b0b641^48c47055d6b0b641^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m0000000000000000^4719"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.o Facebook.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/Facebook.o"36"579E498E-D7ED-4A97-A10F-A2CBE9E12BB8-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687957.290707
+e380687957.344087
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m72a54a55d6b0b641^e92b5855d6b0b641^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m0000000000000000^4771"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.o JSON/NSObject+SBJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSObject+SBJSON.o"36"767F5A8D-39C2-4632-BDA8-4332D0C7D601-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687956.965694
+e380687957.057967
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.mfc6df754d6b0b641^49a20f55d6b0b641^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.m0000000000000000^4771"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.o JSON/NSString+SBJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/NSString+SBJSON.o"36"B4EAE412-01A3-4BE7-A011-CE622C70D9FC-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687957.293136
+e380687957.359911
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m35424b55d6b0b641^07ea5c55d6b0b641^---0#0#0#-19%DVTDocumentLocation2@150"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m0000000000000000^4717"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.o JSON/SBJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJSON.o"36"764E781C-97AD-44BE-8DF3-1FC052D49DBA-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687957.346514
+e380687957.413498
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection142"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m20f05855d6b0b641^8ee56955d6b0b641^---0#0#0#-19%DVTDocumentLocation2@154"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m0000000000000000^4741"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.o JSON/SBJsonBase.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonBase.o"36"9D98C0E6-D63F-4C97-B354-A9640C93E90E-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687956.965706
+e380687957.085215
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.mad6cf754d6b0b641^bef91555d6b0b641^---0#0#0#-19%DVTDocumentLocation2@156"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.m0000000000000000^4753"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.o JSON/SBJsonParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonParser.o"36"A91D2EB2-006B-4496-BA8A-8788E219665C-
+
+CCompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687957.371260
+e380687957.443161
+r1
+xCompileC
+xbuild/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.o
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection144"Compile /Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m37515f55d6b0b641^e3717155d6b0b641^---0#0#0#-19%DVTDocumentLocation2@156"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m0000000000000000^4753"CompileC build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.o JSON/SBJsonWriter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -include /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch -MMD -MT dependencies -MF "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.d" --serialize-diagnostics "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.dia" -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.m" -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/SBJsonWriter.o"36"05A37C20-7E3D-4D0F-9FF9-8CBEA95D6BCB-
+
+CCpHeader FBConnect.h build/Debug-iphonesimulator/facebook-ios-sdk/FBConnect.h
+s380687956.661974
+e380687956.666403
+r1
+xCpHeader
+xFBConnect.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/FBConnect.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphonesimulator/facebook-ios-sdk/FBConnect.hb7d0a954d6b0b641^8719b254d6b0b641^---0#0#0#-19%DVTDocumentLocation2@193"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBConnect.h000000000080d041^806"CpHeader FBConnect.h build/Debug-iphonesimulator/facebook-ios-sdk/FBConnect.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBConnect.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"EB03FCC6-998F-4CF8-AEBF-95FF0B0F8A74-
+
+CCpHeader FBDialog.h build/Debug-iphonesimulator/facebook-ios-sdk/FBDialog.h
+s380687956.673579
+e380687956.696110
+r1
+xCpHeader
+xFBDialog.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/FBDialog.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Debug-iphonesimulator/facebook-ios-sdk/FBDialog.hfd87ac54d6b0b641^e754b254d6b0b641^---0#0#0#-19%DVTDocumentLocation2@192"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBDialog.h000000000080d041^803"CpHeader FBDialog.h build/Debug-iphonesimulator/facebook-ios-sdk/FBDialog.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBDialog.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"0E242047-DBBA-452C-A503-99F50124577E-
+
+CCpHeader FBLoginDialog.h build/Debug-iphonesimulator/facebook-ios-sdk/FBLoginDialog.h
+s380687956.663138
+e380687956.683196
+r1
+xCpHeader
+xFBLoginDialog.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/FBLoginDialog.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/Debug-iphonesimulator/facebook-ios-sdk/FBLoginDialog.h6fd9a954d6b0b641^4f22b254d6b0b641^---0#0#0#-19%DVTDocumentLocation2@197"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBLoginDialog.h000000000080d041^818"CpHeader FBLoginDialog.h build/Debug-iphonesimulator/facebook-ios-sdk/FBLoginDialog.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBLoginDialog.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"A033AA0F-EA08-40B1-88E4-1BA1226D2B88-
+
+CCpHeader FBRequest.h build/Debug-iphonesimulator/facebook-ios-sdk/FBRequest.h
+s380687956.663525
+e380687956.696292
+r1
+xCpHeader
+xFBRequest.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/FBRequest.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Debug-iphonesimulator/facebook-ios-sdk/FBRequest.hd0eda954d6b0b641^4b59b254d6b0b641^---0#0#0#-19%DVTDocumentLocation2@193"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/FBRequest.h000000000080d041^806"CpHeader FBRequest.h build/Debug-iphonesimulator/facebook-ios-sdk/FBRequest.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/FBRequest.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"84BD0471-057B-4368-9C20-70880DEB57EA-
+
+CCpHeader Facebook.h build/Debug-iphonesimulator/facebook-ios-sdk/Facebook.h
+s380687956.662537
+e380687956.667050
+r1
+xCpHeader
+xFacebook.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/Facebook.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Copy build/Debug-iphonesimulator/facebook-ios-sdk/Facebook.hbbd3a954d6b0b641^fc1db254d6b0b641^---0#0#0#-19%DVTDocumentLocation2@192"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/Facebook.h000000000080d041^803"CpHeader Facebook.h build/Debug-iphonesimulator/facebook-ios-sdk/Facebook.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/Facebook.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"781E4150-3011-4931-BCB9-1EA48600725B-
+
+CCpHeader JSON/JSON.h build/Debug-iphonesimulator/facebook-ios-sdk/JSON.h
+s380687956.677410
+e380687956.697038
+r1
+xCpHeader
+xJSON/JSON.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/JSON.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/Debug-iphonesimulator/facebook-ios-sdk/JSON.h9487ad54d6b0b641^107ab254d6b0b641^---0#0#0#-19%DVTDocumentLocation2@188"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/JSON.h000000000080d041^801"CpHeader JSON/JSON.h build/Debug-iphonesimulator/facebook-ios-sdk/JSON.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/JSON.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"F17024C0-70A1-4577-B88E-0F46748114DE-
+
+CCpHeader JSON/NSObject+SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/NSObject+SBJSON.h
+s380687956.696242
+e380687956.700001
+r1
+xCpHeader
+xJSON/NSObject+SBJSON.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/NSObject+SBJSON.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug-iphonesimulator/facebook-ios-sdk/NSObject+SBJSON.h2656b254d6b0b641^b666b354d6b0b641^---0#0#0#-19%DVTDocumentLocation2@199"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/NSObject+SBJSON.h000000000080d041^834"CpHeader JSON/NSObject+SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/NSObject+SBJSON.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSObject+SBJSON.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"A91050D7-64DE-41C6-90B9-281E774937C1-
+
+CCpHeader JSON/NSString+SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/NSString+SBJSON.h
+s380687956.697315
+e380687956.712417
+r1
+xCpHeader
+xJSON/NSString+SBJSON.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/NSString+SBJSON.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug-iphonesimulator/facebook-ios-sdk/NSString+SBJSON.h079bb254d6b0b641^5a80b654d6b0b641^---0#0#0#-19%DVTDocumentLocation2@199"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/NSString+SBJSON.h000000000080d041^834"CpHeader JSON/NSString+SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/NSString+SBJSON.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/NSString+SBJSON.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"C3760201-91CD-43C3-8F86-B6DA967A22D1-
+
+CCpHeader JSON/SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJSON.h
+s380687956.697308
+e380687956.711721
+r1
+xCpHeader
+xJSON/SBJSON.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/SBJSON.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/Debug-iphonesimulator/facebook-ios-sdk/SBJSON.he59ab254d6b0b641^f94cb654d6b0b641^---0#0#0#-19%DVTDocumentLocation2@190"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJSON.h000000000080d041^807"CpHeader JSON/SBJSON.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJSON.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJSON.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"8FB04A16-697F-44DD-9966-C92781CC7449-
+
+CCpHeader JSON/SBJsonBase.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonBase.h
+s380687956.697611
+e380687956.712432
+r1
+xCpHeader
+xJSON/SBJsonBase.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/SBJsonBase.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonBase.h04afb254d6b0b641^ad84b654d6b0b641^---0#0#0#-19%DVTDocumentLocation2@194"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonBase.h000000000080d041^819"CpHeader JSON/SBJsonBase.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonBase.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonBase.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"E6134376-D82A-4E9E-BBCE-1CF8E8E12F28-
+
+CCpHeader JSON/SBJsonParser.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonParser.h
+s380687956.711693
+e380687956.722331
+r1
+xCpHeader
+xJSON/SBJsonParser.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/SBJsonParser.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonParser.hc24db654d6b0b641^ec16b954d6b0b641^---0#0#0#-19%DVTDocumentLocation2@196"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonParser.h000000000080d041^825"CpHeader JSON/SBJsonParser.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonParser.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonParser.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"49924832-8566-492C-95CE-E7601DEDA9B0-
+
+CCpHeader JSON/SBJsonWriter.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonWriter.h
+s380687956.714221
+e380687956.722566
+r1
+xCpHeader
+xJSON/SBJsonWriter.h
+xbuild/Debug-iphonesimulator/facebook-ios-sdk/SBJsonWriter.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonWriter.hd4efb654d6b0b641^9f20b954d6b0b641^---0#0#0#-19%DVTDocumentLocation2@196"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonWriter.h000000000080d041^825"CpHeader JSON/SBJsonWriter.h build/Debug-iphonesimulator/facebook-ios-sdk/SBJsonWriter.h    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/JSON/SBJsonWriter.h" "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/facebook-ios-sdk"36"7BD52F12-08F0-44C2-8F64-C19CEAB6ABBF-
+
+CLibtool "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/libfacebook_ios_sdk.a" normal i386
+s380687957.610422
+e380687957.640746
+r1
+xLibtool
+x/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/libfacebook_ios_sdk.a
+xnormal
+xi386
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Libtool build/Debug-iphonesimulator/libfacebook_ios_sdk.a normal i3865ea09c55d6b0b641^0648a455d6b0b641^-159"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC -0#0#0#--1286"Libtool build/Debug-iphonesimulator/libfacebook_ios_sdk.a normal i386    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv IPHONEOS_DEPLOYMENT_TARGET 3.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk "-L/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" -filelist "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/Objects-normal/i386/facebook_ios_sdk.LinkFileList" -ObjC -framework Foundation -o "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/libfacebook_ios_sdk.a"36"0E516FB6-8F6E-4EED-9A9F-DD0FAA90C05E-
+
+CProcessPCH /Users/CHIRAG/Library/Developer/Xcode/DerivedData/UltimageGeoTech-enaotiopfuzswmcvlnzkgypmfeek/Index/PrecompiledHeaders/facebook_ios_sdk_Prefix-bsksibgahstegsgalepodragqezf_ast/facebook_ios_sdk_Prefix.pch.pth facebook_ios_sdk_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.pth facebook_ios_sdk_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s380687956.738969
+e380687956.946059
+r1
+xProcessPCH
+x/var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.pth
+xfacebook_ios_sdk_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Precompile facebook_ios_sdk_Prefix.pch2060bd54d6b0b641^7231f254d6b0b641^---0#0#0#-19%DVTDocumentLocation2@164"file://localhost/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate%20Geo%20Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/facebook_ios_sdk_Prefix.pch0000000000000000^4513"ProcessPCH /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.pth facebook_ios_sdk_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook"    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=3.0 -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-generated-files.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-own-target-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-all-target-headers.hmap" -iquote "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/facebook_ios_sdk-project-headers.hmap" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources/i386" "-I/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/facebook-ios-sdk.build/Debug-iphonesimulator/facebook-ios-sdk.build/DerivedSources" "-F/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/build/Debug-iphonesimulator" --serialize-diagnostics /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.dia -c "/Users/CHIRAG/My_Work/Private/Astron/Projects/Ultimate Geo Tech/project/ios/UltimageGeoTech/UltimageGeoTech/facebook/facebook_ios_sdk_Prefix.pch" -o /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/p0/9q0zsdj92j7bnk_xr3b1flnw0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/facebook_ios_sdk_Prefix-hcrxeuhqttjcnlerpuaqpqvfwkwy/facebook_ios_sdk_Prefix.pch.d36"C3893341-425C-4AC0-B8EA-34C658463B51-
+
