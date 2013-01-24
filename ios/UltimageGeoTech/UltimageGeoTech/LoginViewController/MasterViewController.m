@@ -59,7 +59,72 @@
 -(IBAction)email_reg_registration_button_pressed:(id)sender
 {
 
-    email_registration_view.hidden = TRUE;
+    
+    //user_registration
+    
+    
+    requestObjects = [NSArray arrayWithObjects:@"user_registration",email_registration,email_address_textField.text,password_textField.text,nil];
+    requestkeys = [NSArray arrayWithObjects:@"action",@"registration_type",@"email",@"password",nil];
+    
+    
+    
+    
+    requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
+    //requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
+    requestString = [NSString stringWithFormat:@"%@",[requestJSONDict JSONRepresentation]];
+    NSLog(@"\n \n \n \n \n \n ");
+    
+    NSLog(@"\n requestString = %@",requestString);
+    
+    requestData = [NSData dataWithBytes: [requestString UTF8String] length: [requestString length]];
+    urlString = [NSString stringWithFormat:@"%@%@",WEB_SERVICE_URL,@"Signup"];
+    NSLog(@"\n urlString = %@",urlString);
+    request = [[[NSMutableURLRequest alloc] init] autorelease];
+    [request setURL:[NSURL URLWithString:urlString]]; // set URL for the request
+    [request setHTTPMethod:@"POST"]; // set method the request
+    [request addValue: @"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    [request setHTTPBody:requestData];
+    
+    
+    
+    process_activity_indicator.hidden = FALSE;
+    [process_activity_indicator startAnimating];
+    [self.view endEditing:TRUE];
+    [self.view setUserInteractionEnabled:FALSE];
+    
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         NSLog(@"\n response we get = %@",response);
+         returnData = data;
+         NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+         NSLog(@"\n returnString == %@",returnString);
+         json = [[SBJSON new] autorelease];
+         
+         
+         responseDataDictionary = [json objectWithString:returnString error:&error];
+         [responseDataDictionary retain];
+         
+         NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
+         
+         NSLog(@"\n data = %@",[[responseDataDictionary objectForKey:@"d"] objectAtIndex:0]);
+         [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
+         
+         
+         
+     }];
+    
+    [queue release];
+    
+    
+    
+    //email_registration_view.hidden = TRUE;
 }
 
 -(IBAction)email_reg_login_button_pressed:(id)sender
@@ -94,6 +159,32 @@
     email_registration_view.hidden = TRUE;
 	
 }
+
+#pragma mark - TextField Delegate Methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return TRUE;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    return TRUE;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+   
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    return TRUE;
+}
+
+#pragma mark -
 
 - (void)didReceiveMemoryWarning
 {

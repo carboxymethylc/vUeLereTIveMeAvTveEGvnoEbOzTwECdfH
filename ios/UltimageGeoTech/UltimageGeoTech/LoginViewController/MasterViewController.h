@@ -12,15 +12,40 @@
 #import "JSON.h"
 
 
-@interface MasterViewController : UIViewController<FBRequestDelegate,FBDialogDelegate,FBSessionDelegate>
+@interface MasterViewController : UIViewController<FBRequestDelegate,FBDialogDelegate,FBSessionDelegate,UITextFieldDelegate>
 {
     IBOutlet UIView*email_registration_view;
     
     IBOutlet UIButton*fb_button;
     IBOutlet UIButton*email_button;
     
+    IBOutlet UITextField*email_address_textField;
+    IBOutlet UITextField*password_textField;
+    
     //fb permission array
     NSArray *permissions;
+    
+    
+    //variabales for Webservices
+    
+    
+    NSArray *requestObjects;
+	NSArray *requestkeys;
+	NSDictionary *requestJSONDict;
+	NSMutableDictionary *finalJSONDictionary;
+	NSString *jsonRequest;
+	NSString *requestString;
+	NSData *requestData;
+	NSString *urlString;
+	NSMutableURLRequest *request;
+	NSData *returnData;
+	NSError *error;
+	SBJSON *json;
+	NSDictionary *responseDataDictionary;
+    //NSMutableArray *responseDataArray;//May be needed
+    
+    IBOutlet UIActivityIndicatorView*process_activity_indicator;
+    
 }
 
 -(IBAction)fb_button_pressed:(id)sender;

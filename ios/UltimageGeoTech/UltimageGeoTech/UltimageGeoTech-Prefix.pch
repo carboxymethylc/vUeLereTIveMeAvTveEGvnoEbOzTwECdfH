@@ -12,3 +12,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define fb_registration @"1"
+#define email_registration @"2"
+#define WEB_SERVICE_URL @"http://localhost:8888/"
+
