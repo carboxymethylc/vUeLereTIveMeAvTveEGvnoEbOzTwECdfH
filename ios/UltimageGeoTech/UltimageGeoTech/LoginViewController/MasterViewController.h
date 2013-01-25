@@ -14,13 +14,28 @@
 
 @interface MasterViewController : UIViewController<FBRequestDelegate,FBDialogDelegate,FBSessionDelegate,UITextFieldDelegate>
 {
-    IBOutlet UIView*email_registration_view;
+    IBOutlet UIView*email_login_view;
+    IBOutlet UIView*user_registration_view;
     
     IBOutlet UIButton*fb_button;
     IBOutlet UIButton*email_button;
     
+    //email login
     IBOutlet UITextField*email_address_textField;
     IBOutlet UITextField*password_textField;
+    
+    
+    //email registration
+    IBOutlet UITextField*registration_fullname_textField;
+    IBOutlet UITextField*registration_email_address_textField;
+    IBOutlet UITextField*registration_password_textField;
+    IBOutlet UITextField*registration_city_textField;
+    
+    
+
+    
+    
+    
     
     //fb permission array
     NSArray *permissions;
@@ -46,6 +61,9 @@
     
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
     
+    
+    
+    
 }
 
 -(IBAction)fb_button_pressed:(id)sender;
@@ -59,11 +77,13 @@
 
 
 //
-
+-(IBAction)email_create_account_button_pressed:(id)sender;
 
 -(IBAction)email_reg_back_button_pressed:(id)sender;
+-(IBAction)email_login_back_button_pressed:(id)sender;
 -(IBAction)email_reg_registration_button_pressed:(id)sender;
--(IBAction)email_reg_login_button_pressed:(id)sender;
--(IBAction)email_reg_forgotPassword_button_pressed:(id)sender;
+
+-(IBAction)email_login_login_button_pressed:(id)sender;
+-(IBAction)email_login_forgotPassword_button_pressed:(id)sender;
 
 @end
