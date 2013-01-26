@@ -35,8 +35,6 @@
     else
     {
         
-        
-       
     }
     
 }
@@ -56,7 +54,7 @@
     
     //user_registration
     
-    
+    action_type = 1;
     requestObjects = [NSArray arrayWithObjects:
                       @"user_registration",
                       email_registration,
@@ -78,7 +76,7 @@
     
     requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
     //requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
-    requestString = [NSString stringWithFormat:@"%@",[requestJSONDict JSONRepresentation]];
+    requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
     NSLog(@"\n \n \n \n \n \n ");
     
     NSLog(@"\n requestString = %@",requestString);
@@ -161,13 +159,13 @@
     
     //user_registration
     
-    
+    action_type = 3;
     requestObjects = [NSArray arrayWithObjects:@"login",email_registration,email_address_textField.text,password_textField.text,nil];
     requestkeys = [NSArray arrayWithObjects:@"action",@"registration_type",@"email",@"password",nil];
     
     requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
     //requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
-    requestString = [NSString stringWithFormat:@"%@",[requestJSONDict JSONRepresentation]];
+    requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
     NSLog(@"\n \n \n \n \n \n ");
     
     NSLog(@"\n requestString = %@",requestString);
@@ -247,8 +245,12 @@
     [process_activity_indicator stopAnimating];
     process_activity_indicator.hidden = TRUE;
     
-    
+    NSLog(@"\n data = %d",action_type);
     NSLog(@"\n data = %@",responseDataDictionary);
+    
+    UIAlertView*alertView = [[UIAlertView alloc] initWithTitle:@"" message:[responseDataDictionary objectForKey:@"MESSAGE"] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alertView show];
+    [alertView release];
     
         
     [self.view setUserInteractionEnabled:TRUE];
@@ -305,10 +307,14 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [textField resignFirstResponder];
     return TRUE;
 }
 
 #pragma mark -
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -363,7 +369,20 @@
         result = [result objectAtIndex:0];
     }
 
+    
+    NSLog(@"\n user registered/signup using fb..now we need to ");
+    NSLog(@"\n resutl for user = %@",result);
+    
+    NSLog(@"\n email for user = %@",[result objectForKey:@"email"]);
+    NSLog(@"\n first_name for user = %@",[result objectForKey:@"first_name"]);
+    NSLog(@"\n last_name for user = %@",[result objectForKey:@"last_name"]);
+    NSLog(@"\n name for user = %@",[result objectForKey:@"name"]);
+    NSLog(@"\n uid for user = %@",[result objectForKey:@"uid"]);
+    
+    
 
+    
+    
     
 }
 
@@ -371,10 +390,10 @@
  * Called when an error prevents the Facebook API request from completing
  * successfully.
  */
-- (void)request:(FBRequest *)request didFailWithError:(NSError *)error
+- (void)request:(FBRequest *)request didFailWithError:(NSError *)fb_error
 {
-    NSLog(@"Err message: %@", [[error userInfo] objectForKey:@"error_msg"]);
-    NSLog(@"Err code: %d", [error code]);
+    NSLog(@"Err message: %@", [[fb_error userInfo] objectForKey:@"error_msg"]);
+    NSLog(@"Err code: %d", [fb_error code]);
     
 }
 

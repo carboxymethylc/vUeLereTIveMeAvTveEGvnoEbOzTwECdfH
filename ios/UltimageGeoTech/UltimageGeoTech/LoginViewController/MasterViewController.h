@@ -61,7 +61,7 @@
     
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
     
-    
+    int action_type;//1=registration,2=forgotpassword,3= login
     
     
 }

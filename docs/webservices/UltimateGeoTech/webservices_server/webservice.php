@@ -6,7 +6,7 @@
 	if($link)
 	{
 		
-		if(!mysql_select_db("temp_open_source"))
+		if(!mysql_select_db("utlimate_geo_tech"))
 		 
 		{
 			 die('Could not select DB: ' . mysql_error());
@@ -50,8 +50,10 @@
 	$decodedData = $json->decode($data);
 	$action =  $decodedData->action;
 	
-	
-	
+	/*
+	echo "this is test".$action;
+	exit;
+	*/
 	$myFile = "responce.txt";
 	$fh = fopen($myFile, 'w') or die("can't open file");
 /*		foreach($_GET as $key=>$value) {
@@ -98,8 +100,10 @@
 			'".$decodedData->user_name."',
 			'".$decodedData->email."',
 			'".$decodedData->password."',
-			'".$decodedData->city."',
+			'".$decodedData->city."'
 			)";
+			
+			
 			$result = mysql_query($sql);
 			
 			$resultArray['STATUS'] = "1";
@@ -118,7 +122,7 @@
 			if($decodedData->registration_type==2)
 			{
 			
-				$sql = "SELECT * FROM users WHERE user_name = '".$decodedData->username."' AND BINARY password ='".$decodedData->password."'";
+				$sql = "SELECT * FROM tbl_user WHERE user_name = '".$decodedData->email."' AND BINARY password ='".$decodedData->password."'";
 				$result = mysql_query($sql);
 				if(mysql_num_rows($result)==0)
 				{
@@ -137,7 +141,9 @@
 					$resultArray['race_completed'] = $row["race_completed"];
 					$resultArray['race_created'] = $row["race_created"];
 					$resultArray['gps_rank'] = $row["gps_rank"];
-					
+					$resultArray['STATUS'] = "1";
+					$resultArray['MESSAGE'] = "Sucessfully Logged In.";
+
 					
 					
 				}

@@ -15,5 +15,5 @@
 
 #define fb_registration @"1"
 #define email_registration @"2"
-#define WEB_SERVICE_URL @"http://localhost:8888/zeen_web/webservices_server/webservice.php"
+#define WEB_SERVICE_URL @"http://localhost:8888/UltimateGeoTech/webservices_server/webservice.php"
 
