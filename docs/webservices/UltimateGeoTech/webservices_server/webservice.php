@@ -66,7 +66,49 @@
 	{
 		
 	
-		
+		case "fb_user_registration_login":
+		{
+			$sql = "SELECT * FROM tbl_user WHERE fb_id = '".$decodedData->fb_id."'";
+			$result = mysql_query($sql);
+			/*if user already registered redirect him to main screen. */
+			if(mysql_num_rows($result)>0)
+			{
+				$resultArray['STATUS'] = "1";
+				$resultArray['MESSAGE'] = "Login successful";
+				print_r($json->encode($resultArray));
+				break;
+			}
+			/*else register him and take him to main screen*/
+			else
+			{
+				
+				$sql = "INSERT INTO tbl_user
+				(
+				full_name,
+				user_name,
+				email,
+				password,
+				city
+				
+				) 
+				VALUES
+				(
+				'".$decodedData->full_name."',
+				'".$decodedData->email."',
+				'".$decodedData->email."',
+				'',
+				''
+				)";
+				
+				
+				$result = mysql_query($sql);
+				
+				$resultArray['STATUS'] = "1";
+				$resultArray['MESSAGE'] = "Registration successful";
+				print_r($json->encode($resultArray));
+				
+			}
+		}
 	
 		
 		case "user_registration":
