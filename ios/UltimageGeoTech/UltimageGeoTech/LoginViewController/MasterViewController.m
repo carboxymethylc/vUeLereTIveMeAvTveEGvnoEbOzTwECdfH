@@ -34,7 +34,7 @@
     }
     else
     {
-        
+        [self check_fb_user_registration];
     }
     
 }
@@ -339,13 +339,18 @@
 -(void)check_fb_user_registration
 {
     
+    appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    NSLog(@"\n name = %@",[appDelegate.user_defaults objectForKey:@"name"]);
+     NSLog(@"\n name = %@",[appDelegate.user_defaults objectForKey:@"fb_email"]);
+     NSLog(@"\n name = %@",[appDelegate.user_defaults objectForKey:@"fb_uid"]);
     
     action_type = 4;
     requestObjects = [NSArray arrayWithObjects:
                       @"fb_user_registration_login",
-                      [appDelegate.user_defaults objectForKey:@"name"],
+                      [appDelegate.user_defaults objectForKey:@"fb_name"],
                       [appDelegate.user_defaults objectForKey:@"fb_email"],
-                      [appDelegate.user_defaults objectForKey:@"fb_uid"],
+                      [NSString stringWithFormat:@"%@",[appDelegate.user_defaults objectForKey:@"fb_uid"]],
                       nil];
     
     requestkeys = [NSArray arrayWithObjects:
@@ -354,6 +359,9 @@
                    @"email",
                    @"fb_id",
                 nil];
+    
+    
+    NSLog(@"\n requestObjects = %@",requestObjects);
     
     requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
     
@@ -431,6 +439,7 @@
     {
         [[delegate facebook] authorize:permissions];
     }
+    
 }
 
 

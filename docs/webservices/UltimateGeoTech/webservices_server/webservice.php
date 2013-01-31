@@ -73,8 +73,22 @@
 			/*if user already registered redirect him to main screen. */
 			if(mysql_num_rows($result)>0)
 			{
+				$row = mysql_fetch_array($result);
+				
 				$resultArray['STATUS'] = "1";
 				$resultArray['MESSAGE'] = "Login successful";
+				
+				
+					
+				$resultArray['user_name'] = $row["user_name"];
+				$resultArray['email'] = $row["email"];
+				$resultArray['password'] = $row["password"];
+				$resultArray['full_name'] = $row["full_name"];
+				$resultArray['city'] = $row["city"];
+				$resultArray['race_completed'] = $row["race_completed"];
+				$resultArray['race_created'] = $row["race_created"];
+				$resultArray['gps_rank'] = $row["gps_rank"];
+				
 				print_r($json->encode($resultArray));
 				break;
 			}
@@ -88,7 +102,8 @@
 				user_name,
 				email,
 				password,
-				city
+				city,
+				fb_id
 				
 				) 
 				VALUES
@@ -97,17 +112,33 @@
 				'".$decodedData->email."',
 				'".$decodedData->email."',
 				'',
-				''
+				'',
+				'".$decodedData->fb_id."'
 				)";
+				
+				
+				
 				
 				
 				$result = mysql_query($sql);
 				
-				$resultArray['STATUS'] = "1";
-				$resultArray['MESSAGE'] = "Registration successful";
-				print_r($json->encode($resultArray));
+				if (!$result) 
+				{
+    				die('Invalid query: ' . mysql_error());
+					
+				}
+				else
+				{
+					$resultArray['STATUS'] = "1";
+					$resultArray['MESSAGE'] = "Registration successful";
+					print_r($json->encode($resultArray));
+				}
 				
+				
+				break;
 			}
+			
+			break;
 		}
 	
 		
