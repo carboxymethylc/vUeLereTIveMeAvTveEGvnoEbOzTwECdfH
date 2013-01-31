@@ -61,8 +61,9 @@
     
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
     
-    int action_type;//1=registration,2=forgotpassword,3= login
+    int action_type;//1=registration,2=forgotpassword,3= login,4= connect with fb(this includes registration + login)
     
+    AppDelegate*appDelegate;
     
 }
 
@@ -85,5 +86,13 @@
 
 -(IBAction)email_login_login_button_pressed:(id)sender;
 -(IBAction)email_login_forgotPassword_button_pressed:(id)sender;
+
+/*checks whether current user is already registerd.
+ if Not,then registering new user and redirecting in home screen
+ if Yes,then redirecting in home screen.
+ */
+-(IBAction)check_fb_user_registration;
+
+
 
 @end

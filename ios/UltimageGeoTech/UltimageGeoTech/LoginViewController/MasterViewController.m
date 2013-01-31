@@ -133,7 +133,7 @@
     //email_registration_view.hidden = TRUE;
 }
 
-#pragma mark - 
+
 
 
 #pragma mark - Start Email login methods
@@ -248,9 +248,26 @@
     NSLog(@"\n data = %d",action_type);
     NSLog(@"\n data = %@",responseDataDictionary);
     
+
+    switch (action_type)
+    {
+        case 4:
+        {
+
+            //Fb login or registration
+            break;
+
+        }
+            
+        default:
+            break;
+    }
+    
+    /*
     UIAlertView*alertView = [[UIAlertView alloc] initWithTitle:@"" message:[responseDataDictionary objectForKey:@"MESSAGE"] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alertView show];
     [alertView release];
+    */
     
         
     [self.view setUserInteractionEnabled:TRUE];
@@ -283,6 +300,8 @@
     //[self.view addSubview:email_registration_view];
     email_login_view.hidden = TRUE;
     user_registration_view.hidden = TRUE;
+    
+    appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
 	
 }
 
@@ -313,8 +332,88 @@
 
 #pragma mark -
 
+#pragma mark -  check_fb_user_registration
 
 
+
+-(void)check_fb_user_registration
+{
+    
+    
+    action_type = 4;
+    requestObjects = [NSArray arrayWithObjects:
+                      @"fb_user_registration_login",
+                      [appDelegate.user_defaults objectForKey:@"name"],
+                      [appDelegate.user_defaults objectForKey:@"fb_email"],
+                      [appDelegate.user_defaults objectForKey:@"fb_uid"],
+                      nil];
+    
+    requestkeys = [NSArray arrayWithObjects:
+                   @"action",
+                   @"full_name",
+                   @"email",
+                   @"fb_id",
+                nil];
+    
+    requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
+    
+    requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
+    NSLog(@"\n \n \n \n \n \n ");
+    
+    NSLog(@"\n requestString = %@",requestString);
+    
+    requestData = [NSData dataWithBytes: [requestString UTF8String] length: [requestString length]];
+    urlString = [NSString stringWithFormat:@"%@",WEB_SERVICE_URL];
+    NSLog(@"\n urlString = %@",urlString);
+    request = [[[NSMutableURLRequest alloc] init] autorelease];
+    [request setURL:[NSURL URLWithString:urlString]]; // set URL for the request
+    [request setHTTPMethod:@"POST"]; // set method the request
+    
+    
+    [request setHTTPBody:requestData];
+    
+    
+    
+    process_activity_indicator.hidden = FALSE;
+    [process_activity_indicator startAnimating];
+    [self.view bringSubviewToFront:process_activity_indicator];
+    [self.view endEditing:TRUE];
+    [self.view setUserInteractionEnabled:FALSE];
+    
+    
+    
+    
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         NSLog(@"\n response we get = %@",response);
+         returnData = data;
+         NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+         NSLog(@"\n returnString == %@",returnString);
+         json = [[SBJSON new] autorelease];
+         
+         
+         responseDataDictionary = [json objectWithString:returnString error:&error];
+         [responseDataDictionary retain];
+         
+         NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
+         
+         NSLog(@"\n data = %@",[[responseDataDictionary objectForKey:@"d"] objectAtIndex:0]);
+         [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
+         
+         
+         
+     }];
+    
+    [queue release];
+
+    
+    
+}
+
+#pragma mark -
 
 - (void)didReceiveMemoryWarning
 {
@@ -379,8 +478,15 @@
     NSLog(@"\n name for user = %@",[result objectForKey:@"name"]);
     NSLog(@"\n uid for user = %@",[result objectForKey:@"uid"]);
     
+    [appDelegate.user_defaults setObject:[result objectForKey:@"email"] forKey:@"fb_email"];
+    [appDelegate.user_defaults setObject:[result objectForKey:@"name"] forKey:@"fb_name"];
+    [appDelegate.user_defaults setObject:[result objectForKey:@"uid"] forKey:@"fb_uid"];
+    [appDelegate.user_defaults synchronize];
     
-
+    [self check_fb_user_registration];
+    
+    
+//user_defaults
     
     
     
