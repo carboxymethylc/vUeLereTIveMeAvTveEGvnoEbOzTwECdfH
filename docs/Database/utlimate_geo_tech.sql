@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 23, 2013 at 07:51 AM
+-- Generation Time: Jan 31, 2013 at 08:06 AM
 -- Server version: 5.1.44
 -- PHP Version: 5.2.13
 
@@ -132,9 +132,12 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `race_created` int(11) NOT NULL,
   `gps_rank` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
+INSERT INTO `tbl_user` (`id`, `full_name`, `fb_id`, `email`, `city`, `user_name`, `password`, `race_completed`, `race_created`, `gps_rank`) VALUES
+(1, 'test', '', 'test@gmail.com', 'test', 'test@gmail.com', 'test', 0, 0, 0),
+(2, 'Test', '', 'test@astroninfotech.com', 'Ahmedabad', 'test@astroninfotech.com', 'test123', 0, 0, 0);

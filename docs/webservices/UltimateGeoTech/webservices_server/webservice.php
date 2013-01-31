@@ -5,9 +5,7 @@
 
 	if($link)
 	{
-		
 		if(!mysql_select_db("utlimate_geo_tech"))
-		 
 		{
 			 die('Could not select DB: ' . mysql_error());
 		}
