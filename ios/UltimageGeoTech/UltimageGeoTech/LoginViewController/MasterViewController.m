@@ -170,7 +170,6 @@
     requestkeys = [NSArray arrayWithObjects:@"action",@"registration_type",@"email",@"password",nil];
     
     requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
-    //requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
     requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
     NSLog(@"\n \n \n \n \n \n ");
     
@@ -475,7 +474,7 @@
  */
 - (void)request:(FBRequest *)request didLoad:(id)result
 {
-    
+    appDelegate = [UIApplication sharedApplication].delegate;
     NSLog(@"\n request did load result = %@",result);
     
     if ([result isKindOfClass:[NSArray class]])

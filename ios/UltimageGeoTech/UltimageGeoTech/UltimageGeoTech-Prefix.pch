@@ -19,6 +19,10 @@
 
 #define WEB_SERVICE_URL @"http://localhost:8888/UltimateGeoTech/webservices_server/webservice.php"
 
+<<<<<<< HEAD
+=======
+#define WEB_SERVICE_URL @"http://192.168.3.14:8888/zeen_web/webservices_server/webservice.php"
+>>>>>>> local
 
 /*
 #define WEB_SERVICE_URL @"http://localhost:8888/zeen_web/webservices_server/webservice.php"
