@@ -149,6 +149,12 @@
 
 -(IBAction)email_create_account_button_pressed:(id)sender
 {
+
+    /*
+    [appDelegate.navigationController removeFromParentViewController];
+    appDelegate.window.rootViewController =appDelegate.tabBarController;
+    */
+     
     email_login_view.hidden = TRUE;
     user_registration_view.hidden = FALSE;
 }

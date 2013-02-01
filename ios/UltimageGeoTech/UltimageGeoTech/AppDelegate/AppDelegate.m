@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "MasterViewController.h"
-
+#import "HomeScreenViewController.h"
 #import <sys/socket.h>
 #import <netinet/in.h>
 #import <SystemConfiguration/SystemConfiguration.h>
@@ -21,6 +21,7 @@ static NSString* kAppId = @"401301426565681";
 {
     [_window release];
     [_navigationController release];
+    [_tabBarController release];
     [super dealloc];
 }
 
@@ -31,6 +32,17 @@ static NSString* kAppId = @"401301426565681";
 
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+    
+    
+    
+    HomeScreenViewController *homeScreenViewController = [[[HomeScreenViewController alloc] initWithNibName:@"HomeScreenViewController" bundle:nil] autorelease];
+    
+    UINavigationController*homeScreenNavController =  [[[UINavigationController alloc] initWithRootViewController:homeScreenViewController] autorelease];
+    
+    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController.viewControllers = @[homeScreenNavController];
+
+    
     
 
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
@@ -110,8 +122,14 @@ static NSString* kAppId = @"401301426565681";
 
     
     //[[self navigationController] setNavigationBarHidden:YES animated:NO];
+    self.tabBarController.delegate = self;
     
+    //[self.window addSubview:self.tabBarController.view];
+    //self.window.rootViewController =self.tabBarController;
     self.window.rootViewController = self.navigationController;
+    [self.tabBarController.tabBar setHidden:YES];
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

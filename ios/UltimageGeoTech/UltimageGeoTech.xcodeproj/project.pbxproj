@@ -16,8 +16,8 @@
 		469460BF16ADA3A60013F3D6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460BE16ADA3A60013F3D6 /* Default@2x.png */; };
 		469460C116ADA3A70013F3D6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460C016ADA3A70013F3D6 /* Default-568h@2x.png */; };
 		469460DE16ADB2D80013F3D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460D516ADB2D80013F3D6 /* AppDelegate.m */; };
-		469460DF16ADB2D80013F3D6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460D816ADB2D80013F3D6 /* DetailViewController.m */; };
-		469460E016ADB2D80013F3D6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469460D916ADB2D80013F3D6 /* DetailViewController.xib */; };
+		469460DF16ADB2D80013F3D6 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460D816ADB2D80013F3D6 /* HomeScreenViewController.m */; };
+		469460E016ADB2D80013F3D6 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469460D916ADB2D80013F3D6 /* HomeScreenViewController.xib */; };
 		469460E116ADB2D80013F3D6 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469460DC16ADB2D80013F3D6 /* MasterViewController.m */; };
 		469460E216ADB2D80013F3D6 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469460DD16ADB2D80013F3D6 /* MasterViewController.xib */; };
 		469460EF16ADBDC20013F3D6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 469460EE16ADBDC20013F3D6 /* background.png */; };
@@ -89,9 +89,9 @@
 		469AA52416B0D6AD006F931E /* tclose.png in Resources */ = {isa = PBXBuildFile; fileRef = 469AA4DD16B0D6AD006F931E /* tclose.png */; };
 		469AA52516B0D6AD006F931E /* ticon.png in Resources */ = {isa = PBXBuildFile; fileRef = 469AA4DE16B0D6AD006F931E /* ticon.png */; };
 		469AA52616B0D6AD006F931E /* TwitterDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 469AA4E016B0D6AD006F931E /* TwitterDialog.m */; };
-		469AA52B16B0D6CA006F931E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52A16B0D6CA006F931E /* Accounts.framework */; };
-		469AA52D16B0D6D0006F931E /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52C16B0D6D0006F931E /* Twitter.framework */; };
-		469AA52F16B0D6D7006F931E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52E16B0D6D7006F931E /* Social.framework */; };
+		469AA52B16B0D6CA006F931E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52A16B0D6CA006F931E /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		469AA52D16B0D6D0006F931E /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52C16B0D6D0006F931E /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		469AA52F16B0D6D7006F931E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52E16B0D6D7006F931E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ED49ABB616B0F30700FF0D85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */; };
 		ED49ABB816B0F30B00FF0D85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB716B0F30B00FF0D85 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -120,9 +120,9 @@
 		469460C016ADA3A70013F3D6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		469460D416ADB2D80013F3D6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		469460D516ADB2D80013F3D6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		469460D716ADB2D80013F3D6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		469460D816ADB2D80013F3D6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		469460D916ADB2D80013F3D6 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		469460D716ADB2D80013F3D6 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		469460D816ADB2D80013F3D6 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		469460D916ADB2D80013F3D6 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		469460DB16ADB2D80013F3D6 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		469460DC16ADB2D80013F3D6 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		469460DD16ADB2D80013F3D6 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
@@ -333,9 +333,9 @@
 		469460D616ADB2D80013F3D6 /* HomeScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
-				469460D716ADB2D80013F3D6 /* DetailViewController.h */,
-				469460D816ADB2D80013F3D6 /* DetailViewController.m */,
-				469460D916ADB2D80013F3D6 /* DetailViewController.xib */,
+				469460D716ADB2D80013F3D6 /* HomeScreenViewController.h */,
+				469460D816ADB2D80013F3D6 /* HomeScreenViewController.m */,
+				469460D916ADB2D80013F3D6 /* HomeScreenViewController.xib */,
 			);
 			path = HomeScreenViewController;
 			sourceTree = "<group>";
@@ -697,7 +697,7 @@
 				469460BD16ADA3A60013F3D6 /* Default.png in Resources */,
 				469460BF16ADA3A60013F3D6 /* Default@2x.png in Resources */,
 				469460C116ADA3A70013F3D6 /* Default-568h@2x.png in Resources */,
-				469460E016ADB2D80013F3D6 /* DetailViewController.xib in Resources */,
+				469460E016ADB2D80013F3D6 /* HomeScreenViewController.xib in Resources */,
 				469460E216ADB2D80013F3D6 /* MasterViewController.xib in Resources */,
 				469460EF16ADBDC20013F3D6 /* background.png in Resources */,
 				469460F116ADBEC40013F3D6 /* top_navigation_bar.png in Resources */,
@@ -748,7 +748,7 @@
 			files = (
 				469460B716ADA3A60013F3D6 /* main.m in Sources */,
 				469460DE16ADB2D80013F3D6 /* AppDelegate.m in Sources */,
-				469460DF16ADB2D80013F3D6 /* DetailViewController.m in Sources */,
+				469460DF16ADB2D80013F3D6 /* HomeScreenViewController.m in Sources */,
 				469460E116ADB2D80013F3D6 /* MasterViewController.m in Sources */,
 				469AA4EE16B0D6AD006F931E /* DataSet.m in Sources */,
 				469AA4EF16B0D6AD006F931E /* Facebook.m in Sources */,

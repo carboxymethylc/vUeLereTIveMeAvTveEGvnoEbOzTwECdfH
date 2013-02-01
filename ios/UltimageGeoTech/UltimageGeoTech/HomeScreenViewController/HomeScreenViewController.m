@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 LD.Chirag. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "HomeScreenViewController.h"
 
 
 
-@implementation DetailViewController
+@implementation HomeScreenViewController
 
 - (void)dealloc
 {
