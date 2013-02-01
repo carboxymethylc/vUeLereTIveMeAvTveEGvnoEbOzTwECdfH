@@ -39,6 +39,8 @@ static NSString* kAppId = @"401301426565681";
     
     UINavigationController*homeScreenNavController =  [[[UINavigationController alloc] initWithRootViewController:homeScreenViewController] autorelease];
     
+    [homeScreenNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
+    
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
     self.tabBarController.viewControllers = @[homeScreenNavController];
 

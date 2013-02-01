@@ -124,7 +124,6 @@
 						<string key="NSFrame">{{70, 196}, {181, 44}}</string>
 						<reference key="NSSuperview" ref="512207532"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1145,6 +1144,7 @@
 					<string key="className">MasterViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="check_fb_user_registration">id</string>
 						<string key="email_button_pressed:">id</string>
 						<string key="email_create_account_button_pressed:">id</string>
 						<string key="email_login_back_button_pressed:">id</string>
@@ -1155,6 +1155,10 @@
 						<string key="fb_button_pressed:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="check_fb_user_registration">
+							<string key="name">check_fb_user_registration</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="email_button_pressed:">
 							<string key="name">email_button_pressed:</string>
 							<string key="candidateClassName">id</string>

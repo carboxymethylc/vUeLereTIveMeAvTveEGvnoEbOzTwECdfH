@@ -251,7 +251,7 @@
     process_activity_indicator.hidden = TRUE;
     
     NSLog(@"\n data = %d",action_type);
-    NSLog(@"\n data = %@",responseDataDictionary);
+    NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
     
 
     switch (action_type)
@@ -259,6 +259,11 @@
         case 4:
         {
 
+            
+            
+            [appDelegate.navigationController removeFromParentViewController];
+            appDelegate.window.rootViewController =appDelegate.tabBarController;
+            
             //Fb login or registration
             break;
 
