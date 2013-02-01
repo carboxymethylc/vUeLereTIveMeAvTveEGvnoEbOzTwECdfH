@@ -2,7 +2,6 @@
 	session_start();
 	//$link = mysql_connect('68.178.136.205', 'zeenweb', 'Zeen#321!');
 	$link = mysql_connect('localhost', 'root', 'root');
-
 	if($link)
 	{
 		if(!mysql_select_db("utlimate_geo_tech"))
