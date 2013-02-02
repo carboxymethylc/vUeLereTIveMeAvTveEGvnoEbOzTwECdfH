@@ -124,12 +124,14 @@ static NSString* kAppId = @"401301426565681";
 
     
     //[[self navigationController] setNavigationBarHidden:YES animated:NO];
+    
     self.tabBarController.delegate = self;
+    [self.tabBarController.tabBar setHidden:YES];
     
     //[self.window addSubview:self.tabBarController.view];
     //self.window.rootViewController =self.tabBarController;
     self.window.rootViewController = self.navigationController;
-    [self.tabBarController.tabBar setHidden:YES];
+    
     
     
     [self.window makeKeyAndVisible];
