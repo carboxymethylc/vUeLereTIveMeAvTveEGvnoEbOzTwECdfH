@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4601EB3816BE7AD500497ED0 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB3316BE7AD500497ED0 /* backbutton.png */; };
+		4601EB3A16BE7AD500497ED0 /* forgotpasswordbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB3516BE7AD500497ED0 /* forgotpasswordbutton.png */; };
+		4601EB3B16BE7AD500497ED0 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB3616BE7AD500497ED0 /* login.png */; };
+		4601EB3C16BE7AD500497ED0 /* registerbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB3716BE7AD500497ED0 /* registerbutton.png */; };
+		4601EB3E16BE7C0800497ED0 /* createaccountbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB3D16BE7C0800497ED0 /* createaccountbutton.png */; };
+		4601EB4516BEA3CC00497ED0 /* loginemail.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB4316BEA3CC00497ED0 /* loginemail.png */; };
+		4601EB4616BEA3CC00497ED0 /* loginfacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB4416BEA3CC00497ED0 /* loginfacebook.png */; };
+		467DBDF416BD2EA50015CE60 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDF216BD2EA50015CE60 /* AccountViewController.m */; };
+		467DBDF516BD2EA50015CE60 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBDF316BD2EA50015CE60 /* AccountViewController.xib */; };
+		467DBDF916BD2EBF0015CE60 /* CreateRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDF716BD2EBF0015CE60 /* CreateRaceViewController.m */; };
+		467DBDFA16BD2EBF0015CE60 /* CreateRaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBDF816BD2EBF0015CE60 /* CreateRaceViewController.xib */; };
+		467DBDFE16BD2EE50015CE60 /* RaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDFC16BD2EE50015CE60 /* RaceViewController.m */; };
+		467DBDFF16BD2EE50015CE60 /* RaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBDFD16BD2EE50015CE60 /* RaceViewController.xib */; };
+		467DBE0316BD2EFA0015CE60 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBE0116BD2EFA0015CE60 /* ScoreViewController.m */; };
+		467DBE0416BD2EFA0015CE60 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */; };
 		469460AB16ADA3A60013F3D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AA16ADA3A60013F3D6 /* UIKit.framework */; };
 		469460AD16ADA3A60013F3D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AC16ADA3A60013F3D6 /* Foundation.framework */; };
 		469460AF16ADA3A60013F3D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AE16ADA3A60013F3D6 /* CoreGraphics.framework */; };
@@ -92,6 +107,10 @@
 		469AA52B16B0D6CA006F931E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52A16B0D6CA006F931E /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		469AA52D16B0D6D0006F931E /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52C16B0D6D0006F931E /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		469AA52F16B0D6D7006F931E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469AA52E16B0D6D7006F931E /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		46CA250A16BD6FE300C18E76 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA250916BD6FE300C18E76 /* CoreLocation.framework */; };
+		46CA250E16BD706500C18E76 /* CLLocation (Strings).m in Sources */ = {isa = PBXBuildFile; fileRef = 46CA250D16BD706500C18E76 /* CLLocation (Strings).m */; };
+		46CA252116BD9D7100C18E76 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CA252016BD9D7000C18E76 /* MyAnnotation.m */; };
+		46CA252316BDA10D00C18E76 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA252216BDA10D00C18E76 /* MapKit.framework */; };
 		ED49ABB616B0F30700FF0D85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */; };
 		ED49ABB816B0F30B00FF0D85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB716B0F30B00FF0D85 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -107,6 +126,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4601EB3316BE7AD500497ED0 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
+		4601EB3516BE7AD500497ED0 /* forgotpasswordbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotpasswordbutton.png; sourceTree = "<group>"; };
+		4601EB3616BE7AD500497ED0 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		4601EB3716BE7AD500497ED0 /* registerbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registerbutton.png; sourceTree = "<group>"; };
+		4601EB3D16BE7C0800497ED0 /* createaccountbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createaccountbutton.png; sourceTree = "<group>"; };
+		4601EB4316BEA3CC00497ED0 /* loginemail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginemail.png; sourceTree = "<group>"; };
+		4601EB4416BEA3CC00497ED0 /* loginfacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginfacebook.png; sourceTree = "<group>"; };
+		467DBDF116BD2EA50015CE60 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		467DBDF216BD2EA50015CE60 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		467DBDF316BD2EA50015CE60 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		467DBDF616BD2EBF0015CE60 /* CreateRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateRaceViewController.h; sourceTree = "<group>"; };
+		467DBDF716BD2EBF0015CE60 /* CreateRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateRaceViewController.m; sourceTree = "<group>"; };
+		467DBDF816BD2EBF0015CE60 /* CreateRaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateRaceViewController.xib; sourceTree = "<group>"; };
+		467DBDFB16BD2EE50015CE60 /* RaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceViewController.h; sourceTree = "<group>"; };
+		467DBDFC16BD2EE50015CE60 /* RaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceViewController.m; sourceTree = "<group>"; };
+		467DBDFD16BD2EE50015CE60 /* RaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RaceViewController.xib; sourceTree = "<group>"; };
+		467DBE0016BD2EFA0015CE60 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		467DBE0116BD2EFA0015CE60 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
+		467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
 		469460A616ADA3A60013F3D6 /* UltimageGeoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimageGeoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469460AA16ADA3A60013F3D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		469460AC16ADA3A60013F3D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -239,6 +277,12 @@
 		469AA52A16B0D6CA006F931E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		469AA52C16B0D6D0006F931E /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		469AA52E16B0D6D7006F931E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		46CA250916BD6FE300C18E76 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		46CA250C16BD706500C18E76 /* CLLocation (Strings).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation (Strings).h"; sourceTree = "<group>"; };
+		46CA250D16BD706500C18E76 /* CLLocation (Strings).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation (Strings).m"; sourceTree = "<group>"; };
+		46CA251F16BD9D7000C18E76 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		46CA252016BD9D7000C18E76 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		46CA252216BDA10D00C18E76 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ED49ABB716B0F30B00FF0D85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -248,6 +292,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46CA252316BDA10D00C18E76 /* MapKit.framework in Frameworks */,
+				46CA250A16BD6FE300C18E76 /* CoreLocation.framework in Frameworks */,
 				ED49ABB816B0F30B00FF0D85 /* Security.framework in Frameworks */,
 				ED49ABB616B0F30700FF0D85 /* SystemConfiguration.framework in Frameworks */,
 				469AA52F16B0D6D7006F931E /* Social.framework in Frameworks */,
@@ -262,9 +308,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		467DBDED16BD29670015CE60 /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				467DBDF116BD2EA50015CE60 /* AccountViewController.h */,
+				467DBDF216BD2EA50015CE60 /* AccountViewController.m */,
+				467DBDF316BD2EA50015CE60 /* AccountViewController.xib */,
+			);
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		467DBDEE16BD29670015CE60 /* CreateRaceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				467DBDF616BD2EBF0015CE60 /* CreateRaceViewController.h */,
+				467DBDF716BD2EBF0015CE60 /* CreateRaceViewController.m */,
+				467DBDF816BD2EBF0015CE60 /* CreateRaceViewController.xib */,
+			);
+			path = CreateRaceViewController;
+			sourceTree = "<group>";
+		};
+		467DBDEF16BD29670015CE60 /* RaceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				467DBDFB16BD2EE50015CE60 /* RaceViewController.h */,
+				467DBDFC16BD2EE50015CE60 /* RaceViewController.m */,
+				467DBDFD16BD2EE50015CE60 /* RaceViewController.xib */,
+			);
+			path = RaceViewController;
+			sourceTree = "<group>";
+		};
+		467DBDF016BD29670015CE60 /* ScoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				467DBE0016BD2EFA0015CE60 /* ScoreViewController.h */,
+				467DBE0116BD2EFA0015CE60 /* ScoreViewController.m */,
+				467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */,
+			);
+			path = ScoreViewController;
+			sourceTree = "<group>";
+		};
 		4694609B16ADA3A60013F3D6 = {
 			isa = PBXGroup;
 			children = (
+				46CA252216BDA10D00C18E76 /* MapKit.framework */,
+				46CA250916BD6FE300C18E76 /* CoreLocation.framework */,
 				ED49ABB716B0F30B00FF0D85 /* Security.framework */,
 				ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */,
 				469AA52E16B0D6D7006F931E /* Social.framework */,
@@ -297,6 +385,11 @@
 		469460B016ADA3A60013F3D6 /* UltimageGeoTech */ = {
 			isa = PBXGroup;
 			children = (
+				46CA250B16BD706500C18E76 /* LocationManager */,
+				467DBDED16BD29670015CE60 /* AccountViewController */,
+				467DBDEE16BD29670015CE60 /* CreateRaceViewController */,
+				467DBDEF16BD29670015CE60 /* RaceViewController */,
+				467DBDF016BD29670015CE60 /* ScoreViewController */,
 				469AA46016B0D6AD006F931E /* Share */,
 				469460D316ADB2D80013F3D6 /* AppDelegate */,
 				469460D616ADB2D80013F3D6 /* HomeScreenViewController */,
@@ -353,6 +446,13 @@
 		469460ED16ADBDC20013F3D6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4601EB4316BEA3CC00497ED0 /* loginemail.png */,
+				4601EB4416BEA3CC00497ED0 /* loginfacebook.png */,
+				4601EB3D16BE7C0800497ED0 /* createaccountbutton.png */,
+				4601EB3316BE7AD500497ED0 /* backbutton.png */,
+				4601EB3516BE7AD500497ED0 /* forgotpasswordbutton.png */,
+				4601EB3616BE7AD500497ED0 /* login.png */,
+				4601EB3716BE7AD500497ED0 /* registerbutton.png */,
 				469460F016ADBEC40013F3D6 /* top_navigation_bar.png */,
 				469460EE16ADBDC20013F3D6 /* background.png */,
 			);
@@ -626,6 +726,17 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		46CA250B16BD706500C18E76 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				46CA251F16BD9D7000C18E76 /* MyAnnotation.h */,
+				46CA252016BD9D7000C18E76 /* MyAnnotation.m */,
+				46CA250C16BD706500C18E76 /* CLLocation (Strings).h */,
+				46CA250D16BD706500C18E76 /* CLLocation (Strings).m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -736,6 +847,17 @@
 				469AA51A16B0D6AD006F931E /* DETweetURLAttachment@2x.png in Resources */,
 				469AA52416B0D6AD006F931E /* tclose.png in Resources */,
 				469AA52516B0D6AD006F931E /* ticon.png in Resources */,
+				467DBDF516BD2EA50015CE60 /* AccountViewController.xib in Resources */,
+				467DBDFA16BD2EBF0015CE60 /* CreateRaceViewController.xib in Resources */,
+				467DBDFF16BD2EE50015CE60 /* RaceViewController.xib in Resources */,
+				467DBE0416BD2EFA0015CE60 /* ScoreViewController.xib in Resources */,
+				4601EB3816BE7AD500497ED0 /* backbutton.png in Resources */,
+				4601EB3A16BE7AD500497ED0 /* forgotpasswordbutton.png in Resources */,
+				4601EB3B16BE7AD500497ED0 /* login.png in Resources */,
+				4601EB3C16BE7AD500497ED0 /* registerbutton.png in Resources */,
+				4601EB3E16BE7C0800497ED0 /* createaccountbutton.png in Resources */,
+				4601EB4516BEA3CC00497ED0 /* loginemail.png in Resources */,
+				4601EB4616BEA3CC00497ED0 /* loginfacebook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +904,12 @@
 				469AA52216B0D6AD006F931E /* NSString+URLEncoding.m in Sources */,
 				469AA52316B0D6AD006F931E /* OAuth.m in Sources */,
 				469AA52616B0D6AD006F931E /* TwitterDialog.m in Sources */,
+				467DBDF416BD2EA50015CE60 /* AccountViewController.m in Sources */,
+				467DBDF916BD2EBF0015CE60 /* CreateRaceViewController.m in Sources */,
+				467DBDFE16BD2EE50015CE60 /* RaceViewController.m in Sources */,
+				467DBE0316BD2EFA0015CE60 /* ScoreViewController.m in Sources */,
+				46CA250E16BD706500C18E76 /* CLLocation (Strings).m in Sources */,
+				46CA252116BD9D7100C18E76 /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

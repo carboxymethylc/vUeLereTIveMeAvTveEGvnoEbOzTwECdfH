@@ -12,6 +12,12 @@
 {
     Facebook *facebook;
     NSUserDefaults *user_defaults;
+    
+    NSMutableDictionary*user_information_dictionary;//this dictionary have all the info.regarding user
+    
+    float current_latitude;
+    float current_longitued;
+    
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -22,5 +28,11 @@
 
 @property (nonatomic, retain) Facebook *facebook;
 @property (nonatomic, retain) NSUserDefaults *user_defaults;
+
+@property (nonatomic, retain) NSMutableDictionary *user_information_dictionary;
+
+@property (nonatomic, readwrite) float current_latitude;
+@property (nonatomic, readwrite) float current_longitued;
+
 +(BOOL)hasConnectivity;
 @end

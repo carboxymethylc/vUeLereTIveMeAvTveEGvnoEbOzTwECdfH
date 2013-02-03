@@ -1,17 +1,31 @@
 //
-//  DetailViewController.h
+//  RaceViewController.h
 //  UltimageGeoTech
 //
-//  Created by LD.Chirag on 1/21/13.
+//  Created by LD.Chirag on 2/2/13.
 //  Copyright (c) 2013 LD.Chirag. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MKAnnotation.h>
+#import <MapKit/MKReverseGeocoder.h>
 #import "AppDelegate.h"
-@interface HomeScreenViewController : UIViewController<CLLocationManagerDelegate,UITextViewDelegate>
+
+
+@class MyAnnotation;
+@interface RaceViewController : UIViewController<MKReverseGeocoderDelegate,MKMapViewDelegate, CLLocationManagerDelegate>
 {
-    CLLocationManager *locationManager;
+    IBOutlet MKMapView *mapView;
+	MKPlacemark *mPlacemark;
+	CLLocationCoordinate2D location;
+    MyAnnotation *ann[100];
+	MKCoordinateRegion region;
+	MKCoordinateSpan span;
+    AppDelegate*app_delegate;
+    
     
     //variabales for Webservices
     
@@ -27,18 +41,18 @@
 	NSData *returnData;
 	NSError *error;
 	SBJSON *json;
-	NSDictionary *responseDataDictionary;
+	//NSDictionary *responseDataDictionary;
     NSMutableArray *responseDataArray;//May be needed
     
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
-
-    AppDelegate*app_delegate;
     
-    IBOutlet UITextView*news_textView;
-    int action_type;//1 for getting news,2 for current location
+
+
     
     
 }
-@property (nonatomic, retain) CLLocationManager *locationManager;
+
+@property(nonatomic, retain) MKReverseGeocoder *geoCoder;
+
 
 @end

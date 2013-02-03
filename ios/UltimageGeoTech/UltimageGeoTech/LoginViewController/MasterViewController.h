@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
 #import "AppDelegate.h"
-#import "JSON.h"
 
 
-@interface MasterViewController : UIViewController<FBRequestDelegate,FBDialogDelegate,FBSessionDelegate,UITextFieldDelegate>
+
+@interface MasterViewController : UIViewController<FBRequestDelegate,FBDialogDelegate,FBSessionDelegate,UITextFieldDelegate,UIAlertViewDelegate>
 {
     IBOutlet UIView*email_login_view;
     IBOutlet UIView*user_registration_view;
@@ -61,9 +61,14 @@
     
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
     
-    int action_type;//1=registration,2=forgotpassword,3= login,4= connect with fb(this includes registration + login)
+    int action_type;//1=registration,2=forgotpassword,3= login,4= connect with fb(this includes registration + login),
     
-    AppDelegate*appDelegate;
+    AppDelegate*app_delegate;
+    
+    IBOutlet UIScrollView*email_reg_scrollView;
+    
+    IBOutlet UITextField*forgotPassword_textField;
+    
     
 }
 

@@ -9,19 +9,33 @@
 #import "AppDelegate.h"
 
 #import "MasterViewController.h"
+
 #import "HomeScreenViewController.h"
+#import "AccountViewController.h"
+#import "CreateRaceViewController.h"
+#import "RaceViewController.h"
+#import "ScoreViewController.h"
+
+
 #import <sys/socket.h>
 #import <netinet/in.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
 @implementation AppDelegate
 @synthesize facebook,user_defaults;
+@synthesize user_information_dictionary;
+
+@synthesize current_longitued,current_latitude;
+
 static NSString* kAppId = @"401301426565681";
+
+
 - (void)dealloc
 {
     [_window release];
     [_navigationController release];
     [_tabBarController release];
+    [user_information_dictionary release];
     [super dealloc];
 }
 
@@ -30,10 +44,16 @@ static NSString* kAppId = @"401301426565681";
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 
+    
+    user_information_dictionary = [[NSMutableDictionary alloc] init];
+    
+    
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
     
+     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
     
+    //HomeScreenViewController
     
     HomeScreenViewController *homeScreenViewController = [[[HomeScreenViewController alloc] initWithNibName:@"HomeScreenViewController" bundle:nil] autorelease];
     
@@ -41,13 +61,61 @@ static NSString* kAppId = @"401301426565681";
     
     [homeScreenNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
     
+    
+
+    //AccountViewController
+    
+    AccountViewController *accountViewController = [[[AccountViewController alloc] initWithNibName:@"AccountViewController" bundle:nil] autorelease];
+    
+    UINavigationController*accountScreenNavController =  [[[UINavigationController alloc] initWithRootViewController:accountViewController] autorelease];
+    
+    [accountScreenNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    //CreateRaceViewController
+    
+    CreateRaceViewController *createRaceViewController = [[[CreateRaceViewController alloc] initWithNibName:@"CreateRaceViewController" bundle:nil] autorelease];
+    
+    UINavigationController*createRaceNavController =  [[[UINavigationController alloc] initWithRootViewController:createRaceViewController] autorelease];
+    
+    [createRaceNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
+
+    
+    //RaceViewController
+    RaceViewController *raceViewController = [[[RaceViewController alloc] initWithNibName:@"RaceViewController" bundle:nil] autorelease];
+    
+    UINavigationController*raceViewNavController =  [[[UINavigationController alloc] initWithRootViewController:raceViewController] autorelease];
+    
+    [raceViewNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
+
+    
+    //ScoreViewController
+    
+    ScoreViewController *scoreViewController = [[[ScoreViewController alloc] initWithNibName:@"ScoreViewController" bundle:nil] autorelease];
+    
+    UINavigationController*scoreViewNavController =  [[[UINavigationController alloc] initWithRootViewController:scoreViewController] autorelease];
+    
+    [scoreViewNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    
+
+
+
+    
+    
+    
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[homeScreenNavController];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:
+                                             raceViewNavController,
+                                            createRaceNavController,
+                                             scoreViewNavController,
+                                            homeScreenNavController, 
+                                            accountScreenNavController,
+                                              nil];
 
     
     
-
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_navigation_bar.png"] forBarMetrics:UIBarMetricsDefault];
+    self.tabBarController.selectedIndex = 3;
+   
     
     /*
      Facebook methods starts
@@ -126,11 +194,26 @@ static NSString* kAppId = @"401301426565681";
     //[[self navigationController] setNavigationBarHidden:YES animated:NO];
     
     self.tabBarController.delegate = self;
-    [self.tabBarController.tabBar setHidden:YES];
+    //[self.tabBarController.tabBar setHidden:YES];
     
     //[self.window addSubview:self.tabBarController.view];
     //self.window.rootViewController =self.tabBarController;
-    self.window.rootViewController = self.navigationController;
+    
+    
+    
+    
+    NSLog(@"\n user id = %@",[user_defaults objectForKey:@"user_id"]);
+
+    
+    if([user_defaults objectForKey:@"user_id"]!=nil && [[[user_defaults objectForKey:@"user_id"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]>0)
+    {
+        [user_information_dictionary setObject:[user_defaults objectForKey:@"user_id"] forKey:@"user_id"];
+        self.window.rootViewController =self.tabBarController;
+    }
+    else
+    {
+        self.window.rootViewController = self.navigationController;
+    }
     
     
     

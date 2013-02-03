@@ -7,13 +7,26 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "UltimageGeoTech/LoginViewController/MasterViewController.m"
-         timestampString = "381360551.384508"
+         filePath = "UltimageGeoTech/AccountViewController/AccountViewController.m"
+         timestampString = "381581152.271383"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "355"
-         endingLineNumber = "355"
-         landmarkName = "-check_fb_user_registration"
+         startingLineNumber = "189"
+         endingLineNumber = "189"
+         landmarkName = "-update_button_pressed:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UltimageGeoTech/LoginViewController/MasterViewController.m"
+         timestampString = "381595468.001026"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "313"
+         endingLineNumber = "313"
+         landmarkName = "-alertView:clickedButtonAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

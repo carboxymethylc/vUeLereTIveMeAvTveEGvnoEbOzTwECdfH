@@ -16,6 +16,7 @@
     if (self)
     {
         self.title = NSLocalizedString(@"Login", @"Login");
+        [[self navigationItem] setTitle:@"UTLTIMATE GT"];
     }
     return self;
 }
@@ -117,9 +118,31 @@
          responseDataDictionary = [json objectWithString:returnString error:&error];
          [responseDataDictionary retain];
          
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"race_completed"] forKey:@"race_completed"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"race_created"] forKey:@"race_created"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"gps_rank"] forKey:@"gps_rank"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"full_name"] forKey:@"full_name"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"city"] forKey:@"city"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"email"] forKey:@"email"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"user_name"] forKey:@"user_name"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"id"] forKey:@"user_id"];
+
+         
+         [app_delegate.user_defaults setObject:[responseDataDictionary objectForKey:@"id"] forKey:@"user_id"];
+         [app_delegate.user_defaults synchronize];
+
+         
+         
          NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
          
-         NSLog(@"\n data = %@",[[responseDataDictionary objectForKey:@"d"] objectAtIndex:0]);
          [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
          
          
@@ -151,8 +174,8 @@
 {
 
     /*
-    [appDelegate.navigationController removeFromParentViewController];
-    appDelegate.window.rootViewController =appDelegate.tabBarController;
+    [app_delegate.navigationController removeFromParentViewController];
+    app_delegate.window.rootViewController =app_delegate.tabBarController;
     */
      
     email_login_view.hidden = TRUE;
@@ -213,7 +236,27 @@
          
          NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
          
-         NSLog(@"\n data = %@",[[responseDataDictionary objectForKey:@"d"] objectAtIndex:0]);
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"race_completed"] forKey:@"race_completed"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"race_created"] forKey:@"race_created"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"gps_rank"] forKey:@"gps_rank"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"full_name"] forKey:@"full_name"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"city"] forKey:@"city"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"email"] forKey:@"email"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"user_name"] forKey:@"user_name"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"id"] forKey:@"user_id"];
+         
+         
+         [app_delegate.user_defaults setObject:[responseDataDictionary objectForKey:@"id"] forKey:@"user_id"];
+         [app_delegate.user_defaults synchronize];
+
+         
          [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
          
          
@@ -235,35 +278,158 @@
 -(IBAction)email_login_forgotPassword_button_pressed:(id)sender
 {
     //email_login_view.hidden = TRUE;
+    
+   
+    /*
+    UIAlertView*forgotPassword_alertView = [[UIAlertView alloc] initWithTitle:@"Please enter your user name" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    */
+    
+    
+    UIAlertView*forgotPassword_alertView = [[UIAlertView alloc] init];
+    
+    
+    
+    forgotPassword_textField.borderStyle = UITextBorderStyleRoundedRect;
+    forgotPassword_textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+    forgotPassword_textField.delegate = self;
+    [forgotPassword_alertView addSubview:forgotPassword_textField];
+    
+    forgotPassword_alertView.title = @"Please enter your username\n\n\n";
+    forgotPassword_alertView.tag = 998;
+    forgotPassword_alertView.message = nil;
+    forgotPassword_alertView.delegate = self;
+    [forgotPassword_alertView addButtonWithTitle:@"Cancel"];
+    [forgotPassword_alertView addButtonWithTitle:@"Ok"];
+    //[forgotPassword_alertView addButtonWithTitle:nil];
+    
+    
+    [forgotPassword_alertView show];
+    [forgotPassword_alertView release];
+    
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"\n buttonIndex = %d",buttonIndex);
+    
+    if(alertView.tag == 998)
+    {
+        
+        if(buttonIndex != 1)
+        {
+            
+            return;
+        }
+        
+        action_type = 2;
+        
+        
+        requestObjects = [NSArray arrayWithObjects:@"forgotpassword",
+                          forgotPassword_textField.text,nil];
+        requestkeys = [NSArray arrayWithObjects:@"action",
+                       @"user_name",
+                       nil];
+        
+        requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
+        requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
+        NSLog(@"\n \n \n \n \n \n ");
+        
+        NSLog(@"\n requestString = %@",requestString);
+        
+        requestData = [NSData dataWithBytes: [requestString UTF8String] length: [requestString length]];
+        urlString = [NSString stringWithFormat:@"%@",WEB_SERVICE_URL];
+        NSLog(@"\n urlString = %@",urlString);
+        request = [[[NSMutableURLRequest alloc] init] autorelease];
+        [request setURL:[NSURL URLWithString:urlString]]; // set URL for the request
+        [request setHTTPMethod:@"POST"]; // set method the request
+        
+        
+        [request setHTTPBody:requestData];
+        
+        
+        
+        process_activity_indicator.hidden = FALSE;
+        [self.view bringSubviewToFront:process_activity_indicator];
+        [process_activity_indicator startAnimating];
+        [self.view endEditing:TRUE];
+        [self.view setUserInteractionEnabled:FALSE];
+        
+        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        
+        [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+         {
+             NSLog(@"\n response we get = %@",response);
+             returnData = data;
+             NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+             NSLog(@"\n returnString == %@",returnString);
+             json = [[SBJSON new] autorelease];
+             
+             
+             responseDataDictionary = [json objectWithString:returnString error:&error];
+             [responseDataDictionary retain];
+             
+             NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
+             
+             [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
+             
+             
+             
+         }];
+        
+        [queue release];
+
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+}
+
+- (void)willPresentAlertView:(UIAlertView *)alertView
+{
+    //[alertView setFrame:CGRectMake(0, 0,275,200)];
+    
+}
 
 -(IBAction)email_login_back_button_pressed:(id)sender
 {
     email_login_view.hidden = TRUE;
 }
 
+#pragma mark -  enable_user_interaction
 
 -(void)enable_user_interaction
 {
     
     [process_activity_indicator stopAnimating];
     process_activity_indicator.hidden = TRUE;
-    
+    [self.view setUserInteractionEnabled:TRUE];
     NSLog(@"\n data = %d",action_type);
     NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
     
 
     switch (action_type)
     {
+            
+        case 2://forgotpassword
+        {
+            
+            UIAlertView*forgotPassword = [[UIAlertView alloc] initWithTitle:@"" message:[responseDataDictionary objectForKey:@"MESSAGE"] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            forgotPassword.tag = 999;
+            [forgotPassword show];
+            [forgotPassword release];
+            
+            return;
+            
+        }
+            
         case 4:
         {
-
-            
-            
-            [appDelegate.navigationController removeFromParentViewController];
-            appDelegate.window.rootViewController =appDelegate.tabBarController;
-            
             //Fb login or registration
             break;
 
@@ -273,6 +439,9 @@
             break;
     }
     
+    [app_delegate.navigationController removeFromParentViewController];
+    app_delegate.window.rootViewController =app_delegate.tabBarController;
+    
     /*
     UIAlertView*alertView = [[UIAlertView alloc] initWithTitle:@"" message:[responseDataDictionary objectForKey:@"MESSAGE"] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alertView show];
@@ -280,7 +449,7 @@
     */
     
         
-    [self.view setUserInteractionEnabled:TRUE];
+    
 }
 
 
@@ -296,6 +465,7 @@
 
 - (void)dealloc
 {
+    [forgotPassword_textField release];
     [super dealloc];
 }
 
@@ -311,14 +481,21 @@
     email_login_view.hidden = TRUE;
     user_registration_view.hidden = TRUE;
     
-    appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-	
+    app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+	email_reg_scrollView.contentSize = CGSizeMake(320,500);
+    
+    forgotPassword_textField = [[UITextField alloc] initWithFrame:CGRectMake(10,50,260,30)];
+    
+    
+    
 }
 
 #pragma mark - TextField Delegate Methods
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
+    email_reg_scrollView.contentSize = CGSizeMake(320,700);
+    
     return TRUE;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -331,7 +508,7 @@
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-   
+       email_reg_scrollView.contentSize = CGSizeMake(320,500);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -349,18 +526,18 @@
 -(void)check_fb_user_registration
 {
     
-    appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     
-    NSLog(@"\n name = %@",[appDelegate.user_defaults objectForKey:@"name"]);
-     NSLog(@"\n name = %@",[appDelegate.user_defaults objectForKey:@"fb_email"]);
-     NSLog(@"\n name = %@",[appDelegate.user_defaults objectForKey:@"fb_uid"]);
+    NSLog(@"\n name = %@",[app_delegate.user_defaults objectForKey:@"name"]);
+     NSLog(@"\n name = %@",[app_delegate.user_defaults objectForKey:@"fb_email"]);
+     NSLog(@"\n name = %@",[app_delegate.user_defaults objectForKey:@"fb_uid"]);
     
     action_type = 4;
     requestObjects = [NSArray arrayWithObjects:
                       @"fb_user_registration_login",
-                      [appDelegate.user_defaults objectForKey:@"fb_name"],
-                      [appDelegate.user_defaults objectForKey:@"fb_email"],
-                      [NSString stringWithFormat:@"%@",[appDelegate.user_defaults objectForKey:@"fb_uid"]],
+                      [app_delegate.user_defaults objectForKey:@"fb_name"],
+                      [app_delegate.user_defaults objectForKey:@"fb_email"],
+                      [NSString stringWithFormat:@"%@",[app_delegate.user_defaults objectForKey:@"fb_uid"]],
                       nil];
     
     requestkeys = [NSArray arrayWithObjects:
@@ -418,7 +595,27 @@
          
          NSLog(@"\n responseDataDictionary = %@",responseDataDictionary);
          
-         NSLog(@"\n data = %@",[[responseDataDictionary objectForKey:@"d"] objectAtIndex:0]);
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"race_completed"] forKey:@"race_completed"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"race_created"] forKey:@"race_created"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"gps_rank"] forKey:@"gps_rank"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"full_name"] forKey:@"full_name"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"city"] forKey:@"city"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"email"] forKey:@"email"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"user_name"] forKey:@"user_name"];
+         
+         [app_delegate.user_information_dictionary setObject:[responseDataDictionary objectForKey:@"id"] forKey:@"user_id"];
+         
+         
+         [app_delegate.user_defaults setObject:[responseDataDictionary objectForKey:@"id"] forKey:@"user_id"];
+         [app_delegate.user_defaults synchronize];
+         
          [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
          
          
@@ -479,7 +676,7 @@
  */
 - (void)request:(FBRequest *)request didLoad:(id)result
 {
-    appDelegate = [UIApplication sharedApplication].delegate;
+    app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     NSLog(@"\n request did load result = %@",result);
     
     if ([result isKindOfClass:[NSArray class]])
@@ -497,10 +694,10 @@
     NSLog(@"\n name for user = %@",[result objectForKey:@"name"]);
     NSLog(@"\n uid for user = %@",[result objectForKey:@"uid"]);
     
-    [appDelegate.user_defaults setObject:[result objectForKey:@"email"] forKey:@"fb_email"];
-    [appDelegate.user_defaults setObject:[result objectForKey:@"name"] forKey:@"fb_name"];
-    [appDelegate.user_defaults setObject:[result objectForKey:@"uid"] forKey:@"fb_uid"];
-    [appDelegate.user_defaults synchronize];
+    [app_delegate.user_defaults setObject:[result objectForKey:@"email"] forKey:@"fb_email"];
+    [app_delegate.user_defaults setObject:[result objectForKey:@"name"] forKey:@"fb_name"];
+    [app_delegate.user_defaults setObject:[result objectForKey:@"uid"] forKey:@"fb_uid"];
+    [app_delegate.user_defaults synchronize];
     
     [self check_fb_user_registration];
     
