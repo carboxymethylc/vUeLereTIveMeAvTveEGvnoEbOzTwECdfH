@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 31, 2013 at 08:06 AM
+-- Generation Time: Feb 03, 2013 at 08:23 PM
 -- Server version: 5.1.44
 -- PHP Version: 5.2.13
 
@@ -22,6 +22,27 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_latest_news`
+--
+
+DROP TABLE IF EXISTS `tbl_latest_news`;
+CREATE TABLE IF NOT EXISTS `tbl_latest_news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `news` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_latest_news`
+--
+
+INSERT INTO `tbl_latest_news` (`id`, `news`) VALUES
+(2, 'This is news for ultimate geotech.This is news for ultimate geotech.This is news for ultimate geotech.This is news for ultimate geotech.This is news for ultimate geotech.This is news for ultimate geotech.This is news for ultimate geotech.This is news for ultimate geotechThis is news for ultimate geotech'),
+(3, 'thi si sthired.fdjfldsj fdlsfjdslfjdslfjdsl jf');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_race`
 --
 
@@ -35,13 +56,17 @@ CREATE TABLE IF NOT EXISTS `tbl_race` (
   `race_difficulty` int(2) NOT NULL COMMENT '(user will give this after he finishes race)',
   `race_popularity` int(2) NOT NULL,
   `number_of_completion` int(11) NOT NULL COMMENT '(if user completes the race it will incremented by 1)',
+  `race_latitude` double NOT NULL,
+  `race_longitude` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `tbl_race`
 --
 
+INSERT INTO `tbl_race` (`id`, `race_name`, `number_of_questions`, `race_info`, `race_rating`, `race_difficulty`, `race_popularity`, `number_of_completion`, `race_latitude`, `race_longitude`) VALUES
+(1, 'race-1', 1, 'fdlsjfldj ldfjlsdj', 0, 0, 0, 0, -33.8634, 151.211);
 
 -- --------------------------------------------------------
 
@@ -131,13 +156,17 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `race_completed` int(11) NOT NULL,
   `race_created` int(11) NOT NULL,
   `gps_rank` int(11) NOT NULL,
+  `user_latitude` text NOT NULL,
+  `user_longitude` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `full_name`, `fb_id`, `email`, `city`, `user_name`, `password`, `race_completed`, `race_created`, `gps_rank`) VALUES
-(1, 'test', '', 'test@gmail.com', 'test', 'test@gmail.com', 'test', 0, 0, 0),
-(2, 'Test', '', 'test@astroninfotech.com', 'Ahmedabad', 'test@astroninfotech.com', 'test123', 0, 0, 0);
+INSERT INTO `tbl_user` (`id`, `full_name`, `fb_id`, `email`, `city`, `user_name`, `password`, `race_completed`, `race_created`, `gps_rank`, `user_latitude`, `user_longitude`) VALUES
+(1, 'test', '', 'test@gmail.com', 'test123', 'test@gmail.com', 'test', 0, 0, 0, '', ''),
+(2, 'Test', '', 'test@astroninfotech.com', 'Ahmedabad', 'test@astroninfotech.com', 'test123', 0, 0, 0, '', ''),
+(6, 'Nirav Sun', '100003522159987', 'test@sunshineinfotech.com', 'ahmedabad', 'test@sunshineinfotech.com', '', 0, 0, 0, '0.000000', '-122.406417'),
+(7, 'Chirag purohit', '', 'chirag@test.com', 'ahmedabad', 'chirag@test.com', 'chirag', 0, 0, 0, '', '');

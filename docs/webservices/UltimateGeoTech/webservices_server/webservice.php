@@ -2,6 +2,7 @@
 	session_start();
 	//$link = mysql_connect('68.178.136.205', 'zeenweb', 'Zeen#321!');
 	$link = mysql_connect('localhost', 'root', 'root');
+
 	if($link)
 	{
 		if(!mysql_select_db("utlimate_geo_tech"))
@@ -64,7 +65,193 @@
 	switch($action)
 	{
 		
-	
+		case "get_near_by_races":
+		{
+			
+			//lat = -33.8634
+			//long = 151.211
+			
+			$sql = "SELECT *, ( 3959 * acos( cos( radians(".$decodedData->user_latitude.") ) * cos( radians( race_latitude ) ) * cos( radians( race_longitude ) - radians(".$decodedData->user_longitude.") ) + sin( radians(".$decodedData->user_latitude.") ) * sin( radians( race_latitude ) ) ) ) AS distance FROM tbl_race HAVING distance < 20 ORDER BY distance";
+			
+			
+			
+			
+			$result = mysql_query($sql);
+			$resultArray = array();
+			if(!$result)
+			{
+				$resultArray['STATUS'] = "0";
+			}
+			else
+			{
+				$i=0;
+				while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+				{
+    				
+					$resultArray[$i]['id'] = $row["id"];
+					$resultArray[$i]['race_name'] = $row["race_name"];
+					$resultArray[$i]['number_of_questions'] = $row["number_of_questions"];
+					$resultArray[$i]['race_info'] = $row["race_info"];
+					$resultArray[$i]['race_rating'] = $row["race_rating"];
+					$resultArray[$i]['race_difficulty'] = $row["race_difficulty"];
+					$resultArray[$i]['race_popularity'] = $row["race_popularity"];
+					$resultArray[$i]['number_of_completion'] = $row["number_of_completion"];
+					$resultArray[$i]['race_latitude'] = $row["race_latitude"];
+					$resultArray[$i]['race_longitude '] = $row["race_longitude"];
+					 
+					
+					$i++;
+				}
+				
+				
+				
+				print_r($json->encode($resultArray));
+			}
+			
+			break;
+			
+			
+		}
+		
+		
+		case "get_latest_news":
+		{
+			
+			$sql = "SELECT * FROM tbl_latest_news"; 
+			$result = mysql_query($sql);
+			if(!$result)
+			{
+				//
+				$resultArray['STATUS'] = "0";
+			}
+			else
+			{
+				$i=0;
+				
+				
+				//echo "<pre>";
+				//print_r($row);
+				//echo"test..";
+				while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+				{
+    				//printf("ID: %s  Name: %s", $row["id"], $row["news"]);
+					
+					//echo"test..";
+					/**/
+					
+					$resultArray[$i]['id'] = $row["id"];
+					$resultArray[$i]['news'] = $row["news"];
+					
+					$i++;
+				}
+				
+				/*
+				while($row = mysql_fetch_array($result));
+				{
+					
+					echo $sql;
+					//$resultArray[$i]['id'] = $row["id"];
+					//$resultArray[$i]['news'] = $row["news"];
+					//$i++;
+				}
+				*/
+				
+				print_r($json->encode($resultArray));
+			}
+			
+			
+			break;
+		}
+		
+		
+		case "update_user_location":
+		{
+			
+			
+			$sql = "UPDATE 
+			tbl_user
+			SET user_latitude = '".$decodedData->user_latitude."',
+			user_longitude = '".$decodedData->user_longitude."'
+			WHERE id = ".$decodedData->user_id;
+			
+			
+			$result = mysql_query($sql);
+			if(!$result)
+			{
+				//
+				$resultArray['STATUS'] = "0";
+				$resultArray['MESSAGE'] = "Update Failed";
+			}
+			else
+			{
+				$resultArray['STATUS'] = "1";
+				$resultArray['MESSAGE'] = "Update Successfully";
+			}
+			
+			print_r($json->encode($resultArray));
+			break;
+			
+			
+		}
+		
+		case "update_user_detail":
+		{
+			$sql = "UPDATE 
+			tbl_user 
+			SET full_name = '".$decodedData->full_name."',
+			city= '".$decodedData->city."',
+			password = '".$decodedData->password."'
+			WHERE id = ".$decodedData->user_id;
+			$result = mysql_query($sql);
+			if(!$result)
+			{
+				//
+				$resultArray['STATUS'] = "0";
+				$resultArray['MESSAGE'] = "Update Failed";
+			}
+			else
+			{
+				$resultArray['STATUS'] = "1";
+				$resultArray['MESSAGE'] = "Update Successfully";
+			}
+			
+			print_r($json->encode($resultArray));
+			break;
+		}
+		
+		case "get_user_detail":
+		{
+			$sql = "SELECT * FROM tbl_user WHERE id = '".$decodedData->user_id."'";
+			$result = mysql_query($sql);
+			if(!$result)
+			{
+				//
+				$resultArray['STATUS'] = "0";
+			}
+			else
+			{
+				
+				$row = mysql_fetch_array($result);
+				
+				$resultArray['STATUS'] = "1";
+				//$resultArray['id'] = $row["id"];
+				$resultArray['user_name'] = $row["user_name"];
+				$resultArray['email'] = $row["email"];
+				$resultArray['password'] = $row["password"];
+				$resultArray['full_name'] = $row["full_name"];
+				$resultArray['city'] = $row["city"];
+				$resultArray['race_completed'] = $row["race_completed"];
+				$resultArray['race_created'] = $row["race_created"];
+				$resultArray['gps_rank'] = $row["gps_rank"];
+				
+				print_r($json->encode($resultArray));
+				break;
+				
+				
+			}
+			break;
+			
+		}
 		case "fb_user_registration_login":
 		{
 			$sql = "SELECT * FROM tbl_user WHERE fb_id = '".$decodedData->fb_id."'";
@@ -79,6 +266,7 @@
 				
 				
 					
+				$resultArray['id'] = $row["id"];
 				$resultArray['user_name'] = $row["user_name"];
 				$resultArray['email'] = $row["email"];
 				$resultArray['password'] = $row["password"];
@@ -130,7 +318,23 @@
 				{
 					$resultArray['STATUS'] = "1";
 					$resultArray['MESSAGE'] = "Registration successful";
+					
+					
+					$resultArray['id'] = mysql_insert_id();
+					$resultArray['user_name'] = $decodedData->email;
+					$resultArray['email'] = $decodedData->email;
+					$resultArray['password'] = '';
+					$resultArray['full_name'] = $decodedData->full_name;
+					$resultArray['city'] = '';
+					$resultArray['race_completed'] = 0;
+					$resultArray['race_created'] = 0;
+					$resultArray['gps_rank'] = 0;
+				
 					print_r($json->encode($resultArray));
+					
+					
+					
+					
 				}
 				
 				
@@ -178,6 +382,19 @@
 			
 			$resultArray['STATUS'] = "1";
 			$resultArray['MESSAGE'] = "Registration successful";
+			
+			$resultArray['id'] = mysql_insert_id();
+			$resultArray['user_name'] = $decodedData->user_name;
+			$resultArray['email'] = $decodedData->email;
+			$resultArray['password'] = $decodedData->password;
+			$resultArray['full_name'] = $decodedData->full_name;
+			$resultArray['city'] = $decodedData->city;
+			$resultArray['race_completed'] = 0;
+			$resultArray['race_created'] = 0;
+			$resultArray['gps_rank'] = 0;
+			
+			
+			
 			print_r($json->encode($resultArray));
 			
 			
@@ -203,6 +420,8 @@
 				{	
 					$row = mysql_fetch_array($result);
 					
+					
+					$resultArray['id'] = $row["id"];
 					$resultArray['user_name'] = $row["user_name"];
 					$resultArray['email'] = $row["email"];
 					$resultArray['password'] = $row["password"];
@@ -230,7 +449,7 @@
 		
 		case "forgotpassword":
 		{
-			$sql = "SELECT * FROM users WHERE username = '".$decodedData->username."'";
+			$sql = "SELECT * FROM  tbl_user WHERE user_name = '".$decodedData->user_name."'";
 			
 			$result = mysql_query($sql);
 			if(mysql_num_rows($result)==0)
@@ -254,7 +473,7 @@
 			<body>
 			<table width=\"320px\">
 			<tr>
-			<td>Hello: ".$row["first_name"]."</td>
+			<td>Hello: ".$row["full_name"]."</td>
 			</tr>
 			<tr>
 			<td>Your password is :".$row["password"]."</td>
@@ -269,7 +488,7 @@
 			$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
 			
 			// More headers
-			$headers .= 'From: <admin@sweetshop.com>' . "\r\n";
+			$headers .= 'From: <admin@ultimategeotech.com>' . "\r\n";
 			
 			
 			if(mail($to,$subject,$message,$headers))
