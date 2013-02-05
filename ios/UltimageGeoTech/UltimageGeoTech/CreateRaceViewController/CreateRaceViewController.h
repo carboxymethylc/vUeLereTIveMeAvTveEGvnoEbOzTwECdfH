@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CreateRaceViewController : UIViewController
+{
+    IBOutlet UIButton*create_race_Button;
+}
+-(IBAction)create_race_button_pressed:(id)sender;
 
 @end

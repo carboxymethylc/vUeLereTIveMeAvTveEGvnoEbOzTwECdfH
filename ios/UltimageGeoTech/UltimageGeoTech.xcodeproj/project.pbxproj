@@ -22,6 +22,12 @@
 		467DBDFF16BD2EE50015CE60 /* RaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBDFD16BD2EE50015CE60 /* RaceViewController.xib */; };
 		467DBE0316BD2EFA0015CE60 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBE0116BD2EFA0015CE60 /* ScoreViewController.m */; };
 		467DBE0416BD2EFA0015CE60 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */; };
+		468EE90916C17C1C0089044D /* home_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 468EE90716C17C1C0089044D /* home_hover.png */; };
+		468EE90A16C17C1C0089044D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 468EE90816C17C1C0089044D /* home.png */; };
+		468EE91416C17DDB0089044D /* CreateNewRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468EE91216C17DDB0089044D /* CreateNewRaceViewController.m */; };
+		468EE91516C17DDB0089044D /* CreateNewRaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468EE91316C17DDB0089044D /* CreateNewRaceViewController.xib */; };
+		468EE91F16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468EE91D16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m */; };
+		468EE92016C17F9E0089044D /* AddMultipleChoiceQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468EE91E16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.xib */; };
 		469460AB16ADA3A60013F3D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AA16ADA3A60013F3D6 /* UIKit.framework */; };
 		469460AD16ADA3A60013F3D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AC16ADA3A60013F3D6 /* Foundation.framework */; };
 		469460AF16ADA3A60013F3D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469460AE16ADA3A60013F3D6 /* CoreGraphics.framework */; };
@@ -145,6 +151,14 @@
 		467DBE0016BD2EFA0015CE60 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		467DBE0116BD2EFA0015CE60 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
+		468EE90716C17C1C0089044D /* home_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_hover.png; sourceTree = "<group>"; };
+		468EE90816C17C1C0089044D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		468EE91116C17DDB0089044D /* CreateNewRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewRaceViewController.h; sourceTree = "<group>"; };
+		468EE91216C17DDB0089044D /* CreateNewRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewRaceViewController.m; sourceTree = "<group>"; };
+		468EE91316C17DDB0089044D /* CreateNewRaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateNewRaceViewController.xib; sourceTree = "<group>"; };
+		468EE91C16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMultipleChoiceQuestionViewController.h; sourceTree = "<group>"; };
+		468EE91D16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMultipleChoiceQuestionViewController.m; sourceTree = "<group>"; };
+		468EE91E16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMultipleChoiceQuestionViewController.xib; sourceTree = "<group>"; };
 		469460A616ADA3A60013F3D6 /* UltimageGeoTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltimageGeoTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469460AA16ADA3A60013F3D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		469460AC16ADA3A60013F3D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -321,6 +335,8 @@
 		467DBDEE16BD29670015CE60 /* CreateRaceViewController */ = {
 			isa = PBXGroup;
 			children = (
+				468EE91B16C17F9E0089044D /* AddMultipleChoiceQuestionViewController */,
+				468EE91016C17DDB0089044D /* CreateNewRace */,
 				467DBDF616BD2EBF0015CE60 /* CreateRaceViewController.h */,
 				467DBDF716BD2EBF0015CE60 /* CreateRaceViewController.m */,
 				467DBDF816BD2EBF0015CE60 /* CreateRaceViewController.xib */,
@@ -346,6 +362,26 @@
 				467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */,
 			);
 			path = ScoreViewController;
+			sourceTree = "<group>";
+		};
+		468EE91016C17DDB0089044D /* CreateNewRace */ = {
+			isa = PBXGroup;
+			children = (
+				468EE91116C17DDB0089044D /* CreateNewRaceViewController.h */,
+				468EE91216C17DDB0089044D /* CreateNewRaceViewController.m */,
+				468EE91316C17DDB0089044D /* CreateNewRaceViewController.xib */,
+			);
+			path = CreateNewRace;
+			sourceTree = "<group>";
+		};
+		468EE91B16C17F9E0089044D /* AddMultipleChoiceQuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				468EE91C16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.h */,
+				468EE91D16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m */,
+				468EE91E16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.xib */,
+			);
+			path = AddMultipleChoiceQuestionViewController;
 			sourceTree = "<group>";
 		};
 		4694609B16ADA3A60013F3D6 = {
@@ -446,6 +482,8 @@
 		469460ED16ADBDC20013F3D6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				468EE90716C17C1C0089044D /* home_hover.png */,
+				468EE90816C17C1C0089044D /* home.png */,
 				4601EB4316BEA3CC00497ED0 /* loginemail.png */,
 				4601EB4416BEA3CC00497ED0 /* loginfacebook.png */,
 				4601EB3D16BE7C0800497ED0 /* createaccountbutton.png */,
@@ -858,6 +896,10 @@
 				4601EB3E16BE7C0800497ED0 /* createaccountbutton.png in Resources */,
 				4601EB4516BEA3CC00497ED0 /* loginemail.png in Resources */,
 				4601EB4616BEA3CC00497ED0 /* loginfacebook.png in Resources */,
+				468EE90916C17C1C0089044D /* home_hover.png in Resources */,
+				468EE90A16C17C1C0089044D /* home.png in Resources */,
+				468EE91516C17DDB0089044D /* CreateNewRaceViewController.xib in Resources */,
+				468EE92016C17F9E0089044D /* AddMultipleChoiceQuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +952,8 @@
 				467DBE0316BD2EFA0015CE60 /* ScoreViewController.m in Sources */,
 				46CA250E16BD706500C18E76 /* CLLocation (Strings).m in Sources */,
 				46CA252116BD9D7100C18E76 /* MyAnnotation.m in Sources */,
+				468EE91416C17DDB0089044D /* CreateNewRaceViewController.m in Sources */,
+				468EE91F16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

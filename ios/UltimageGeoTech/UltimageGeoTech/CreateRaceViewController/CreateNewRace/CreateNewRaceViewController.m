@@ -1,25 +1,24 @@
 //
-//  CreateRaceViewController.m
+//  CreateNewRaceViewController.m
 //  UltimageGeoTech
 //
-//  Created by LD.Chirag on 2/2/13.
+//  Created by LD.Chirag on 2/5/13.
 //  Copyright (c) 2013 LD.Chirag. All rights reserved.
 //
 
-#import "CreateRaceViewController.h"
+#import "CreateNewRaceViewController.h"
 
-@interface CreateRaceViewController ()
+@interface CreateNewRaceViewController ()
 
 @end
 
-@implementation CreateRaceViewController
+@implementation CreateNewRaceViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-         self.title = NSLocalizedString(@"Create Race", @"Create Race");
     }
     return self;
 }
@@ -34,11 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)create_race_button_pressed:(id)sender
-{
-    
 }
 
 @end
