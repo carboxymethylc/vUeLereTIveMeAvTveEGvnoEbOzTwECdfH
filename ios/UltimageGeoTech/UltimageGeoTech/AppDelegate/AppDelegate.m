@@ -26,7 +26,7 @@
 @synthesize user_information_dictionary;
 
 @synthesize current_longitued,current_latitude;
-
+@synthesize bottomView;
 static NSString* kAppId = @"401301426565681";
 
 
@@ -36,6 +36,7 @@ static NSString* kAppId = @"401301426565681";
     [_navigationController release];
     [_tabBarController release];
     [user_information_dictionary release];
+    [bottomView release];
     [super dealloc];
 }
 
@@ -100,6 +101,82 @@ static NSString* kAppId = @"401301426565681";
 
 
 
+    bottomView = [[UIView alloc] initWithFrame:CGRectMake(0,386,320,48)];
+    
+    NSLog(@"\n bottom view in app= %@",bottomView);
+    
+    UIImageView*bottomBGImageVIew = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"footer_bg_ipad_landscape.png"]];
+    bottomBGImageVIew.frame = CGRectMake(0, 0,320,48);
+    
+    //[bottomView addSubview:bottomBGImageVIew];
+    [bottomBGImageVIew release];
+
+    
+    btnRace=[UIButton buttonWithType:UIButtonTypeCustom] ;
+    [btnRace setBackgroundImage:[UIImage imageNamed:@"race.png"] forState:UIControlStateNormal];
+    [btnRace setBackgroundImage:[UIImage imageNamed:@"racehover.png"] forState:UIControlStateSelected];
+    [btnRace setFrame:CGRectMake(0,0,64,48)];
+    [btnRace addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [btnRace setTag:0];
+    [btnRace setSelected:YES];
+    [bottomView addSubview:btnRace];
+    
+    
+    btnCreateRace=[UIButton buttonWithType:UIButtonTypeCustom];
+    [btnCreateRace setBackgroundImage:[UIImage imageNamed:@"create.png"] forState:UIControlStateNormal];
+    [btnCreateRace setBackgroundImage:[UIImage imageNamed:@"createhover.png"] forState:UIControlStateSelected];
+    [btnCreateRace setFrame:CGRectMake(64,0,64,48)];
+    [btnCreateRace addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [btnCreateRace setTag:1];
+    [btnCreateRace setSelected:NO];
+    [bottomView addSubview:btnCreateRace];
+    
+    
+    btnScore=[UIButton buttonWithType:UIButtonTypeCustom];
+    [btnScore setBackgroundImage:[UIImage imageNamed:@"scores.png"] forState:UIControlStateNormal];
+    [btnScore setBackgroundImage:[UIImage imageNamed:@"scoreshover.png"] forState:UIControlStateSelected];
+    [btnScore setFrame:CGRectMake(128,0,64,48)];
+    [btnScore addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [btnScore setTag:2];
+    [btnScore setSelected:NO];
+    [bottomView addSubview:btnScore];
+    
+    
+    btnHome=[UIButton buttonWithType:UIButtonTypeCustom];
+    [btnHome setBackgroundImage:[UIImage imageNamed:@"history.png"] forState:UIControlStateNormal];
+    [btnHome setBackgroundImage:[UIImage imageNamed:@"historyhover.png"] forState:UIControlStateSelected];
+    [btnHome setFrame:CGRectMake(192,0,64,48)];
+    [btnHome addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [btnHome setTag:3];
+    [btnHome setSelected:NO];
+    [bottomView addSubview:btnHome];
+    
+   
+    btnAccount=[UIButton buttonWithType:UIButtonTypeCustom];
+    [btnAccount setBackgroundImage:[UIImage imageNamed:@"account.png"] forState:UIControlStateNormal];
+    [btnAccount setBackgroundImage:[UIImage imageNamed:@"accounthover.png"] forState:UIControlStateSelected];
+    [btnAccount setFrame:CGRectMake(256,0,64,48)];
+    [btnAccount addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [btnAccount setTag:4];
+    [btnAccount setSelected:NO];
+    [bottomView addSubview:btnAccount];
+    
+    bottomView.backgroundColor = [UIColor redColor];
+    
+    //bottomView.hidden = TRUE;
+   
+    
+    
+    
+    
+    /*
+    currentsender=btnSound;
+    previoussender=btnSound;
+    */
+    
+    
+    
     
     
     
@@ -195,8 +272,7 @@ static NSString* kAppId = @"401301426565681";
     
     self.tabBarController.delegate = self;
     //[self.tabBarController.tabBar setHidden:YES];
-    
-    //[self.window addSubview:self.tabBarController.view];
+   
     //self.window.rootViewController =self.tabBarController;
     
     
@@ -247,6 +323,42 @@ static NSString* kAppId = @"401301426565681";
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+-(IBAction)buttonTabBarPressed:(id)sender
+{
+    
+    [btnRace setSelected:NO];
+    [btnCreateRace setSelected:NO];
+    [btnScore setSelected:NO];
+    [btnHome setSelected:NO];
+    [btnAccount setSelected:NO];
+    
+    
+    //self.bool_secondindexclicked = TRUE;
+    NSArray *arr = [_tabBarController viewControllers];
+    
+    for(UINavigationController *view1 in arr)
+    {
+        //nslog(@"view1 %@",view1);
+        if([view1 isKindOfClass:[UINavigationController class]])
+        {
+            [view1 popToRootViewControllerAnimated:TRUE];
+        }
+    }
+    
+    /*
+    [currentsender setSelected:NO];
+    
+    previoussender=currentsender;
+    
+    currentsender=sender;
+    */
+    
+    [_tabBarController setSelectedIndex:[sender tag]];
+    
+    [sender setSelected:YES];
+}
+
 
 +(BOOL)hasConnectivity
 {

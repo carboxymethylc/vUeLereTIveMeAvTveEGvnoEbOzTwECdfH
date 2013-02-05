@@ -18,6 +18,18 @@
     float current_latitude;
     float current_longitued;
     
+    
+    
+    
+    
+    UIButton *btnRace;
+    UIButton *btnCreateRace;
+    UIButton *btnScore;
+    UIButton *btnHome;
+    UIButton *btnAccount;
+    UIView*bottomView;
+    
+    
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -33,6 +45,9 @@
 
 @property (nonatomic, readwrite) float current_latitude;
 @property (nonatomic, readwrite) float current_longitued;
+
+@property (nonatomic,retain)UIView* bottomView;
+-(IBAction)buttonTabBarPressed:(id)sender;
 
 +(BOOL)hasConnectivity;
 @end
