@@ -25,10 +25,14 @@
 @synthesize facebook,user_defaults;
 @synthesize user_information_dictionary;
 
+
 @synthesize current_longitued,current_latitude;
 @synthesize bottomView;
 static NSString* kAppId = @"401301426565681";
 
+//Race Question information..
+
+@synthesize current_race_question_array,current_question_latitude,current_question_longitued;
 
 - (void)dealloc
 {
@@ -144,8 +148,8 @@ static NSString* kAppId = @"401301426565681";
     
     
     btnHome=[UIButton buttonWithType:UIButtonTypeCustom];
-    [btnHome setBackgroundImage:[UIImage imageNamed:@"history.png"] forState:UIControlStateNormal];
-    [btnHome setBackgroundImage:[UIImage imageNamed:@"historyhover.png"] forState:UIControlStateSelected];
+    [btnHome setBackgroundImage:[UIImage imageNamed:@"home.png"] forState:UIControlStateNormal];
+    [btnHome setBackgroundImage:[UIImage imageNamed:@"home_hover.png"] forState:UIControlStateSelected];
     [btnHome setFrame:CGRectMake(192,0,64,48)];
     [btnHome addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
     [btnHome setTag:3];

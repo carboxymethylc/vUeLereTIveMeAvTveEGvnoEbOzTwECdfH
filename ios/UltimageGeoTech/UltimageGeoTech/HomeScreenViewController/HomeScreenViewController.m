@@ -153,15 +153,15 @@
     
     //[locationManager stopUpdatingLocation];
     
+    //testing
     
+    [app_delegate.user_information_dictionary setObject:@"1" forKey:@"user_id"];
     
     requestObjects = [NSArray arrayWithObjects:
                       @"update_user_location",
                       [NSString stringWithFormat:@"%f",newLocation.coordinate.latitude],
                       [NSString stringWithFormat:@"%f",newLocation.coordinate.longitude],
                       [app_delegate.user_information_dictionary objectForKey:@"user_id"],
-                      
-                      
                       nil];
     
     requestkeys = [NSArray arrayWithObjects:

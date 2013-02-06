@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppDelegate.h"
 @interface CreateNewRaceViewController : UIViewController
+{
+    AppDelegate*app_delegate;
+}
+
+-(IBAction)button_clicked:(id)sender;
 
 @end

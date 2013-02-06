@@ -30,6 +30,13 @@
     UIView*bottomView;
     
     
+    //Race Question information..
+    NSMutableArray*current_race_question_array;
+    
+    float current_question_latitude;
+    float current_question_longitued;
+    
+    
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -48,6 +55,13 @@
 
 @property (nonatomic,retain)UIView* bottomView;
 -(IBAction)buttonTabBarPressed:(id)sender;
+
+
+//Race Question information..
+@property (nonatomic,retain)NSMutableArray*current_race_question_array;
+
+@property (nonatomic,readwrite)float current_question_latitude;
+@property (nonatomic,readwrite)float current_question_longitued;
 
 +(BOOL)hasConnectivity;
 @end

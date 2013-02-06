@@ -22,8 +22,6 @@
 		467DBDFF16BD2EE50015CE60 /* RaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBDFD16BD2EE50015CE60 /* RaceViewController.xib */; };
 		467DBE0316BD2EFA0015CE60 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBE0116BD2EFA0015CE60 /* ScoreViewController.m */; };
 		467DBE0416BD2EFA0015CE60 /* ScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */; };
-		468EE90916C17C1C0089044D /* home_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = 468EE90716C17C1C0089044D /* home_hover.png */; };
-		468EE90A16C17C1C0089044D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 468EE90816C17C1C0089044D /* home.png */; };
 		468EE91416C17DDB0089044D /* CreateNewRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468EE91216C17DDB0089044D /* CreateNewRaceViewController.m */; };
 		468EE91516C17DDB0089044D /* CreateNewRaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 468EE91316C17DDB0089044D /* CreateNewRaceViewController.xib */; };
 		468EE91F16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 468EE91D16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m */; };
@@ -119,12 +117,18 @@
 		46CA252316BDA10D00C18E76 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA252216BDA10D00C18E76 /* MapKit.framework */; };
 		ED49ABB616B0F30700FF0D85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */; };
 		ED49ABB816B0F30B00FF0D85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED49ABB716B0F30B00FF0D85 /* Security.framework */; };
+		ED99980316C2158E00C51E00 /* home_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = ED99980116C2158E00C51E00 /* home_hover.png */; };
+		ED99980416C2158E00C51E00 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = ED99980216C2158E00C51E00 /* home.png */; };
+		ED99980E16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED99980C16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.m */; };
+		ED99980F16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED99980D16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.xib */; };
+		ED99982E16C23A0100C51E00 /* AddTrueFalseQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED99982C16C23A0100C51E00 /* AddTrueFalseQuestionViewController.m */; };
+		ED99982F16C23A0100C51E00 /* AddTrueFalseQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED99982D16C23A0100C51E00 /* AddTrueFalseQuestionViewController.xib */; };
+		ED99983816C257CD00C51E00 /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED99983616C257CD00C51E00 /* ChooseLocationViewController.m */; };
+		ED99983916C257CD00C51E00 /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED99983716C257CD00C51E00 /* ChooseLocationViewController.xib */; };
 		EDBC424E16C0E7C10010C90D /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424416C0E7C10010C90D /* account.png */; };
 		EDBC424F16C0E7C10010C90D /* accounthover.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424516C0E7C10010C90D /* accounthover.png */; };
 		EDBC425016C0E7C10010C90D /* create.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424616C0E7C10010C90D /* create.png */; };
 		EDBC425116C0E7C10010C90D /* createhover.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424716C0E7C10010C90D /* createhover.png */; };
-		EDBC425216C0E7C10010C90D /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424816C0E7C10010C90D /* history.png */; };
-		EDBC425316C0E7C10010C90D /* historyhover.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424916C0E7C10010C90D /* historyhover.png */; };
 		EDBC425416C0E7C10010C90D /* race.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424A16C0E7C10010C90D /* race.png */; };
 		EDBC425516C0E7C10010C90D /* racehover.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424B16C0E7C10010C90D /* racehover.png */; };
 		EDBC425616C0E7C10010C90D /* scores.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBC424C16C0E7C10010C90D /* scores.png */; };
@@ -161,8 +165,6 @@
 		467DBE0016BD2EFA0015CE60 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		467DBE0116BD2EFA0015CE60 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		467DBE0216BD2EFA0015CE60 /* ScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreViewController.xib; sourceTree = "<group>"; };
-		468EE90716C17C1C0089044D /* home_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_hover.png; sourceTree = "<group>"; };
-		468EE90816C17C1C0089044D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		468EE91116C17DDB0089044D /* CreateNewRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewRaceViewController.h; sourceTree = "<group>"; };
 		468EE91216C17DDB0089044D /* CreateNewRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewRaceViewController.m; sourceTree = "<group>"; };
 		468EE91316C17DDB0089044D /* CreateNewRaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateNewRaceViewController.xib; sourceTree = "<group>"; };
@@ -309,12 +311,21 @@
 		46CA252216BDA10D00C18E76 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		ED49ABB516B0F30700FF0D85 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ED49ABB716B0F30B00FF0D85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ED99980116C2158E00C51E00 /* home_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_hover.png; sourceTree = "<group>"; };
+		ED99980216C2158E00C51E00 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		ED99980B16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMissingLetterQuestionViewController.h; sourceTree = "<group>"; };
+		ED99980C16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMissingLetterQuestionViewController.m; sourceTree = "<group>"; };
+		ED99980D16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddMissingLetterQuestionViewController.xib; sourceTree = "<group>"; };
+		ED99982B16C23A0100C51E00 /* AddTrueFalseQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTrueFalseQuestionViewController.h; sourceTree = "<group>"; };
+		ED99982C16C23A0100C51E00 /* AddTrueFalseQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTrueFalseQuestionViewController.m; sourceTree = "<group>"; };
+		ED99982D16C23A0100C51E00 /* AddTrueFalseQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTrueFalseQuestionViewController.xib; sourceTree = "<group>"; };
+		ED99983516C257CD00C51E00 /* ChooseLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationViewController.h; sourceTree = "<group>"; };
+		ED99983616C257CD00C51E00 /* ChooseLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationViewController.m; sourceTree = "<group>"; };
+		ED99983716C257CD00C51E00 /* ChooseLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLocationViewController.xib; sourceTree = "<group>"; };
 		EDBC424416C0E7C10010C90D /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 		EDBC424516C0E7C10010C90D /* accounthover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accounthover.png; sourceTree = "<group>"; };
 		EDBC424616C0E7C10010C90D /* create.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create.png; sourceTree = "<group>"; };
 		EDBC424716C0E7C10010C90D /* createhover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createhover.png; sourceTree = "<group>"; };
-		EDBC424816C0E7C10010C90D /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
-		EDBC424916C0E7C10010C90D /* historyhover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historyhover.png; sourceTree = "<group>"; };
 		EDBC424A16C0E7C10010C90D /* race.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = race.png; sourceTree = "<group>"; };
 		EDBC424B16C0E7C10010C90D /* racehover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = racehover.png; sourceTree = "<group>"; };
 		EDBC424C16C0E7C10010C90D /* scores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scores.png; sourceTree = "<group>"; };
@@ -355,6 +366,9 @@
 		467DBDEE16BD29670015CE60 /* CreateRaceViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ED99983416C257C100C51E00 /* ChooseLocationViewController */,
+				ED99982A16C239EC00C51E00 /* AddTrueFalseQuestionViewController */,
+				ED99980A16C21CCF00C51E00 /* AddMissingLetterQuestionViewController */,
 				468EE91B16C17F9E0089044D /* AddMultipleChoiceQuestionViewController */,
 				468EE91016C17DDB0089044D /* CreateNewRace */,
 				467DBDF616BD2EBF0015CE60 /* CreateRaceViewController.h */,
@@ -502,12 +516,7 @@
 		469460ED16ADBDC20013F3D6 /* images */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				468EE90716C17C1C0089044D /* home_hover.png */,
-				468EE90816C17C1C0089044D /* home.png */,
-=======
 				EDBC424316C0E7C10010C90D /* tababr */,
->>>>>>> server_2_1:24PM
 				4601EB4316BEA3CC00497ED0 /* loginemail.png */,
 				4601EB4416BEA3CC00497ED0 /* loginfacebook.png */,
 				4601EB3D16BE7C0800497ED0 /* createaccountbutton.png */,
@@ -799,15 +808,45 @@
 			path = LocationManager;
 			sourceTree = "<group>";
 		};
+		ED99980A16C21CCF00C51E00 /* AddMissingLetterQuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED99980B16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.h */,
+				ED99980C16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.m */,
+				ED99980D16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.xib */,
+			);
+			path = AddMissingLetterQuestionViewController;
+			sourceTree = "<group>";
+		};
+		ED99982A16C239EC00C51E00 /* AddTrueFalseQuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED99982B16C23A0100C51E00 /* AddTrueFalseQuestionViewController.h */,
+				ED99982C16C23A0100C51E00 /* AddTrueFalseQuestionViewController.m */,
+				ED99982D16C23A0100C51E00 /* AddTrueFalseQuestionViewController.xib */,
+			);
+			path = AddTrueFalseQuestionViewController;
+			sourceTree = "<group>";
+		};
+		ED99983416C257C100C51E00 /* ChooseLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED99983516C257CD00C51E00 /* ChooseLocationViewController.h */,
+				ED99983616C257CD00C51E00 /* ChooseLocationViewController.m */,
+				ED99983716C257CD00C51E00 /* ChooseLocationViewController.xib */,
+			);
+			path = ChooseLocationViewController;
+			sourceTree = "<group>";
+		};
 		EDBC424316C0E7C10010C90D /* tababr */ = {
 			isa = PBXGroup;
 			children = (
+				ED99980116C2158E00C51E00 /* home_hover.png */,
+				ED99980216C2158E00C51E00 /* home.png */,
 				EDBC424416C0E7C10010C90D /* account.png */,
 				EDBC424516C0E7C10010C90D /* accounthover.png */,
 				EDBC424616C0E7C10010C90D /* create.png */,
 				EDBC424716C0E7C10010C90D /* createhover.png */,
-				EDBC424816C0E7C10010C90D /* history.png */,
-				EDBC424916C0E7C10010C90D /* historyhover.png */,
 				EDBC424A16C0E7C10010C90D /* race.png */,
 				EDBC424B16C0E7C10010C90D /* racehover.png */,
 				EDBC424C16C0E7C10010C90D /* scores.png */,
@@ -937,23 +976,21 @@
 				4601EB3E16BE7C0800497ED0 /* createaccountbutton.png in Resources */,
 				4601EB4516BEA3CC00497ED0 /* loginemail.png in Resources */,
 				4601EB4616BEA3CC00497ED0 /* loginfacebook.png in Resources */,
-<<<<<<< HEAD
-				468EE90916C17C1C0089044D /* home_hover.png in Resources */,
-				468EE90A16C17C1C0089044D /* home.png in Resources */,
 				468EE91516C17DDB0089044D /* CreateNewRaceViewController.xib in Resources */,
 				468EE92016C17F9E0089044D /* AddMultipleChoiceQuestionViewController.xib in Resources */,
-=======
 				EDBC424E16C0E7C10010C90D /* account.png in Resources */,
 				EDBC424F16C0E7C10010C90D /* accounthover.png in Resources */,
 				EDBC425016C0E7C10010C90D /* create.png in Resources */,
 				EDBC425116C0E7C10010C90D /* createhover.png in Resources */,
-				EDBC425216C0E7C10010C90D /* history.png in Resources */,
-				EDBC425316C0E7C10010C90D /* historyhover.png in Resources */,
 				EDBC425416C0E7C10010C90D /* race.png in Resources */,
 				EDBC425516C0E7C10010C90D /* racehover.png in Resources */,
 				EDBC425616C0E7C10010C90D /* scores.png in Resources */,
 				EDBC425716C0E7C10010C90D /* scoreshover.png in Resources */,
->>>>>>> server_2_1:24PM
+				ED99980316C2158E00C51E00 /* home_hover.png in Resources */,
+				ED99980416C2158E00C51E00 /* home.png in Resources */,
+				ED99980F16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.xib in Resources */,
+				ED99982F16C23A0100C51E00 /* AddTrueFalseQuestionViewController.xib in Resources */,
+				ED99983916C257CD00C51E00 /* ChooseLocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1045,9 @@
 				46CA252116BD9D7100C18E76 /* MyAnnotation.m in Sources */,
 				468EE91416C17DDB0089044D /* CreateNewRaceViewController.m in Sources */,
 				468EE91F16C17F9E0089044D /* AddMultipleChoiceQuestionViewController.m in Sources */,
+				ED99980E16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.m in Sources */,
+				ED99982E16C23A0100C51E00 /* AddTrueFalseQuestionViewController.m in Sources */,
+				ED99983816C257CD00C51E00 /* ChooseLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

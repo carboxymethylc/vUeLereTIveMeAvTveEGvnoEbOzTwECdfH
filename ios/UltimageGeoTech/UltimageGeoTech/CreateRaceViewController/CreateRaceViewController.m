@@ -7,7 +7,7 @@
 //
 
 #import "CreateRaceViewController.h"
-
+#import "CreateNewRaceViewController.h"
 @interface CreateRaceViewController ()
 
 @end
@@ -38,7 +38,9 @@
 
 -(IBAction)create_race_button_pressed:(id)sender
 {
-    
+    CreateNewRaceViewController*viewController = [[CreateNewRaceViewController alloc] initWithNibName:@"CreateNewRaceViewController" bundle:nil];
+    [self.navigationController pushViewController:viewController animated:TRUE];
+    [viewController release];
 }
 
 @end
