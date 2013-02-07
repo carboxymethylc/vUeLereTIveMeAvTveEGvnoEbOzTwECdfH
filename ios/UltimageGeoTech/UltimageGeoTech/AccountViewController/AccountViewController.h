@@ -20,6 +20,7 @@
     IBOutlet UILabel*gps_rank_label;
     AppDelegate*app_delegate;
     
+    IBOutlet UIScrollView*accountView_scrollView;
     
     //variabales for Webservices
     
@@ -42,6 +43,8 @@
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
     
     int action_type;//1 for fetching information.2 for updating 
+    
+    
     
     
 }
