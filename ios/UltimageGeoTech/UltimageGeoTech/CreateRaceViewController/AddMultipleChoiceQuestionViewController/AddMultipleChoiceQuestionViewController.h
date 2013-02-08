@@ -10,6 +10,16 @@
 
 @interface AddMultipleChoiceQuestionViewController : UIViewController
 {
+    IBOutlet UIScrollView*accountScrollView;
+    
+    IBOutlet UITextView*question_textView;
+    
+    IBOutlet UITextView*answer1_textView;
+    IBOutlet UITextView*answer2_textView;
+    IBOutlet UITextView*answer3_textView;
+        IBOutlet UITextView*answer4_textView;
+    
+    
     
 }
 
