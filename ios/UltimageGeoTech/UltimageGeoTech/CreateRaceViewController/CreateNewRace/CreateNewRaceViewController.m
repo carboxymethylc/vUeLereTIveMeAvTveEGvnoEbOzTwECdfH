@@ -48,6 +48,9 @@
     [super viewWillAppear:animated];
     NSLog(@"\n app_delegate.current_question_latitude = %f",app_delegate.current_question_latitude);
     NSLog(@"\n app_delegate.current_question_longitued = %f",app_delegate.current_question_longitued);
+    
+    NSLog(@"\n app_delegate.current_race_question_array = %@",app_delegate.current_race_question_array);
+    
 }
 
 - (void)didReceiveMemoryWarning

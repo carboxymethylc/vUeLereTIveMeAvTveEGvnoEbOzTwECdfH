@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +39,7 @@
 
 -(IBAction)create_race_button_pressed:(id)sender
 {
+    [app_delegate.current_race_question_array removeAllObjects];
     CreateNewRaceViewController*viewController = [[CreateNewRaceViewController alloc] initWithNibName:@"CreateNewRaceViewController" bundle:nil];
     [self.navigationController pushViewController:viewController animated:TRUE];
     [viewController release];

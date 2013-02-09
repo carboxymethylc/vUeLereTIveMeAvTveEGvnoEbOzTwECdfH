@@ -42,7 +42,7 @@ static NSString* kAppId = @"401301426565681";
     [user_information_dictionary release];
     
     [current_question_dictionary release];
-    [current_race_question_array release];
+    
     
     [bottomView release];
     [super dealloc];
@@ -57,7 +57,7 @@ static NSString* kAppId = @"401301426565681";
     user_information_dictionary = [[NSMutableDictionary alloc] init];
     
     current_race_question_array = [[NSMutableArray alloc] init];
-    current_question_dictionary = [[NSMutableDictionary alloc] init];
+   
     
     
     

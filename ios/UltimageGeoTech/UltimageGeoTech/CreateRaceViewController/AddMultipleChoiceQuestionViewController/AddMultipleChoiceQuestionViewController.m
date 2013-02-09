@@ -24,6 +24,8 @@
     return self;
 }
 
+#pragma mark - viewDidLoad
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,16 +36,22 @@
     current_text_view_tag = 0;
     
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    app_delegate.current_question_dictionary = [[NSMutableDictionary alloc] init];
     [app_delegate.current_question_dictionary removeAllObjects];
     
     // Do any additional setup after loading the view from its nib.
 }
+
+#pragma mark - didReceiveMemoryWarning
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - correct_answer_pressed
 
 -(IBAction)correct_answer_pressed:(id)sender
 {
@@ -84,6 +92,8 @@
     
 }
 
+#pragma mark - save_button_pressed
+
 -(IBAction)save_button_pressed:(id)sender
 {
     
@@ -91,7 +101,13 @@
     
     multiQue_toolbar.hidden = TRUE;
     [self.view endEditing:TRUE];
-    [app_delegate.current_question_dictionary setObject:@"" forKey:@""];
+    
+    [app_delegate.current_question_dictionary setObject:[NSNumber numberWithFloat:app_delegate.current_question_latitude] forKey:@"current_question_latitude"];
+    
+    [app_delegate.current_question_dictionary setObject:[NSNumber numberWithFloat:app_delegate.current_question_longitued] forKey:@"current_question_longitued"];
+    
+    [app_delegate.current_question_dictionary setObject:@"" forKey:@"question_type"];
+    
     switch (current_text_view_tag)
     {
         case 1:
@@ -126,11 +142,13 @@
             break;
     }
 
-    
+    [app_delegate.current_race_question_array addObject:app_delegate.current_question_dictionary];
     NSLog(@"\n app_delegate.current_question_dictionary = %@",app_delegate.current_question_dictionary);
     
     
 }
+
+#pragma mark - TextView methods
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
@@ -179,6 +197,8 @@
     }
 }
 
+#pragma mark - toolbar_doneButton_pressed
+
 -(IBAction)toolbar_doneButton_pressed:(id)sender
 {
     accountScrollView.contentSize = CGSizeMake(320,400);
@@ -222,6 +242,12 @@
     
 }
 
+#pragma mark - dealloc
 
+-(void)dealloc
+{
+    [super dealloc];
+    [app_delegate.current_question_dictionary release];
+}
 
 @end

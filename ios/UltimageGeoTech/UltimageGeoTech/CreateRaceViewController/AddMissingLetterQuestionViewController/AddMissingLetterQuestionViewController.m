@@ -24,16 +24,165 @@
     return self;
 }
 
+#pragma mark - viewDidLoad
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    app_delegate.current_question_dictionary = [[NSMutableDictionary alloc] init];
+    [app_delegate.current_question_dictionary removeAllObjects];                        
+    
+    missing_letter_que_toolbar.hidden = TRUE;
+    
+     current_text_view_tag = 0;
+     missing_character_scrollview.contentSize = CGSizeMake(320,400);
+    
     // Do any additional setup after loading the view from its nib.
 }
+
+#pragma mark - didReceiveMemoryWarning
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - save_button_pressed
+
+-(IBAction)save_button_pressed:(id)sender
+{
+    missing_character_scrollview.contentSize = CGSizeMake(320,400);
+    missing_letter_que_toolbar.hidden = TRUE;
+    [self.view endEditing:TRUE];
+    
+    [app_delegate.current_question_dictionary setObject:@"" forKey:@"question_type"];
+    
+    
+    [app_delegate.current_question_dictionary setObject:[NSNumber numberWithFloat:app_delegate.current_question_latitude] forKey:@"current_question_latitude"];
+
+    [app_delegate.current_question_dictionary setObject:[NSNumber numberWithFloat:app_delegate.current_question_longitued] forKey:@"current_question_longitued"];
+
+    
+    [app_delegate.current_question_dictionary setObject:@"" forKey:@"question_type"];
+    
+    [app_delegate.current_question_dictionary setObject:number_of_letters_to_show_textField.text forKey:@"number_of_letters_to_show"];
+    switch (current_text_view_tag)
+    {
+        case 1:
+        {
+            [app_delegate.current_question_dictionary setObject:question_textView.text forKey:@"question"];
+            break;
+        }
+        case 2:
+        {
+            [app_delegate.current_question_dictionary setObject:answer_textView.text forKey:@"answer"];
+            break;
+        }
+    }
+    NSLog(@"\n app_delegate.current_question_dictionary = %@",app_delegate.current_question_dictionary);
+    
+    [app_delegate.current_race_question_array addObject:app_delegate.current_question_dictionary];
+    
+    [self.navigationController popViewControllerAnimated:TRUE];
+    
+}
+
+
+#pragma mark - TextField delegate methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+     missing_letter_que_toolbar.hidden = FALSE;
+    return TRUE;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    missing_character_scrollview.contentSize = CGSizeMake(320,630);
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    [app_delegate.current_question_dictionary setObject:number_of_letters_to_show_textField.text forKey:@"number_of_letters_to_show"];
+    return TRUE;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    missing_character_scrollview.contentSize = CGSizeMake(320,400);
+    [app_delegate.current_question_dictionary setObject:number_of_letters_to_show_textField.text forKey:@"number_of_letters_to_show"];
+    [textField resignFirstResponder];
+    return TRUE;
+}
+
+
+#pragma mark - TextView delegate methods
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+         missing_letter_que_toolbar.hidden = FALSE;
+    missing_character_scrollview.contentSize = CGSizeMake(320,630);
+    current_text_view_tag = textView.tag-1000;
+    return TRUE;
+}
+
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    current_text_view_tag = textView.tag-1000;
+    
+    switch (current_text_view_tag)
+    {
+        case 1:
+        {
+            [app_delegate.current_question_dictionary setObject:question_textView.text forKey:@"question"];
+            break;
+        }
+        case 2:
+        {
+            [app_delegate.current_question_dictionary setObject:answer_textView.text forKey:@"answer"];
+            break;
+        }
+    }
+
+    
+}
+
+#pragma mark - toolbar_doneButton_pressed
+
+-(IBAction)toolbar_doneButton_pressed:(id)sender
+{
+    missing_letter_que_toolbar.hidden = TRUE;
+    [self.view endEditing:TRUE];
+    
+    missing_character_scrollview.contentSize = CGSizeMake(320,400);
+    
+    [app_delegate.current_question_dictionary setObject:number_of_letters_to_show_textField.text forKey:@"number_of_letters_to_show"];
+    switch (current_text_view_tag)
+    {
+        case 1:
+        {
+            [app_delegate.current_question_dictionary setObject:question_textView.text forKey:@"question"];
+            break;
+        }
+        case 2:
+        {
+            [app_delegate.current_question_dictionary setObject:answer_textView.text forKey:@"answer"];
+            break;
+        }
+    }
+    
+}
+
+#pragma mark - dealloc
+
+-(void)dealloc
+{
+    [super dealloc];
+    [app_delegate.current_question_dictionary release];
+}
+
+
 
 @end
