@@ -24,7 +24,7 @@
 @implementation AppDelegate
 @synthesize facebook,user_defaults;
 @synthesize user_information_dictionary;
-
+@synthesize current_question_dictionary;
 
 @synthesize current_longitued,current_latitude;
 @synthesize bottomView;
@@ -40,6 +40,10 @@ static NSString* kAppId = @"401301426565681";
     [_navigationController release];
     [_tabBarController release];
     [user_information_dictionary release];
+    
+    [current_question_dictionary release];
+    [current_race_question_array release];
+    
     [bottomView release];
     [super dealloc];
 }
@@ -51,6 +55,11 @@ static NSString* kAppId = @"401301426565681";
 
     
     user_information_dictionary = [[NSMutableDictionary alloc] init];
+    
+    current_race_question_array = [[NSMutableArray alloc] init];
+    current_question_dictionary = [[NSMutableDictionary alloc] init];
+    
+    
     
     
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];

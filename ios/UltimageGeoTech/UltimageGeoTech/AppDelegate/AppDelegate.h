@@ -36,6 +36,8 @@
     float current_question_latitude;
     float current_question_longitued;
     
+    NSMutableDictionary*current_question_dictionary;
+    
     
 }
 
@@ -57,11 +59,15 @@
 -(IBAction)buttonTabBarPressed:(id)sender;
 
 
-//Race Question information..
-@property (nonatomic,retain)NSMutableArray*current_race_question_array;
+
 
 @property (nonatomic,readwrite)float current_question_latitude;
 @property (nonatomic,readwrite)float current_question_longitued;
+
+//Race Question information..
+@property (nonatomic,retain)NSMutableArray*current_race_question_array;
+@property (nonatomic,retain)NSMutableDictionary*current_question_dictionary;
+
 
 +(BOOL)hasConnectivity;
 @end
