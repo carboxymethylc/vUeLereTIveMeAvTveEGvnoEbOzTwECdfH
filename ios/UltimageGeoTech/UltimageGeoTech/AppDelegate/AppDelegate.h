@@ -36,6 +36,8 @@
     float current_question_latitude;
     float current_question_longitued;
     
+    
+    int selected_question_index_for_edit;
     NSMutableDictionary*current_question_dictionary;
     BOOL is_in_question_editing_mode;//checks whether user currently editing question.
     
@@ -65,6 +67,8 @@
 @property (nonatomic,readwrite)float current_question_longitued;
 
 @property (nonatomic,readwrite)BOOL is_in_question_editing_mode;
+
+@property (nonatomic,readwrite)int selected_question_index_for_edit;
 
 
 //Race Question information..

@@ -149,6 +149,12 @@
     
     app_delegate.current_latitude = newLocation.coordinate.latitude;
     app_delegate.current_longitued = newLocation.coordinate.longitude;
+    
+    
+    app_delegate.current_question_latitude  = app_delegate.current_latitude;
+    app_delegate.current_question_longitued =  app_delegate.current_longitued;
+    
+    
     action_type = 2;
     
     //[locationManager stopUpdatingLocation];

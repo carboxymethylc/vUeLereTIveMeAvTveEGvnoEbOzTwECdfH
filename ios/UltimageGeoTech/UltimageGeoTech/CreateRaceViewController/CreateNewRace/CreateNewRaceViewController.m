@@ -41,7 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
-    
+    app_delegate.is_in_question_editing_mode = FALSE;
     app_delegate.current_question_latitude = app_delegate.current_latitude;
     app_delegate.current_question_longitued =app_delegate.current_longitued;
     
@@ -59,6 +59,10 @@
     NSLog(@"\n app_delegate.current_question_longitued = %f",app_delegate.current_question_longitued);
     
     NSLog(@"\n app_delegate.current_race_question_array = %@",app_delegate.current_race_question_array);
+    app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    app_delegate.is_in_question_editing_mode = FALSE;
+
+    
     [question_list_tblView reloadData];
 }
 
@@ -156,6 +160,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     app_delegate.is_in_question_editing_mode = TRUE;
+    app_delegate.selected_question_index_for_edit = indexPath.row;
+    
     
     int question_type =  [[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question_type"] intValue];
     
@@ -219,6 +225,35 @@
         {
             
             AddTrueFalseQuestionViewController*viewController = [[AddTrueFalseQuestionViewController alloc] initWithNibName:@"AddTrueFalseQuestionViewController" bundle:nil];
+            
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question"]
+             forKey:@"question"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"current_question_latitude"]
+             forKey:@"current_question_latitude"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"current_question_longitued"]
+             forKey:@"current_question_longitued"];
+
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"answer"]
+             forKey:@"answer"];
+            
+            /*
+            app_delegate.current_question_dictionary = {
+                answer = 1;
+                "current_question_latitude" = "23.03828";
+                "current_question_longitued" = "72.52428";
+                question = test;
+                "question_type" = 2;
+            }
+            */
+            
             [self.navigationController pushViewController:viewController animated:YES];
             [viewController release];
             
@@ -227,6 +262,40 @@
         case 3:
         {
             AddMissingLetterQuestionViewController*viewController = [[AddMissingLetterQuestionViewController alloc] initWithNibName:@"AddMissingLetterQuestionViewController" bundle:nil];
+            
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question"]
+             forKey:@"question"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"current_question_latitude"]
+             forKey:@"current_question_latitude"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"current_question_longitued"]
+             forKey:@"current_question_longitued"];
+            
+            
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"answer"]
+             forKey:@"answer"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"number_of_letters_to_show"]
+             forKey:@"number_of_letters_to_show"];
+            
+            
+            /*
+            answer = qweu;
+            "current_question_latitude" = "23.03847";
+            "current_question_longitued" = "72.52427";
+            "number_of_letters_to_show" = 2;
+            question = "test-miss";
+            "question_type" = "";
+            */
+            
             [self.navigationController pushViewController:viewController animated:YES];
             [viewController release];
             

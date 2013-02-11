@@ -47,9 +47,15 @@
 - (void)gotoLocation
 {
     // start off by default in San Francisco
+   
     
-    newRegion.center.latitude = app_delegate.current_latitude;
-    newRegion.center.longitude = app_delegate.current_longitued;
+    
+    newRegion.center.latitude = app_delegate.current_question_latitude;
+    newRegion.center.longitude = app_delegate.current_question_longitued;
+    
+    
+    
+    
     newRegion.span.latitudeDelta = 0.112872;
     newRegion.span.longitudeDelta = 0.109863;
     

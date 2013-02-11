@@ -7,7 +7,7 @@
 //
 
 #import "AddMultipleChoiceQuestionViewController.h"
-
+#import "ChooseLocationViewController.h"
 @interface AddMultipleChoiceQuestionViewController ()
 
 @end
@@ -175,7 +175,19 @@
             break;
     }
 
-    [app_delegate.current_race_question_array addObject:app_delegate.current_question_dictionary];
+    if(app_delegate.is_in_question_editing_mode)
+    {
+        [app_delegate.current_race_question_array replaceObjectAtIndex:app_delegate.selected_question_index_for_edit withObject:app_delegate.current_question_dictionary];
+    }
+    else
+    {
+        
+        [app_delegate.current_race_question_array addObject:app_delegate.current_question_dictionary];
+    }
+
+    
+    
+   
     NSLog(@"\n app_delegate.current_question_dictionary = %@",app_delegate.current_question_dictionary);
     [self.navigationController popViewControllerAnimated:TRUE];
     
@@ -273,6 +285,24 @@
     
     
 }
+
+#pragma mark - edit_location_clicked
+-(IBAction)edit_location_clicked:(id)sender
+{
+    ChooseLocationViewController*viewController = [[ChooseLocationViewController alloc] initWithNibName:@"ChooseLocationViewController" bundle:nil];
+    
+    if(app_delegate.is_in_question_editing_mode)
+    {
+        app_delegate.current_question_latitude =  [[app_delegate.current_question_dictionary objectForKey:@"current_question_latitude"] floatValue];
+        app_delegate.current_question_longitued =  [[app_delegate.current_question_dictionary objectForKey:@"current_question_longitued"] floatValue];
+    }
+    
+
+    
+    [self.navigationController pushViewController:viewController animated:TRUE];
+    [viewController release];
+}
+
 
 #pragma mark - dealloc
 

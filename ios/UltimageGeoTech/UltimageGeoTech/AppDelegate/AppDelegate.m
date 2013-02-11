@@ -30,6 +30,8 @@
 @synthesize bottomView;
 @synthesize is_in_question_editing_mode;
 
+@synthesize selected_question_index_for_edit;
+
 static NSString* kAppId = @"401301426565681";
 
 
@@ -64,7 +66,7 @@ static NSString* kAppId = @"401301426565681";
    
     
     is_in_question_editing_mode = NO;
-    
+    selected_question_index_for_edit = 0;
     
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];

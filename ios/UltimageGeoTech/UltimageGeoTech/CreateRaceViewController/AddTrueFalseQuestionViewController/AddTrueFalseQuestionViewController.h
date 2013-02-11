@@ -25,4 +25,6 @@
 }
 -(IBAction)save_button_pressed:(id)sender;
 -(IBAction)true_false_button_pressed:(id)sender;
+-(IBAction)edit_location_clicked:(id)sender;
+
 @end
