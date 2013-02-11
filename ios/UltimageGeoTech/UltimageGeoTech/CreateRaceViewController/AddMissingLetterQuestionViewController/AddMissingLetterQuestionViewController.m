@@ -20,6 +20,9 @@
     if (self)
     {
         // Custom initialization
+        app_delegate.current_question_dictionary = [[NSMutableDictionary alloc] init];
+        [app_delegate.current_question_dictionary removeAllObjects];
+        
     }
     return self;
 }
@@ -31,8 +34,7 @@
     [super viewDidLoad];
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     
-    app_delegate.current_question_dictionary = [[NSMutableDictionary alloc] init];
-    [app_delegate.current_question_dictionary removeAllObjects];                        
+                            
     
     missing_letter_que_toolbar.hidden = TRUE;
     
@@ -58,7 +60,7 @@
     missing_letter_que_toolbar.hidden = TRUE;
     [self.view endEditing:TRUE];
     
-    [app_delegate.current_question_dictionary setObject:@"" forKey:@"question_type"];
+    [app_delegate.current_question_dictionary setObject:@"3" forKey:@"question_type"];
     
     
     [app_delegate.current_question_dictionary setObject:[NSNumber numberWithFloat:app_delegate.current_question_latitude] forKey:@"current_question_latitude"];

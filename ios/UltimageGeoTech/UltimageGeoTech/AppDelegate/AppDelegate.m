@@ -28,7 +28,11 @@
 
 @synthesize current_longitued,current_latitude;
 @synthesize bottomView;
+@synthesize is_in_question_editing_mode;
+
 static NSString* kAppId = @"401301426565681";
+
+
 
 //Race Question information..
 
@@ -59,7 +63,7 @@ static NSString* kAppId = @"401301426565681";
     current_race_question_array = [[NSMutableArray alloc] init];
    
     
-    
+    is_in_question_editing_mode = NO;
     
     
     MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil] autorelease];

@@ -14,6 +14,11 @@
 #import "AddTrueFalseQuestionViewController.h"
 #import "ChooseLocationViewController.h"
 
+#import "AddMultipleChoiceQuestionViewController.h"
+#import "AddTrueFalseQuestionViewController.h"
+#import "AddMissingLetterQuestionViewController.h"
+
+
 @interface CreateNewRaceViewController ()
 
 @end
@@ -29,6 +34,8 @@
     return self;
 }
 
+#pragma mark - viewDidLoad
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,8 +47,10 @@
     
     [app_delegate.current_race_question_array removeAllObjects];
     
-    
+   // question_list_tblView.can
 }
+
+#pragma mark - viewWillAppear
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -50,14 +59,18 @@
     NSLog(@"\n app_delegate.current_question_longitued = %f",app_delegate.current_question_longitued);
     
     NSLog(@"\n app_delegate.current_race_question_array = %@",app_delegate.current_race_question_array);
-    
+    [question_list_tblView reloadData];
 }
+
+#pragma mark - didReceiveMemoryWarning
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - button_clicked
 
 -(IBAction)button_clicked:(id)sender
 {
@@ -108,6 +121,139 @@
     }
     
     
+}
+
+#pragma mark - Tableview methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  return  [app_delegate.current_race_question_array count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *MyIdentifier = @"MyIdentifier";
+	
+	// Try to retrieve from the table view a now-unused cell with the given identifier.
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+	
+	// If no cell is available, create a new one using the given identifier.
+	if (cell == nil)
+    {
+		// Use the default cell style.
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
+	}
+	
+	// Set up the cell.
+	
+    
+    
+	cell.textLabel.text = [[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question"];
+	
+	return cell;
+
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    app_delegate.is_in_question_editing_mode = TRUE;
+    
+    int question_type =  [[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question_type"] intValue];
+    
+#import "AddMultipleChoiceQuestionViewController.h"
+#import "AddTrueFalseQuestionViewController.h"
+#import "AddMissingLetterQuestionViewController.h"
+    
+    
+    
+    switch (question_type)
+    {
+        case 1:
+        {
+            AddMultipleChoiceQuestionViewController*viewController = [[AddMultipleChoiceQuestionViewController alloc] initWithNibName:@"AddMultipleChoiceQuestionViewController" bundle:nil];
+            
+            
+            
+            
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"correct_answer"]
+             forKey:@"correct_answer"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"current_question_latitude"]
+             forKey:@"current_question_latitude"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"current_question_longitued"]
+             forKey:@"current_question_longitued"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"option_a"]
+             forKey:@"option_a"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"option_b"]
+             forKey:@"option_b"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"option_c"]
+             forKey:@"option_c"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"option_d"]
+             forKey:@"option_d"];
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question"]
+             forKey:@"question"];
+            
+            
+            [self.navigationController pushViewController:viewController animated:YES];
+            [viewController release];
+            
+            
+            break;
+            
+        }
+        case 2:
+        {
+            
+            AddTrueFalseQuestionViewController*viewController = [[AddTrueFalseQuestionViewController alloc] initWithNibName:@"AddTrueFalseQuestionViewController" bundle:nil];
+            [self.navigationController pushViewController:viewController animated:YES];
+            [viewController release];
+            
+            break;
+        }
+        case 3:
+        {
+            AddMissingLetterQuestionViewController*viewController = [[AddMissingLetterQuestionViewController alloc] initWithNibName:@"AddMissingLetterQuestionViewController" bundle:nil];
+            [self.navigationController pushViewController:viewController animated:YES];
+            [viewController release];
+            
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    
+    NSLog(@"\n indexPath.row = %d",indexPath.row);
+}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return TRUE;
+}
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        //add code here for when you hit delete
+        [app_delegate.current_race_question_array removeObjectAtIndex:indexPath.row];
+        [question_list_tblView reloadData];
+        
+    }
 }
 
 @end

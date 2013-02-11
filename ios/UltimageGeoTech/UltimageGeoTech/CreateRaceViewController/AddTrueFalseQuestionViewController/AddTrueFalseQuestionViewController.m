@@ -79,7 +79,7 @@
     [app_delegate.current_question_dictionary setObject:[NSNumber numberWithFloat:app_delegate.current_question_longitued] forKey:@"current_question_longitued"];
     
     
-    [app_delegate.current_question_dictionary setObject:@"" forKey:@"question_type"];
+    [app_delegate.current_question_dictionary setObject:@"2" forKey:@"question_type"];
 
     
     NSLog(@"\n app_delegate.current_question_dictionary = %@",app_delegate.current_question_dictionary);

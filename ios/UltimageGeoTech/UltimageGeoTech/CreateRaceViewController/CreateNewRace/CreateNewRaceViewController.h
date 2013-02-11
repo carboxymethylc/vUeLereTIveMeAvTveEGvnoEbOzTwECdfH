@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-@interface CreateNewRaceViewController : UIViewController
+@interface CreateNewRaceViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
     AppDelegate*app_delegate;
+    IBOutlet UITableView*question_list_tblView;
 }
 
 -(IBAction)button_clicked:(id)sender;

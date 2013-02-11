@@ -20,6 +20,11 @@
     if (self)
     {
         // Custom initialization
+        app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+        app_delegate.current_question_dictionary = [[NSMutableDictionary alloc] init];
+        [app_delegate.current_question_dictionary removeAllObjects];
+
+        
     }
     return self;
 }
@@ -37,8 +42,36 @@
     
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     
-    app_delegate.current_question_dictionary = [[NSMutableDictionary alloc] init];
-    [app_delegate.current_question_dictionary removeAllObjects];
+    if(app_delegate.is_in_question_editing_mode)
+    {
+       
+        
+        question_textView.text =  [app_delegate.current_question_dictionary objectForKey:@"question"];
+
+        answer1_textView.text = [app_delegate.current_question_dictionary objectForKey:@"option_a"];
+        answer2_textView.text = [app_delegate.current_question_dictionary objectForKey:@"option_b"];
+        answer3_textView.text = [app_delegate.current_question_dictionary objectForKey:@"option_c"];
+        answer4_textView.text = [app_delegate.current_question_dictionary objectForKey:@"option_d"];
+        
+        app_delegate.current_question_latitude = [[app_delegate.current_question_dictionary objectForKey:@"current_question_latitude"] floatValue];
+        app_delegate.current_question_longitued = [[app_delegate.current_question_dictionary objectForKey:@"current_question_longitued"] floatValue];
+        
+        
+        
+    }
+    
+    
+    /*
+     city = test123;
+     email = "test@gmail.com";
+     "full_name" = test;
+     "gps_rank" = 0;
+     "race_completed" = 0;
+     "race_created" = 0;
+     "user_id" = 1;
+     "user_name" = "test@gmail.com";
+     
+     */
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -106,7 +139,7 @@
     
     [app_delegate.current_question_dictionary setObject:[NSNumber numberWithFloat:app_delegate.current_question_longitued] forKey:@"current_question_longitued"];
     
-    [app_delegate.current_question_dictionary setObject:@"" forKey:@"question_type"];
+    [app_delegate.current_question_dictionary setObject:@"1" forKey:@"question_type"];
     
     switch (current_text_view_tag)
     {
@@ -144,7 +177,7 @@
 
     [app_delegate.current_race_question_array addObject:app_delegate.current_question_dictionary];
     NSLog(@"\n app_delegate.current_question_dictionary = %@",app_delegate.current_question_dictionary);
-    
+    [self.navigationController popViewControllerAnimated:TRUE];
     
 }
 
@@ -166,7 +199,6 @@
     {
         case 1:
         {
-            
             
             [app_delegate.current_question_dictionary setObject:question_textView.text forKey:@"question"];
             break;
