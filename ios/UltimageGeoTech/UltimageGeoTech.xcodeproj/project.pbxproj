@@ -115,6 +115,8 @@
 		46CA250E16BD706500C18E76 /* CLLocation (Strings).m in Sources */ = {isa = PBXBuildFile; fileRef = 46CA250D16BD706500C18E76 /* CLLocation (Strings).m */; };
 		46CA252116BD9D7100C18E76 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CA252016BD9D7000C18E76 /* MyAnnotation.m */; };
 		46CA252316BDA10D00C18E76 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CA252216BDA10D00C18E76 /* MapKit.framework */; };
+		46F71A0616CB2A9B000B4927 /* SaveAndCreateRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F71A0416CB2A9B000B4927 /* SaveAndCreateRaceViewController.m */; };
+		46F71A0716CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F71A0516CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib */; };
 		ED138E8816C3894D00A39B1E /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = ED138E8516C3894D00A39B1E /* progress.png */; };
 		ED138E8916C3894D00A39B1E /* racename_leadeboard.png in Resources */ = {isa = PBXBuildFile; fileRef = ED138E8616C3894D00A39B1E /* racename_leadeboard.png */; };
 		ED138E8A16C3894D00A39B1E /* user_information.png in Resources */ = {isa = PBXBuildFile; fileRef = ED138E8716C3894D00A39B1E /* user_information.png */; };
@@ -315,6 +317,9 @@
 		46CA251F16BD9D7000C18E76 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		46CA252016BD9D7000C18E76 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		46CA252216BDA10D00C18E76 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		46F71A0316CB2A9B000B4927 /* SaveAndCreateRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveAndCreateRaceViewController.h; sourceTree = "<group>"; };
+		46F71A0416CB2A9B000B4927 /* SaveAndCreateRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveAndCreateRaceViewController.m; sourceTree = "<group>"; };
+		46F71A0516CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveAndCreateRaceViewController.xib; sourceTree = "<group>"; };
 		ED138E8516C3894D00A39B1E /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
 		ED138E8616C3894D00A39B1E /* racename_leadeboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = racename_leadeboard.png; sourceTree = "<group>"; };
 		ED138E8716C3894D00A39B1E /* user_information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_information.png; sourceTree = "<group>"; };
@@ -378,6 +383,7 @@
 		467DBDEE16BD29670015CE60 /* CreateRaceViewController */ = {
 			isa = PBXGroup;
 			children = (
+				46F71A0216CB2A74000B4927 /* SaveAndCreateRaceViewController */,
 				ED99983416C257C100C51E00 /* ChooseLocationViewController */,
 				ED99982A16C239EC00C51E00 /* AddTrueFalseQuestionViewController */,
 				ED99980A16C21CCF00C51E00 /* AddMissingLetterQuestionViewController */,
@@ -822,6 +828,16 @@
 			path = LocationManager;
 			sourceTree = "<group>";
 		};
+		46F71A0216CB2A74000B4927 /* SaveAndCreateRaceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				46F71A0316CB2A9B000B4927 /* SaveAndCreateRaceViewController.h */,
+				46F71A0416CB2A9B000B4927 /* SaveAndCreateRaceViewController.m */,
+				46F71A0516CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib */,
+			);
+			path = SaveAndCreateRaceViewController;
+			sourceTree = "<group>";
+		};
 		ED138E8416C3894D00A39B1E /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,6 +1039,7 @@
 				ED138E8C16C38BBA00A39B1E /* divider.png in Resources */,
 				ED138E9816C3A5E200A39B1E /* text_field_bg.png in Resources */,
 				EDE70C0516C3ACA500C9142B /* save_buttn.png in Resources */,
+				46F71A0716CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,6 +1097,7 @@
 				ED99980E16C21CCF00C51E00 /* AddMissingLetterQuestionViewController.m in Sources */,
 				ED99982E16C23A0100C51E00 /* AddTrueFalseQuestionViewController.m in Sources */,
 				ED99983816C257CD00C51E00 /* ChooseLocationViewController.m in Sources */,
+				46F71A0616CB2A9B000B4927 /* SaveAndCreateRaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

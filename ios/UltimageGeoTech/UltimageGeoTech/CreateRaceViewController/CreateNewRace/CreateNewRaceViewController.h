@@ -12,8 +12,13 @@
 {
     AppDelegate*app_delegate;
     IBOutlet UITableView*question_list_tblView;
+    
+    IBOutlet UIButton*save_race_button;
+    
 }
 
 -(IBAction)button_clicked:(id)sender;
+-(IBAction)save_race_button_pressed:(id)sender;
+
 
 @end

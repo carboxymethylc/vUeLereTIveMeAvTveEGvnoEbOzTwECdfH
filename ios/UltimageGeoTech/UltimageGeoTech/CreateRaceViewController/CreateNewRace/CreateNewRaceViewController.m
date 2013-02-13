@@ -18,6 +18,7 @@
 #import "AddTrueFalseQuestionViewController.h"
 #import "AddMissingLetterQuestionViewController.h"
 
+#import "SaveAndCreateRaceViewController.h"
 
 @interface CreateNewRaceViewController ()
 
@@ -62,8 +63,20 @@
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     app_delegate.is_in_question_editing_mode = FALSE;
 
+    if([app_delegate.current_race_question_array count]==0)
+    {
+        question_list_tblView.hidden = TRUE;
+        save_race_button.hidden = TRUE;
+    }
+    else
+    {
+        question_list_tblView.hidden = FALSE;
+        save_race_button.hidden = FALSE;
+        [question_list_tblView reloadData];
+
+    }
     
-    [question_list_tblView reloadData];
+    
 }
 
 #pragma mark - didReceiveMemoryWarning
@@ -323,6 +336,14 @@
         [question_list_tblView reloadData];
         
     }
+}
+
+#pragma mark - save_race_button_pressed
+-(IBAction)save_race_button_pressed:(id)sender
+{
+    SaveAndCreateRaceViewController*viewController = [[SaveAndCreateRaceViewController alloc] initWithNibName:@"SaveAndCreateRaceViewController" bundle:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
 }
 
 @end
