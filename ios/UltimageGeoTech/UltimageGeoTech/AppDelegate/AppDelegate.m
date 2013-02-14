@@ -59,6 +59,45 @@ static NSString* kAppId = @"401301426565681";
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 
+    /*
+     
+     need to create created_by in tbl_race
+    
+     case "create_race":
+     {
+     
+     echo "<pre>";
+     
+     print_r($decodedData->user_id);
+     
+     echo "\n\n\n\n\n\n";
+     
+     print_r($decodedData->race_detail);
+     
+     echo "\n\n\n\n\n\n";
+     
+     print_r($decodedData->race_question_array);
+     
+     $sql = "INSERT INTO tbl_race
+     (
+     race_name,
+     number_of_questions,
+     race_info,
+     
+     )
+     
+     ";
+     
+     
+     
+     
+     exit;
+     
+     break;	
+     }
+     */
+    
+    
     
     user_information_dictionary = [[NSMutableDictionary alloc] init];
     

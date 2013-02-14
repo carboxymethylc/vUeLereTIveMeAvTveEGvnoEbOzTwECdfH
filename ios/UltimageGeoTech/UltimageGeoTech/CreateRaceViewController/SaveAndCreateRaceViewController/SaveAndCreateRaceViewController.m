@@ -31,7 +31,11 @@
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    process_activity_indicator.hidden = TRUE;
+    [super viewWillAppear:animated];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -73,8 +77,80 @@
     
     
     
-    [race_extra_detail_decitionary setObject:[NSNumber numberWithFloat:app_delegate.current_latitude] forKey:@""];
-    [race_extra_detail_decitionary setObject:[NSNumber numberWithFloat:app_delegate.current_longitued] forKey:@""];
+    [race_extra_detail_decitionary setObject:[NSNumber numberWithFloat:app_delegate.current_latitude] forKey:@"race_latitude"];
+    [race_extra_detail_decitionary setObject:[NSNumber numberWithFloat:app_delegate.current_longitued] forKey:@"race_longitued"];
+    
+    
+    requestObjects = [NSArray arrayWithObjects:
+                      @"create_race",
+                      [app_delegate.user_information_dictionary objectForKey:@"user_id"],
+                      race_extra_detail_decitionary,
+                      app_delegate.current_race_question_array,
+                      nil];
+    
+    requestkeys = [NSArray arrayWithObjects:
+                   @"action",
+                   @"user_id",
+                   @"race_detail",
+                   @"race_question_array",
+                   nil];
+    
+    
+    NSLog(@"\n requestObjects = %@",requestObjects);
+    
+    requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
+    
+    requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
+    NSLog(@"\n \n \n \n \n \n ");
+    
+    NSLog(@"\n requestString = %@",requestString);
+    
+    requestData = [NSData dataWithBytes: [requestString UTF8String] length: [requestString length]];
+    urlString = [NSString stringWithFormat:@"%@",WEB_SERVICE_URL];
+    NSLog(@"\n urlString = %@",urlString);
+    request = [[[NSMutableURLRequest alloc] init] autorelease];
+    [request setURL:[NSURL URLWithString:urlString]]; // set URL for the request
+    [request setHTTPMethod:@"POST"]; // set method the request
+    
+    
+    [request setHTTPBody:requestData];
+    
+    
+    
+    process_activity_indicator.hidden = FALSE;
+    [process_activity_indicator startAnimating];
+    [self.view bringSubviewToFront:process_activity_indicator];
+    [self.view endEditing:TRUE];
+    [self.view setUserInteractionEnabled:FALSE];
+    
+    
+    
+    
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         NSLog(@"\n response we get = %@",response);
+         returnData = data;
+         NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+         NSLog(@"\n returnString == %@",returnString);
+         json = [[SBJSON new] autorelease];
+         
+         
+         responseDataDictionary = [json objectWithString:returnString error:&error];
+         [responseDataDictionary retain];
+         
+         
+         [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
+         
+         
+         
+     }];
+    
+    [queue release];
+
+    
     
     
     
@@ -86,6 +162,18 @@
 -(IBAction)share_race_button_clicked:(id)sender
 {
     
+}
+
+
+
+#pragma mark - enable_user_interaction
+
+-(void)enable_user_interaction
+{
+    
+    [process_activity_indicator stopAnimating];
+    process_activity_indicator.hidden = TRUE;
+    [self.view setUserInteractionEnabled:TRUE];
 }
 
 
