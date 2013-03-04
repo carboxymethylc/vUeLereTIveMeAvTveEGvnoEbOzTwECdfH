@@ -96,22 +96,22 @@
     {
         case 1:
         {
-            [app_delegate.current_question_dictionary setObject:@"a" forKey:@"correct_answer"];
+            [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:1] forKey:@"correct_answer"];
             break;
         }
         case 2:
         {
-            [app_delegate.current_question_dictionary setObject:@"b" forKey:@"correct_answer"];
+            [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:2]  forKey:@"correct_answer"];
             break;
         }
         case 3:
         {
-            [app_delegate.current_question_dictionary setObject:@"c" forKey:@"correct_answer"];
+            [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:3]  forKey:@"correct_answer"];
             break;
         }
         case 4:
         {
-            [app_delegate.current_question_dictionary setObject:@"d" forKey:@"correct_answer"];
+            [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:4]  forKey:@"correct_answer"];
             break;
         }
                     

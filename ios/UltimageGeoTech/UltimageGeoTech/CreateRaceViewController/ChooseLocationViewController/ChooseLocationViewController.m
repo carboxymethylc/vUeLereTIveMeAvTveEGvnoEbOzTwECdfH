@@ -35,7 +35,7 @@
     
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                           initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = 1.2; //user needs to press for 1.2 seconds
+    lpgr.minimumPressDuration = 1; //user needs to press for 1 seconds
     [self.mapView addGestureRecognizer:lpgr];
     [lpgr release];
     
@@ -73,6 +73,7 @@
     
     NSLog(@"\n touchMapCoordinate lat = %f",touchMapCoordinate.latitude);
     NSLog(@"\n touchMapCoordinate  long = %f",touchMapCoordinate.longitude);
+    
     latitude_label.text = [NSString stringWithFormat:@"%f",touchMapCoordinate.latitude];
     longitude_label.text = [NSString stringWithFormat:@"%f",touchMapCoordinate.longitude];
     
@@ -82,6 +83,10 @@
     
 }
 
+-(IBAction)choose_location_pressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:TRUE];
+}
 
 - (void)didReceiveMemoryWarning
 {

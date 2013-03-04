@@ -29,6 +29,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    
+   NSString* videoHTML = [NSString stringWithFormat:@"\
+                 <html>\
+                 <head>\
+                 <style type=\"text/css\">\
+                 iframe {position:absolute; top:50%%; margin-top:-130px;}\
+                 body {background-color:#000; margin:0;}\
+                 </style>\
+                 </head>\
+                 <body>\
+                 <iframe width=\"100%%\" height=\"240px\" src=\"%@\" frameborder=\"0\" allowfullscreen></iframe>\
+                 </body>\
+                 </html>",@"http://www.youtube.com/embed/-owm1Ift7Ig"];
+    
+    [youTube_video_webView loadHTMLString:videoHTML baseURL:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

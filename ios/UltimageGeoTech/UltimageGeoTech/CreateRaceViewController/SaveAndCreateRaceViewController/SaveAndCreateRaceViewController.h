@@ -11,7 +11,7 @@
 @interface SaveAndCreateRaceViewController : UIViewController<UITextFieldDelegate,UITextViewDelegate>
 {
     IBOutlet UITextField* race_name_text_field;//10001
-    IBOutlet UITextField* show_number_of_question_text_field;//10002
+    IBOutlet UILabel* show_number_of_question_label;//10002
     
     IBOutlet UITextView*race_detail_textView;//10003
     
@@ -42,9 +42,12 @@
     
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
     
+    IBOutlet UIToolbar*save_create_toolbar;
+    
+    
 }
 
 -(IBAction)create_race_button_clicked:(id)sender;
 -(IBAction)share_race_button_clicked:(id)sender;
-
+-(IBAction)toolbar_doneButton_pressed;
 @end

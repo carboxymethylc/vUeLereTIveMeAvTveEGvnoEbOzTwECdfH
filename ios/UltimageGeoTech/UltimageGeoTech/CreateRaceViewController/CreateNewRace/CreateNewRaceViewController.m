@@ -162,10 +162,9 @@
 	}
 	
 	// Set up the cell.
-	
     
-    
-	cell.textLabel.text = [[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question"];
+    NSString*question_string = [[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question"];
+	cell.textLabel.text = [NSString stringWithFormat:@"%d %@",indexPath.row+1,question_string];
 	
 	return cell;
 
@@ -257,15 +256,6 @@
              setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"answer"]
              forKey:@"answer"];
             
-            /*
-            app_delegate.current_question_dictionary = {
-                answer = 1;
-                "current_question_latitude" = "23.03828";
-                "current_question_longitued" = "72.52428";
-                question = test;
-                "question_type" = 2;
-            }
-            */
             
             [self.navigationController pushViewController:viewController animated:YES];
             [viewController release];

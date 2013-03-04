@@ -11,11 +11,12 @@
 
 @implementation MyAnnotation
 
-@synthesize coordinate, title,currentPoint,img,curId;
+@synthesize coordinate, title,currentPoint,img,curId,subtitle;
 
 -(void)dealloc 
 {
 	[title release];
+    [subtitle release];
 	[img release];
 	[super dealloc];
 }

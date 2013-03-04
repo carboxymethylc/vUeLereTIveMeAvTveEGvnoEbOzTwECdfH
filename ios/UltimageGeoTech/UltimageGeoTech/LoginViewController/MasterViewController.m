@@ -23,11 +23,11 @@
 
 -(IBAction)fb_button_pressed:(id)sender
 {
-    /*testing only..*/
+    /*testing only..
     [app_delegate.navigationController removeFromParentViewController];
     app_delegate.window.rootViewController =app_delegate.tabBarController;
     return;
-    
+    */
     
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     if (![[delegate facebook] isSessionValid])

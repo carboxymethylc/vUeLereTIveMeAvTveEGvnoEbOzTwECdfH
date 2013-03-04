@@ -29,6 +29,13 @@
     self.navigationItem.hidesBackButton = YES;
     race_extra_detail_decitionary = [[NSMutableDictionary alloc] init];
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    [race_extra_detail_decitionary setObject:[NSString stringWithFormat:@"%d",[app_delegate.current_race_question_array count]] forKey:@"number_of_question"];
+    
+    show_number_of_question_label.text = [NSString stringWithFormat:@"%d",[app_delegate.current_race_question_array count]];
+    
+    save_create_toolbar.hidden = TRUE;
+    
     // Do any additional setup after loading the view from its nib.
 }
 -(void)viewWillAppear:(BOOL)animated
@@ -51,19 +58,12 @@
     {
         case 1001:
         {
-            
-            
             [race_extra_detail_decitionary setObject:race_name_text_field.text forKey:@"race_name"];
-            break;
-        }
-        case 1002:
-        {
-            [race_extra_detail_decitionary setObject:race_detail_textView.text forKey:@"race_detail"];
             break;
         }
         case 1003:
         {
-            [race_extra_detail_decitionary setObject:show_number_of_question_text_field.text forKey:@"number_of_question"];
+            [race_extra_detail_decitionary setObject:show_number_of_question_label.text forKey:@"number_of_question"];
             break;
         }
         default:
@@ -136,11 +136,10 @@
          NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
          NSLog(@"\n returnString == %@",returnString);
          json = [[SBJSON new] autorelease];
-         
-         
          responseDataDictionary = [json objectWithString:returnString error:&error];
          [responseDataDictionary retain];
          
+         NSLog(@"\n responseDataDictionary == %@",responseDataDictionary);
          
          [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
          
@@ -181,7 +180,7 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    
+    save_create_toolbar.hidden = FALSE;
     return TRUE;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -199,11 +198,6 @@
         case 1001:
         {
             [race_extra_detail_decitionary setObject:textField.text forKey:@"race_name"];
-             break;
-        }
-            case 1003:
-        {
-            [race_extra_detail_decitionary setObject:textField.text forKey:@"number_of_question"];
              break;
         }
         default:
@@ -242,6 +236,37 @@
      [race_extra_detail_decitionary setObject:textView.text forKey:@"race_detail"];
 }
 
+
+#pragma mark - dealloc
+
+-(IBAction)toolbar_doneButton_pressed
+{
+    
+    
+    switch (current_textfield_textview_tag)
+    {
+        case 1001:
+        {
+            [race_extra_detail_decitionary setObject:race_name_text_field.text forKey:@"race_name"];
+            break;
+        }
+        case 1003:
+        {
+            [race_extra_detail_decitionary setObject:race_detail_textView.text forKey:@"race_detail"];
+            break;
+        }
+        default:
+        {
+            break;
+        }
+            
+    }
+
+    [self.view endEditing:TRUE];
+    
+    
+    save_create_toolbar.hidden = TRUE;
+}
 
 #pragma mark - dealloc
 -(void)dealloc

@@ -26,7 +26,20 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "313"
          endingLineNumber = "313"
-         landmarkName = "-alertView:clickedButtonAtIndex:"
+         landmarkName = "-email_login_forgotPassword_button_pressed:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UltimageGeoTech/CreateRaceViewController/SaveAndCreateRaceViewController/SaveAndCreateRaceViewController.m"
+         timestampString = "384005850.362107"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "242"
+         endingLineNumber = "242"
+         landmarkName = "-toolbar_doneButton_pressed"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

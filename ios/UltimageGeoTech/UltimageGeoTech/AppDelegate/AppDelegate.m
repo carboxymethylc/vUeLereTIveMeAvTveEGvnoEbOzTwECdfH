@@ -58,51 +58,9 @@ static NSString* kAppId = @"401301426565681";
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-
-    /*
-     
-     need to create created_by in tbl_race
-    
-     case "create_race":
-     {
-     
-     echo "<pre>";
-     
-     print_r($decodedData->user_id);
-     
-     echo "\n\n\n\n\n\n";
-     
-     print_r($decodedData->race_detail);
-     
-     echo "\n\n\n\n\n\n";
-     
-     print_r($decodedData->race_question_array);
-     
-     $sql = "INSERT INTO tbl_race
-     (
-     race_name,
-     number_of_questions,
-     race_info,
-     
-     )
-     
-     ";
-     
-     
-     
-     
-     exit;
-     
-     break;	
-     }
-     */
-    
-    
     
     user_information_dictionary = [[NSMutableDictionary alloc] init];
-    
     current_race_question_array = [[NSMutableArray alloc] init];
-   
     
     is_in_question_editing_mode = NO;
     selected_question_index_for_edit = 0;
@@ -159,16 +117,11 @@ static NSString* kAppId = @"401301426565681";
 
 
 
-    bottomView = [[UIView alloc] initWithFrame:CGRectMake(0,386,320,48)];
+    bottomView = [[UIView alloc] initWithFrame:CGRectMake(0,430,320,48)];
     
     NSLog(@"\n bottom view in app= %@",bottomView);
     
-    UIImageView*bottomBGImageVIew = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"footer_bg_ipad_landscape.png"]];
-    bottomBGImageVIew.frame = CGRectMake(0, 0,320,48);
-    
-    //[bottomView addSubview:bottomBGImageVIew];
-    [bottomBGImageVIew release];
-
+   
     
     btnRace=[UIButton buttonWithType:UIButtonTypeCustom] ;
     [btnRace setBackgroundImage:[UIImage imageNamed:@"race.png"] forState:UIControlStateNormal];
@@ -177,7 +130,7 @@ static NSString* kAppId = @"401301426565681";
     [btnRace addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     [btnRace setTag:0];
-    [btnRace setSelected:YES];
+    [btnRace setSelected:NO];
     [bottomView addSubview:btnRace];
     
     
@@ -207,7 +160,7 @@ static NSString* kAppId = @"401301426565681";
     [btnHome setFrame:CGRectMake(192,0,64,48)];
     [btnHome addTarget:self action:@selector(buttonTabBarPressed:) forControlEvents:UIControlEventTouchUpInside];
     [btnHome setTag:3];
-    [btnHome setSelected:NO];
+    [btnHome setSelected:YES];
     [bottomView addSubview:btnHome];
     
    
@@ -222,7 +175,7 @@ static NSString* kAppId = @"401301426565681";
     
     bottomView.backgroundColor = [UIColor redColor];
     
-    //bottomView.hidden = TRUE;
+    bottomView.hidden = FALSE;
    
     
     
@@ -280,7 +233,8 @@ static NSString* kAppId = @"401301426565681";
                                   nil];
         [alertView show];
         [alertView release];
-    } else
+    }
+    else
     {
         // Now check that the URL scheme fb[app_id]://authorize is in the .plist and can
         // be opened, doing a simple check without local app id factored in here
@@ -329,7 +283,7 @@ static NSString* kAppId = @"401301426565681";
     //[[self navigationController] setNavigationBarHidden:YES animated:NO];
     
     self.tabBarController.delegate = self;
-    //[self.tabBarController.tabBar setHidden:YES];
+   
    
     //self.window.rootViewController =self.tabBarController;
     
@@ -342,7 +296,16 @@ static NSString* kAppId = @"401301426565681";
     if([user_defaults objectForKey:@"user_id"]!=nil && [[[user_defaults objectForKey:@"user_id"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]>0)
     {
         [user_information_dictionary setObject:[user_defaults objectForKey:@"user_id"] forKey:@"user_id"];
-        self.window.rootViewController =self.tabBarController;
+      
+        
+        //self.window.rootViewController =self.tabBarController;
+        
+        [self.window addSubview:[self.tabBarController view]];
+        [self.tabBarController.tabBar setHidden:YES];
+        [self.window bringSubviewToFront:bottomView];
+        [self.window addSubview:bottomView];
+        
+        
     }
     else
     {

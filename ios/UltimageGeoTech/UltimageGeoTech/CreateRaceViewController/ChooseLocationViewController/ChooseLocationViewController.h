@@ -20,6 +20,13 @@
     MKCoordinateRegion newRegion;
     
 }
+
+
+
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
+
+-(IBAction)choose_location_pressed:(id)sender;
+
+
 - (void)gotoLocation;
 @end
