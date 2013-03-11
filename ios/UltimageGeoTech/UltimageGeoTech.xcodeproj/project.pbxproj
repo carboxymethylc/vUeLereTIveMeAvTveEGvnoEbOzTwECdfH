@@ -473,15 +473,15 @@
 		469460B016ADA3A60013F3D6 /* UltimageGeoTech */ = {
 			isa = PBXGroup;
 			children = (
-				46CA250B16BD706500C18E76 /* LocationManager */,
 				467DBDED16BD29670015CE60 /* AccountViewController */,
+				469460D316ADB2D80013F3D6 /* AppDelegate */,
 				467DBDEE16BD29670015CE60 /* CreateRaceViewController */,
+				469460D616ADB2D80013F3D6 /* HomeScreenViewController */,
+				46CA250B16BD706500C18E76 /* LocationManager */,
+				469460DA16ADB2D80013F3D6 /* LoginViewController */,
 				467DBDEF16BD29670015CE60 /* RaceViewController */,
 				467DBDF016BD29670015CE60 /* ScoreViewController */,
 				469AA46016B0D6AD006F931E /* Share */,
-				469460D316ADB2D80013F3D6 /* AppDelegate */,
-				469460D616ADB2D80013F3D6 /* HomeScreenViewController */,
-				469460DA16ADB2D80013F3D6 /* LoginViewController */,
 				469460B116ADA3A60013F3D6 /* Supporting Files */,
 			);
 			path = UltimageGeoTech;

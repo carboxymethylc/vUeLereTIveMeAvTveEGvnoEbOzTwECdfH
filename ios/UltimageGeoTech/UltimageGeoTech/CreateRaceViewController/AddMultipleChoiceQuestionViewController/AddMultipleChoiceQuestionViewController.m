@@ -45,7 +45,6 @@
     if(app_delegate.is_in_question_editing_mode)
     {
        
-        
         question_textView.text =  [app_delegate.current_question_dictionary objectForKey:@"question"];
 
         answer1_textView.text = [app_delegate.current_question_dictionary objectForKey:@"option_a"];
