@@ -42,7 +42,24 @@
     
     if(app_delegate.is_in_question_editing_mode)
     {
+        
+        
+        
+        
+        //false
+        if([[app_delegate.current_question_dictionary objectForKey:@"answer"]intValue]==0)
+        {
+            [false_button setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+        }
+        else
+        {
+            [true_button setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+        }
+        
         question_textView.text = [app_delegate.current_question_dictionary objectForKey:@"question"];
+        
+        
+        
         NSLog(@"\n correct answer is = %@",[app_delegate.current_question_dictionary objectForKey:@"answer"]);
         
     }
@@ -81,6 +98,7 @@
 {
     true_false_que_toolbar.hidden = TRUE;
     true_false_question_scrollview.contentSize = CGSizeMake(320,400);
+    
     [app_delegate.current_question_dictionary setObject:question_textView.text forKey:@"question"];
     [self.view endEditing:TRUE];
     
@@ -118,10 +136,18 @@
 {
     
     UIButton*tempButton = (UIButton*)sender;
+    
+    
+    true_button.titleLabel.textColor = [UIColor whiteColor];
+    false_button.titleLabel.textColor = [UIColor whiteColor];
+    
     switch (tempButton.tag)
     {
         case 2001:
         {
+            
+            
+             [true_button setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
             
             [app_delegate.current_question_dictionary setObject:@"1" forKey:@"answer"];
             break;
@@ -129,6 +155,10 @@
         }
         case 2002:
         {
+            
+            [false_button setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+            
+            
             [app_delegate.current_question_dictionary setObject:@"0" forKey:@"answer"];
             break;
         }

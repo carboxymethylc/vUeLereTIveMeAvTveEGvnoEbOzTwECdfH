@@ -14,6 +14,8 @@
 		4601EB3E16BE7C0800497ED0 /* createaccountbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB3D16BE7C0800497ED0 /* createaccountbutton.png */; };
 		4601EB4516BEA3CC00497ED0 /* loginemail.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB4316BEA3CC00497ED0 /* loginemail.png */; };
 		4601EB4616BEA3CC00497ED0 /* loginfacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB4416BEA3CC00497ED0 /* loginfacebook.png */; };
+		4613E76816FA3A7C00A506C7 /* AddCheckInQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4613E76616FA3A7C00A506C7 /* AddCheckInQuestionViewController.m */; };
+		4613E76916FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4613E76716FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib */; };
 		467DBDF416BD2EA50015CE60 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDF216BD2EA50015CE60 /* AccountViewController.m */; };
 		467DBDF516BD2EA50015CE60 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBDF316BD2EA50015CE60 /* AccountViewController.xib */; };
 		467DBDF916BD2EBF0015CE60 /* CreateRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDF716BD2EBF0015CE60 /* CreateRaceViewController.m */; };
@@ -161,6 +163,9 @@
 		4601EB3D16BE7C0800497ED0 /* createaccountbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createaccountbutton.png; sourceTree = "<group>"; };
 		4601EB4316BEA3CC00497ED0 /* loginemail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginemail.png; sourceTree = "<group>"; };
 		4601EB4416BEA3CC00497ED0 /* loginfacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginfacebook.png; sourceTree = "<group>"; };
+		4613E76516FA3A7C00A506C7 /* AddCheckInQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCheckInQuestionViewController.h; sourceTree = "<group>"; };
+		4613E76616FA3A7C00A506C7 /* AddCheckInQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCheckInQuestionViewController.m; sourceTree = "<group>"; };
+		4613E76716FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCheckInQuestionViewController.xib; sourceTree = "<group>"; };
 		467DBDF116BD2EA50015CE60 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		467DBDF216BD2EA50015CE60 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		467DBDF316BD2EA50015CE60 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
@@ -370,6 +375,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4613E76416FA38F500A506C7 /* AddCheckInQuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4613E76516FA3A7C00A506C7 /* AddCheckInQuestionViewController.h */,
+				4613E76616FA3A7C00A506C7 /* AddCheckInQuestionViewController.m */,
+				4613E76716FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib */,
+			);
+			path = AddCheckInQuestionViewController;
+			sourceTree = "<group>";
+		};
 		467DBDED16BD29670015CE60 /* AccountViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +398,7 @@
 		467DBDEE16BD29670015CE60 /* CreateRaceViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4613E76416FA38F500A506C7 /* AddCheckInQuestionViewController */,
 				46F71A0216CB2A74000B4927 /* SaveAndCreateRaceViewController */,
 				ED99983416C257C100C51E00 /* ChooseLocationViewController */,
 				ED99982A16C239EC00C51E00 /* AddTrueFalseQuestionViewController */,
@@ -1040,6 +1056,7 @@
 				ED138E9816C3A5E200A39B1E /* text_field_bg.png in Resources */,
 				EDE70C0516C3ACA500C9142B /* save_buttn.png in Resources */,
 				46F71A0716CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib in Resources */,
+				4613E76916FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1098,6 +1115,7 @@
 				ED99982E16C23A0100C51E00 /* AddTrueFalseQuestionViewController.m in Sources */,
 				ED99983816C257CD00C51E00 /* ChooseLocationViewController.m in Sources */,
 				46F71A0616CB2A9B000B4927 /* SaveAndCreateRaceViewController.m in Sources */,
+				4613E76816FA3A7C00A506C7 /* AddCheckInQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

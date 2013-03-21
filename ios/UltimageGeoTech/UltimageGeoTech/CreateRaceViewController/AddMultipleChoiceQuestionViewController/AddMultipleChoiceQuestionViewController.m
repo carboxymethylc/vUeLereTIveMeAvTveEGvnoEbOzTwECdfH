@@ -55,6 +55,64 @@
         app_delegate.current_question_latitude = [[app_delegate.current_question_dictionary objectForKey:@"current_question_latitude"] floatValue];
         app_delegate.current_question_longitued = [[app_delegate.current_question_dictionary objectForKey:@"current_question_longitued"] floatValue];
         
+        int tag = [[app_delegate.current_question_dictionary objectForKey:@"correct_answer"] intValue];
+        
+        
+        switch (tag)
+        {
+            case 1:
+            {
+                [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:1] forKey:@"correct_answer"];
+                
+                
+                [answer_button_a setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+                
+                
+                answer_text_label.text = @"You choose A as the correct answer";
+                
+                break;
+            }
+            case 2:
+            {
+                [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:2]  forKey:@"correct_answer"];
+                
+                [answer_button_b setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+                
+                
+                answer_text_label.text = @"You choose B as the correct answer";
+                break;
+            }
+            case 3:
+            {
+                [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:3]  forKey:@"correct_answer"];
+                
+                [answer_button_c setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+                
+                answer_text_label.text = @"You choose C as the correct answer";
+                break;
+            }
+            case 4:
+            {
+                [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:4]  forKey:@"correct_answer"];
+                
+                
+                [answer_button_d setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+                
+                
+                answer_text_label.text = @"You choose D as the correct answer";
+                break;
+            }
+                
+            default:
+            {
+                break;
+            }
+                
+        }
+        
+        
+        
+        
         
         
     }
@@ -90,32 +148,61 @@
     UIButton*tempButton = (UIButton*)sender;
     int tag = tempButton.tag-1000;
     
+    answer_button_a.titleLabel.textColor = [UIColor whiteColor];
+    answer_button_b.titleLabel.textColor = [UIColor whiteColor];
+    answer_button_c.titleLabel.textColor = [UIColor whiteColor];
+    answer_button_d.titleLabel.textColor = [UIColor whiteColor];
     
     switch (tag)
     {
         case 1:
         {
             [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:1] forKey:@"correct_answer"];
+            
+            
+            [answer_button_a setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+            
+            
+            answer_text_label.text = @"You choose A as the correct answer";
+            
             break;
         }
         case 2:
         {
             [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:2]  forKey:@"correct_answer"];
+           
+            [answer_button_b setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+
+            
+            answer_text_label.text = @"You choose B as the correct answer";
             break;
         }
         case 3:
         {
             [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:3]  forKey:@"correct_answer"];
+            
+            [answer_button_c setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+
+            answer_text_label.text = @"You choose C as the correct answer";
             break;
         }
         case 4:
         {
             [app_delegate.current_question_dictionary setObject:[NSNumber numberWithInt:4]  forKey:@"correct_answer"];
+            
+
+            [answer_button_d setTitleColor:[UIColor colorWithRed:50.0/225.0 green:79.0f/255.0 blue:133.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+
+            
+            answer_text_label.text = @"You choose D as the correct answer";
             break;
         }
                     
         default:
+        {
             break;
+        }
+    
     }
 
     

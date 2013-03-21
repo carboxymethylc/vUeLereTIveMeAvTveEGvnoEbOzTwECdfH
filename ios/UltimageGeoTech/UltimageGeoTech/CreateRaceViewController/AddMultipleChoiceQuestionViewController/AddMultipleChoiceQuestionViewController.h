@@ -32,6 +32,8 @@
     
     AppDelegate*app_delegate;
     
+   IBOutlet UILabel*answer_text_label;
+    
     
     
 }

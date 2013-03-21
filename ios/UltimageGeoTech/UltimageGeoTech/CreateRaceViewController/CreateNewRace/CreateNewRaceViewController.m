@@ -17,6 +17,7 @@
 #import "AddMultipleChoiceQuestionViewController.h"
 #import "AddTrueFalseQuestionViewController.h"
 #import "AddMissingLetterQuestionViewController.h"
+#import "AddCheckInQuestionViewController.h"
 
 #import "SaveAndCreateRaceViewController.h"
 
@@ -123,9 +124,16 @@
         }
         case 1004:
         {
-            ChooseLocationViewController*viewController = [[ChooseLocationViewController alloc] initWithNibName:@"ChooseLocationViewController" bundle:nil];
+            
+            
+            
+            
+            AddCheckInQuestionViewController*viewController = [[AddCheckInQuestionViewController alloc] initWithNibName:@"AddCheckInQuestionViewController" bundle:nil];
             [self.navigationController pushViewController:viewController animated:TRUE];
             [viewController release];
+            break;
+
+            
             
             break;
         }
@@ -177,9 +185,7 @@
     
     int question_type =  [[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question_type"] intValue];
     
-#import "AddMultipleChoiceQuestionViewController.h"
-#import "AddTrueFalseQuestionViewController.h"
-#import "AddMissingLetterQuestionViewController.h"
+
     
     
     
@@ -290,19 +296,28 @@
              forKey:@"number_of_letters_to_show"];
             
             
-            /*
-            answer = qweu;
-            "current_question_latitude" = "23.03847";
-            "current_question_longitued" = "72.52427";
-            "number_of_letters_to_show" = 2;
-            question = "test-miss";
-            "question_type" = "";
-            */
-            
+                       
             [self.navigationController pushViewController:viewController animated:YES];
             [viewController release];
             
             break;
+        }
+        case 4:
+        {
+            
+            
+            
+            AddCheckInQuestionViewController*viewController = [[AddCheckInQuestionViewController alloc] initWithNibName:@"AddCheckInQuestionViewController" bundle:nil];
+            
+            
+            [app_delegate.current_question_dictionary
+             setObject:[[app_delegate.current_race_question_array objectAtIndex:indexPath.row] objectForKey:@"question"]
+             forKey:@"question"];
+            
+            [self.navigationController pushViewController:viewController animated:TRUE];
+            [viewController release];
+
+            
         }
             
         default:

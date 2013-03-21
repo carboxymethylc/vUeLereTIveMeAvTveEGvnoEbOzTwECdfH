@@ -47,7 +47,7 @@
 						<string key="NSFrameSize">{320, 387}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="655765503"/>
+						<reference key="NSNextKeyView" ref="636278023"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -80,11 +80,11 @@
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
-								<object class="IBUIFontDescription" key="IBUIFontDescription">
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="966229902">
 									<int key="type">1</int>
 									<double key="pointSize">16</double>
 								</object>
-								<object class="NSFont" key="IBUIFont">
+								<object class="NSFont" key="IBUIFont" id="197012182">
 									<string key="NSName">Helvetica</string>
 									<double key="NSSize">16</double>
 									<int key="NSfFlags">16</int>
@@ -324,24 +324,20 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">a</string>
+								<string key="IBUINormalTitle">A</string>
 								<reference key="IBUIHighlightedTitleColor" ref="598633012"/>
-								<object class="NSColor" key="IBUINormalTitleColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-								</object>
+								<reference key="IBUINormalTitleColor" ref="598633012"/>
 								<object class="NSColor" key="IBUINormalTitleShadowColor" id="491487553">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
-								<object class="IBUIFontDescription" key="IBUIFontDescription" id="628813276">
+								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<int key="type">2</int>
-									<double key="pointSize">15</double>
+									<int key="size">2</int>
 								</object>
-								<object class="NSFont" key="IBUIFont" id="1003392247">
+								<object class="NSFont" key="IBUIFont" id="424315054">
 									<string key="NSName">Helvetica-Bold</string>
-									<double key="NSSize">15</double>
+									<double key="NSSize">18</double>
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
@@ -358,16 +354,15 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">b</string>
+								<string key="IBUINormalTitle">B</string>
 								<reference key="IBUIHighlightedTitleColor" ref="598633012"/>
-								<object class="NSColor" key="IBUINormalTitleColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-								</object>
+								<reference key="IBUINormalTitleColor" ref="598633012"/>
 								<reference key="IBUINormalTitleShadowColor" ref="491487553"/>
-								<reference key="IBUIFontDescription" ref="628813276"/>
-								<reference key="IBUIFont" ref="1003392247"/>
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="952289714">
+									<int key="type">2</int>
+									<double key="pointSize">18</double>
+								</object>
+								<reference key="IBUIFont" ref="424315054"/>
 							</object>
 							<object class="IBUIButton" id="96254179">
 								<reference key="NSNextResponder" ref="720256227"/>
@@ -382,16 +377,12 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">c</string>
+								<string key="IBUINormalTitle">C</string>
 								<reference key="IBUIHighlightedTitleColor" ref="598633012"/>
-								<object class="NSColor" key="IBUINormalTitleColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-								</object>
+								<reference key="IBUINormalTitleColor" ref="598633012"/>
 								<reference key="IBUINormalTitleShadowColor" ref="491487553"/>
-								<reference key="IBUIFontDescription" ref="628813276"/>
-								<reference key="IBUIFont" ref="1003392247"/>
+								<reference key="IBUIFontDescription" ref="952289714"/>
+								<reference key="IBUIFont" ref="424315054"/>
 							</object>
 							<object class="IBUIButton" id="485686421">
 								<reference key="NSNextResponder" ref="720256227"/>
@@ -399,28 +390,24 @@
 								<string key="NSFrame">{{280, 319}, {25, 25}}</string>
 								<reference key="NSSuperview" ref="720256227"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="724016838"/>
+								<reference key="NSNextKeyView" ref="724559528"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<int key="IBUITag">1004</int>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
-								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">d</string>
+								<string key="IBUINormalTitle">D</string>
 								<reference key="IBUIHighlightedTitleColor" ref="598633012"/>
-								<object class="NSColor" key="IBUINormalTitleColor">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-								</object>
+								<reference key="IBUINormalTitleColor" ref="598633012"/>
 								<reference key="IBUINormalTitleShadowColor" ref="491487553"/>
-								<reference key="IBUIFontDescription" ref="628813276"/>
-								<reference key="IBUIFont" ref="1003392247"/>
+								<reference key="IBUIFontDescription" ref="952289714"/>
+								<reference key="IBUIFont" ref="424315054"/>
 							</object>
 							<object class="IBUIButton" id="724016838">
 								<reference key="NSNextResponder" ref="720256227"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{137, 357}, {73, 44}}</string>
+								<string key="NSFrame">{{266, 373}, {59, 32}}</string>
 								<reference key="NSSuperview" ref="720256227"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="721270445"/>
@@ -430,15 +417,43 @@
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
 								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">Save</string>
+								<string key="IBUINormalTitle">SAVE</string>
 								<reference key="IBUIHighlightedTitleColor" ref="598633012"/>
 								<object class="NSColor" key="IBUINormalTitleColor">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 								</object>
 								<reference key="IBUINormalTitleShadowColor" ref="491487553"/>
-								<reference key="IBUIFontDescription" ref="628813276"/>
-								<reference key="IBUIFont" ref="1003392247"/>
+								<object class="IBUIFontDescription" key="IBUIFontDescription">
+									<int key="type">2</int>
+									<double key="pointSize">15</double>
+								</object>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica-Bold</string>
+									<double key="NSSize">15</double>
+									<int key="NSfFlags">16</int>
+								</object>
+							</object>
+							<object class="IBUILabel" id="724559528">
+								<reference key="NSNextResponder" ref="720256227"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{43, 348}, {274, 21}}</string>
+								<reference key="NSSuperview" ref="720256227"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="724016838"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<string key="IBUIText">You choose  as the correct answer</string>
+								<reference key="IBUITextColor" ref="598633012"/>
+								<nil key="IBUIHighlightedColor"/>
+								<int key="IBUIBaselineAdjustment">0</int>
+								<reference key="IBUIFontDescription" ref="966229902"/>
+								<reference key="IBUIFont" ref="197012182"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
 						<string key="NSFrame">{{-20, -20}, {360, 427}}</string>
@@ -456,6 +471,7 @@
 						<string key="NSFrame">{{216, 6}, {95, 25}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="655765503"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -485,6 +501,7 @@
 						<string key="NSFrame">{{0, 177}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -640,6 +657,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">answer_text_label</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="724559528"/>
+					</object>
+					<int key="connectionID">59</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="429310913"/>
 						<reference key="destination" ref="372490531"/>
@@ -791,6 +816,7 @@
 							<reference ref="240358790"/>
 							<reference ref="633251640"/>
 							<reference ref="411190662"/>
+							<reference ref="724559528"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -903,6 +929,11 @@
 						<reference key="object" ref="636278023"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">58</int>
+						<reference key="object" ref="724559528"/>
+						<reference key="parent" ref="720256227"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -929,6 +960,7 @@
 				<string key="54.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="55.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="58.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -938,7 +970,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">57</int>
+			<int key="maxID">59</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -979,6 +1011,7 @@
 						<string key="answer_button_b">UIButton</string>
 						<string key="answer_button_c">UIButton</string>
 						<string key="answer_button_d">UIButton</string>
+						<string key="answer_text_label">UILabel</string>
 						<string key="multiQue_toolbar">UIToolbar</string>
 						<string key="question_textView">UITextView</string>
 					</dictionary>
@@ -1018,6 +1051,10 @@
 						<object class="IBToOneOutletInfo" key="answer_button_d">
 							<string key="name">answer_button_d</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="answer_text_label">
+							<string key="name">answer_text_label</string>
+							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="multiQue_toolbar">
 							<string key="name">multiQue_toolbar</string>
