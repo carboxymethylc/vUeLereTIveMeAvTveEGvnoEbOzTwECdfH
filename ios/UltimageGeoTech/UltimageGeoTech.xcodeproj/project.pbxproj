@@ -16,6 +16,8 @@
 		4601EB4616BEA3CC00497ED0 /* loginfacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB4416BEA3CC00497ED0 /* loginfacebook.png */; };
 		4613E76816FA3A7C00A506C7 /* AddCheckInQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4613E76616FA3A7C00A506C7 /* AddCheckInQuestionViewController.m */; };
 		4613E76916FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4613E76716FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib */; };
+		462CF2C816FB842C00BC582A /* RaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462CF2C616FB842C00BC582A /* RaceDetailViewController.m */; };
+		462CF2C916FB842C00BC582A /* RaceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462CF2C716FB842C00BC582A /* RaceDetailViewController.xib */; };
 		467DBDF416BD2EA50015CE60 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDF216BD2EA50015CE60 /* AccountViewController.m */; };
 		467DBDF516BD2EA50015CE60 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 467DBDF316BD2EA50015CE60 /* AccountViewController.xib */; };
 		467DBDF916BD2EBF0015CE60 /* CreateRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDF716BD2EBF0015CE60 /* CreateRaceViewController.m */; };
@@ -166,6 +168,9 @@
 		4613E76516FA3A7C00A506C7 /* AddCheckInQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCheckInQuestionViewController.h; sourceTree = "<group>"; };
 		4613E76616FA3A7C00A506C7 /* AddCheckInQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCheckInQuestionViewController.m; sourceTree = "<group>"; };
 		4613E76716FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCheckInQuestionViewController.xib; sourceTree = "<group>"; };
+		462CF2C516FB842C00BC582A /* RaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceDetailViewController.h; sourceTree = "<group>"; };
+		462CF2C616FB842C00BC582A /* RaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceDetailViewController.m; sourceTree = "<group>"; };
+		462CF2C716FB842C00BC582A /* RaceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RaceDetailViewController.xib; sourceTree = "<group>"; };
 		467DBDF116BD2EA50015CE60 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		467DBDF216BD2EA50015CE60 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		467DBDF316BD2EA50015CE60 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
@@ -385,6 +390,16 @@
 			path = AddCheckInQuestionViewController;
 			sourceTree = "<group>";
 		};
+		462CF2C416FB840D00BC582A /* RaceDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				462CF2C516FB842C00BC582A /* RaceDetailViewController.h */,
+				462CF2C616FB842C00BC582A /* RaceDetailViewController.m */,
+				462CF2C716FB842C00BC582A /* RaceDetailViewController.xib */,
+			);
+			path = RaceDetailViewController;
+			sourceTree = "<group>";
+		};
 		467DBDED16BD29670015CE60 /* AccountViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +430,7 @@
 		467DBDEF16BD29670015CE60 /* RaceViewController */ = {
 			isa = PBXGroup;
 			children = (
+				462CF2C416FB840D00BC582A /* RaceDetailViewController */,
 				467DBDFB16BD2EE50015CE60 /* RaceViewController.h */,
 				467DBDFC16BD2EE50015CE60 /* RaceViewController.m */,
 				467DBDFD16BD2EE50015CE60 /* RaceViewController.xib */,
@@ -1057,6 +1073,7 @@
 				EDE70C0516C3ACA500C9142B /* save_buttn.png in Resources */,
 				46F71A0716CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib in Resources */,
 				4613E76916FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib in Resources */,
+				462CF2C916FB842C00BC582A /* RaceDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,6 +1133,7 @@
 				ED99983816C257CD00C51E00 /* ChooseLocationViewController.m in Sources */,
 				46F71A0616CB2A9B000B4927 /* SaveAndCreateRaceViewController.m in Sources */,
 				4613E76816FA3A7C00A506C7 /* AddCheckInQuestionViewController.m in Sources */,
+				462CF2C816FB842C00BC582A /* RaceDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

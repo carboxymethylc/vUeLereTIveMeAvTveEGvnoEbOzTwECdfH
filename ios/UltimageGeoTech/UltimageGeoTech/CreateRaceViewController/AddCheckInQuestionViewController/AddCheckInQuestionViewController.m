@@ -79,6 +79,7 @@
 {
     checkin_que_toolbar.hidden = FALSE;
     checkIn_question_textView.frame = CGRectMake(checkIn_question_textView.frame.origin.x, checkIn_question_textView.frame.origin.y,checkIn_question_textView.frame.size.width, 123.0f);
+    
 }
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
