@@ -9,5 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface RaceDetailViewController : UIViewController
+{
+    IBOutlet UILabel*race_name_lable;
+    IBOutlet UILabel*race_details_lable;
+    IBOutlet UILabel*race_number_of_questions_lable;
+    IBOutlet UILabel*race_completed_lable;
+    IBOutlet UILabel*race_rating_lable;
+    IBOutlet UILabel*race_number_of_revies_lable;
+}
+
+-(IBAction)read_reviews_clicked:(id)sender;
+-(IBAction)start_game_clicked:(id)sender;
+
 
 @end
