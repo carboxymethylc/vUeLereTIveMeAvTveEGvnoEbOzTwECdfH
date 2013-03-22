@@ -65,15 +65,18 @@
 	switch($action)
 	{
 		
-		case "get_near_by_races":
+		case "get_race_detail":
 		{
 			
-			//lat = -33.8634
-			//long = 151.211
-			
-			$sql = "SELECT *, ( 3959 * acos( cos( radians(".$decodedData->user_latitude.") ) * cos( radians( race_latitude ) ) * cos( radians( race_longitude ) - radians(".$decodedData->user_longitude.") ) + sin( radians(".$decodedData->user_latitude.") ) * sin( radians( race_latitude ) ) ) ) AS distance FROM tbl_race HAVING distance < 20 ORDER BY distance";
 			
 			
+			$sql = "SELECT * FROM tbl_race_question WHERE race_id = ".$decodedData->race_id;
+			
+			/*
+			echo $sql;
+			
+			exit;
+			*/
 			
 			
 			$result = mysql_query($sql);
@@ -89,6 +92,285 @@
 				{
     				
 					$resultArray[$i]['id'] = $row["id"];
+					$resultArray[$i]['race_id'] = $row["race_id"];
+					$resultArray[$i]['race_question_text'] = $row["race_question_text"];
+					$resultArray[$i]['option_a'] = $row["option_a"];
+					$resultArray[$i]['option_b'] = $row["option_b"];
+					$resultArray[$i]['option_c'] = $row["option_d"];
+					$resultArray[$i]['correct_answer'] = $row["correct_answer"];
+					$resultArray[$i]['answer_is_true_false'] = $row["answer_is_true_false"];
+					$resultArray[$i]['missing_letter_word'] = $row["missing_letter_word"];
+					$resultArray[$i]['random_word'] = $row["random_word"];
+					$resultArray[$i]['question_type '] = $row["question_type"];
+					$resultArray[$i]['race_lat'] = $row["race_lat"];
+					$resultArray[$i]['race_lon'] = $row["race_lon"];
+					$i++;
+				}
+				print_r($json->encode($resultArray));
+			}
+			
+			
+			
+			break;
+		}
+		
+		case "create_race":
+     {
+     
+	 /*
+		 echo "<pre>";
+		 
+		 print_r($decodedData->user_id);
+		 
+		 echo "\n\n\n\n\n\n";
+		 
+		 print_r($decodedData->race_detail);
+		 
+		echo "\n\n\n\n\n\n";
+		 
+		 print_r($decodedData->race_question_array);
+		 */
+		 
+		
+		 
+		 $sql = "INSERT INTO tbl_race
+		 (
+		 race_createdby,
+		 race_name,
+		 number_of_questions,
+		 race_info,
+		 race_latitude,
+		 race_longitude
+		 
+		 )
+		
+		VALUES
+		(
+			".$decodedData->user_id.",
+			'".$decodedData->race_detail->race_name."',
+			".$decodedData->race_detail->number_of_question.",
+			'".$decodedData->race_detail->race_detail."',
+			".$decodedData->race_detail->race_latitude.",
+			".$decodedData->race_detail->race_longitued."
+			
+		)";
+		
+		 
+		 
+		$result = mysql_query($sql);
+		$resultArray = array();
+		if(!$result)
+		{
+			$resultArray['STATUS'] = "0";
+			$resultArray['STATUS'] = "Error";
+		}
+		else
+		{
+			
+			$last_insert_id = mysql_insert_id();
+			for($i=0;$i<count($decodedData->race_question_array);$i++)
+			{
+				
+				
+				if($decodedData->race_question_array[$i]->question_type==1)
+				{
+					
+					
+					$sql = "INSERT INTO tbl_race_question
+					(
+					race_id,
+					race_question_text,
+					option_a,
+					option_b,
+					option_c,
+					option_d,
+					correct_answer,
+					question_type,
+					race_lat,
+					race_lon
+					
+					)
+					
+					VALUES
+					(
+					".$last_insert_id.",
+					'".$decodedData->race_question_array[$i]->question."',
+					'".$decodedData->race_question_array[$i]->option_a."',
+					'".$decodedData->race_question_array[$i]->option_b."',
+					'".$decodedData->race_question_array[$i]->option_c."',
+					'".$decodedData->race_question_array[$i]->option_d."',
+					".$decodedData->race_question_array[$i]->correct_answer.",
+					".$decodedData->race_question_array[$i]->question_type.",
+					".$decodedData->race_question_array[$i]->current_question_latitude.",
+					".$decodedData->race_question_array[$i]->current_question_longitued."
+					
+					
+					)";
+					
+					
+					
+				}
+				else if($decodedData->race_question_array[$i]->question_type==2)
+				{
+					
+					$sql = "INSERT INTO tbl_race_question
+					(
+					race_id,
+					race_question_text,
+					answer_is_true_false,
+					question_type,
+					race_lat,
+					race_lon
+					
+					)
+					
+					VALUES
+					(
+					".$last_insert_id.",
+					'".$decodedData->race_question_array[$i]->question."',
+					".$decodedData->race_question_array[$i]->answer.",
+					".$decodedData->race_question_array[$i]->question_type.",
+					".$decodedData->race_question_array[$i]->current_question_latitude.",
+					".$decodedData->race_question_array[$i]->current_question_longitued."
+					
+					
+					)";
+					
+					
+				}
+				else if($decodedData->race_question_array[$i]->question_type==3)
+				{
+					
+					
+					$sql = "INSERT INTO tbl_race_question
+					(
+					race_id,
+					race_question_text,
+					missing_letter_word,
+					number_of_character_to_show,
+					question_type,
+					race_lat,
+					race_lon
+					
+					)
+					
+					VALUES
+					(
+					".$last_insert_id.",
+					'".$decodedData->race_question_array[$i]->question."',
+					'".$decodedData->race_question_array[$i]->answer."',
+					".$decodedData->race_question_array[$i]->number_of_letters_to_show.",
+					".$decodedData->race_question_array[$i]->question_type.",
+					".$decodedData->race_question_array[$i]->current_question_latitude.",
+					".$decodedData->race_question_array[$i]->current_question_longitued."
+					
+					
+					)";
+					
+					
+				}
+				else if($decodedData->race_question_array[$i]->question_type==4)//Checkin.
+				{
+					
+					
+					$sql = "INSERT INTO tbl_race_question
+					(
+					race_id,
+					race_question_text,
+					question_type,
+					race_lat,
+					race_lon
+					
+					)
+					
+					VALUES
+					(
+					".$last_insert_id.",
+					'".$decodedData->race_question_array[$i]->question."',
+					".$decodedData->race_question_array[$i]->question_type.",
+					".$decodedData->race_question_array[$i]->current_question_latitude.",
+					".$decodedData->race_question_array[$i]->current_question_longitued."
+					)";
+					
+					
+				}
+				
+				
+				
+				$result = mysql_query($sql);
+				$resultArray = array();
+				if(!$result)
+				{
+					$resultArray['STATUS'] = "0";
+					
+				}
+				
+				
+				
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			if($resultArray['STATUS']=='0')
+			{
+				$resultArray['STATUS'] = "0";
+				$resultArray['MESSAGE'] = "Error in creating race.Pleaes try again later.";
+			}
+			else
+			{
+				$resultArray['STATUS'] = "1";
+				$resultArray['MESSAGE'] = "Race created successfully.";
+			}
+			
+		}
+		 
+		 print_r($json->encode($resultArray));
+		 
+		 break;	
+     }
+
+		
+		
+		
+		case "get_near_by_races":
+		{
+			
+			//lat = -33.8634
+			//long = 151.211
+			
+			$sql = "SELECT *, 
+			( 3959 * acos( cos( radians(".$decodedData->user_latitude.") ) * cos( radians( race_latitude ) ) * cos( radians( race_longitude ) - radians(".$decodedData->user_longitude.") ) + sin( radians(".$decodedData->user_latitude.") ) * sin( radians( race_latitude ) ) ) ) AS distance 
+			FROM tbl_race WHERE race_createdby != $decodedData->user_id
+			HAVING distance < 20 ORDER BY distance";
+			
+			/*
+			echo $sql;
+			
+			exit;
+			*/
+			
+			
+			$result = mysql_query($sql);
+			$resultArray = array();
+			if(!$result)
+			{
+				$resultArray['STATUS'] = "0";
+			}
+			else
+			{
+				$i=0;
+				while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+				{
+    				
+					$resultArray[$i]['id'] = $row["id"];
+					$resultArray[$i]['race_createdby'] = $row["race_createdby"];
 					$resultArray[$i]['race_name'] = $row["race_name"];
 					$resultArray[$i]['number_of_questions'] = $row["number_of_questions"];
 					$resultArray[$i]['race_info'] = $row["race_info"];
@@ -98,6 +380,8 @@
 					$resultArray[$i]['number_of_completion'] = $row["number_of_completion"];
 					$resultArray[$i]['race_latitude'] = $row["race_latitude"];
 					$resultArray[$i]['race_longitude '] = $row["race_longitude"];
+					$resultArray[$i]['distance'] = $row["distance"];
+					 
 					 
 					
 					$i++;
