@@ -16,7 +16,7 @@
 
 
 @class MyAnnotation;
-@interface RaceViewController : UIViewController<MKReverseGeocoderDelegate,MKMapViewDelegate, CLLocationManagerDelegate>
+@interface RaceViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     IBOutlet MKMapView *mapView;
 	MKPlacemark *mPlacemark;
@@ -47,12 +47,22 @@
     IBOutlet UIActivityIndicatorView*process_activity_indicator;
     
 
-
+    IBOutlet UITableView*search_filter_tableView;
     
+    NSMutableArray*filter_types;
+    NSMutableDictionary*checked_filters;
+    NSMutableArray*tableView_cell_array;
+    IBOutlet UIView*search_view;
+    UIButton * filter_button;
+    
+    
+    NSMutableArray*search_fiters;
+    int current_request_type;
     
 }
 
 @property(nonatomic, retain) MKReverseGeocoder *geoCoder;
-
+-(IBAction)search_done_button_pressed:(id)sender;
+@property(nonatomic,retain)NSMutableArray*search_fiters;
 
 @end

@@ -16,6 +16,8 @@
 		4601EB4616BEA3CC00497ED0 /* loginfacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 4601EB4416BEA3CC00497ED0 /* loginfacebook.png */; };
 		4613E76816FA3A7C00A506C7 /* AddCheckInQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4613E76616FA3A7C00A506C7 /* AddCheckInQuestionViewController.m */; };
 		4613E76916FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4613E76716FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib */; };
+		462B8BC617033B6100CD9825 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 462B8BC417033B6100CD9825 /* checked.png */; };
+		462B8BC717033B6100CD9825 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 462B8BC517033B6100CD9825 /* unchecked.png */; };
 		462CF2C816FB842C00BC582A /* RaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462CF2C616FB842C00BC582A /* RaceDetailViewController.m */; };
 		462CF2C916FB842C00BC582A /* RaceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462CF2C716FB842C00BC582A /* RaceDetailViewController.xib */; };
 		467DBDF416BD2EA50015CE60 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467DBDF216BD2EA50015CE60 /* AccountViewController.m */; };
@@ -168,6 +170,8 @@
 		4613E76516FA3A7C00A506C7 /* AddCheckInQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCheckInQuestionViewController.h; sourceTree = "<group>"; };
 		4613E76616FA3A7C00A506C7 /* AddCheckInQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCheckInQuestionViewController.m; sourceTree = "<group>"; };
 		4613E76716FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCheckInQuestionViewController.xib; sourceTree = "<group>"; };
+		462B8BC417033B6100CD9825 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		462B8BC517033B6100CD9825 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		462CF2C516FB842C00BC582A /* RaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceDetailViewController.h; sourceTree = "<group>"; };
 		462CF2C616FB842C00BC582A /* RaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceDetailViewController.m; sourceTree = "<group>"; };
 		462CF2C716FB842C00BC582A /* RaceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RaceDetailViewController.xib; sourceTree = "<group>"; };
@@ -566,6 +570,8 @@
 		469460ED16ADBDC20013F3D6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				462B8BC417033B6100CD9825 /* checked.png */,
+				462B8BC517033B6100CD9825 /* unchecked.png */,
 				ED138E9716C3A5E200A39B1E /* text_field_bg.png */,
 				ED138E8416C3894D00A39B1E /* Account */,
 				EDBC424316C0E7C10010C90D /* tababr */,
@@ -1074,6 +1080,8 @@
 				46F71A0716CB2A9B000B4927 /* SaveAndCreateRaceViewController.xib in Resources */,
 				4613E76916FA3A7C00A506C7 /* AddCheckInQuestionViewController.xib in Resources */,
 				462CF2C916FB842C00BC582A /* RaceDetailViewController.xib in Resources */,
+				462B8BC617033B6100CD9825 /* checked.png in Resources */,
+				462B8BC717033B6100CD9825 /* unchecked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
