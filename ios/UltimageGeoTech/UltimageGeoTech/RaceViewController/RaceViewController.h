@@ -56,13 +56,20 @@
     UIButton * filter_button;
     
     
-    NSMutableArray*search_fiters;
+    NSMutableArray*search_filters;
     int current_request_type;
+    
+    NSMutableArray*all_questions_index;
+    
+    NSMutableArray*final_question_array;
+    
+    NSMutableArray*initial_question_array;
+    
     
 }
 
-@property(nonatomic, retain) MKReverseGeocoder *geoCoder;
+
 -(IBAction)search_done_button_pressed:(id)sender;
-@property(nonatomic,retain)NSMutableArray*search_fiters;
+@property(nonatomic,retain)NSMutableArray*search_filters;
 
 @end

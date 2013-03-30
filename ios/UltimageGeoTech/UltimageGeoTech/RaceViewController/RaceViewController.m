@@ -13,14 +13,14 @@
 @end
 
 @implementation RaceViewController
-@synthesize geoCoder;
+@synthesize search_filters;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
         // Custom initialization
-         self.title = NSLocalizedString(@"Race", @"Race");
+        self.title = NSLocalizedString(@"Race", @"Race");
     }
     return self;
 }
@@ -43,11 +43,11 @@
     search_view.hidden = TRUE;
     
     /*
-    geoCoder=[[MKReverseGeocoder alloc] initWithCoordinate:mapView.userLocation.location.coordinate];
-	
-	geoCoder.delegate=self;
-	[geoCoder start];
-	*/
+     geoCoder=[[MKReverseGeocoder alloc] initWithCoordinate:mapView.userLocation.location.coordinate];
+     
+     geoCoder.delegate=self;
+     [geoCoder start];
+     */
     
     
     
@@ -76,9 +76,14 @@
     [checked_filters setObject:[NSNumber numberWithInt:1] forKey:[NSNumber numberWithInt:0]];
     
     tableView_cell_array = [[NSMutableArray alloc] init];
-
-    search_fiters= [[NSMutableArray alloc] init];
     
+    search_filters= [[NSMutableArray alloc] init];
+    
+    all_questions_index = [[NSMutableArray alloc] init];
+    
+    final_question_array = [[NSMutableArray alloc] init];
+    
+    initial_question_array = [[NSMutableArray alloc] init];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -93,11 +98,11 @@
 	location2.latitude=app_delegate.current_latitude;
 	location2.longitude=app_delegate.current_longitued;
     
-
+    
     /*
-    region.span=span;
-    region.center=location2;
-    */
+     region.span=span;
+     region.center=location2;
+     */
     
     region.center.latitude = app_delegate.current_question_latitude;
     region.center.longitude = app_delegate.current_question_longitued;
@@ -114,7 +119,7 @@
 	[mapView regionThatFits:region];
     
     NSLog(@"\n  user Info. dic = %@",app_delegate.user_information_dictionary);
-       
+    
     
     
     current_request_type = 1;
@@ -171,7 +176,11 @@
          responseDataArray = [json objectWithString:returnString error:&error];
          [responseDataArray retain];
          
-         NSLog(@"\n responseDataArray = %@",responseDataArray);
+         
+         
+         initial_question_array = [NSMutableArray arrayWithArray:responseDataArray];
+         [initial_question_array retain];
+         NSLog(@"\n initial_question_array = %@",initial_question_array);
          
          
          [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
@@ -182,7 +191,7 @@
     
     [queue release];
     
-
+    
     
     [super viewWillAppear:animated];
 }
@@ -198,14 +207,10 @@
     //race_latitude
     //race_longitude
     
-    if(current_request_type==1)
-    {
-        
-    }
-    else
-        
-        
-        switch (current_request_type)
+    
+    
+    
+    switch (current_request_type)
     {
         case 1:
         {
@@ -231,27 +236,12 @@
             }
             break;
         }
-        case 2:
-        {
-            
-            
-            
-            break;
-            
-        }
         default:
         {
             break;
         }
-    
+            
     }
-    
-    
-    
-    
-    
-    
-    
     [self.view setUserInteractionEnabled:TRUE];
     
 }
@@ -264,7 +254,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-   return  [filter_types count];
+    return  [filter_types count];
     
 }
 
@@ -278,7 +268,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
 	
 	// If no cell is available, create a new one using the given identifier.
-	if (cell == nil)
+	//if (cell == nil)
     {
 		// Use the default cell style.
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
@@ -299,7 +289,7 @@
     }
     else
     {
-         image =[UIImage imageNamed:@"unchecked"];
+        image =[UIImage imageNamed:@"unchecked"];
     }
 	
 	UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -317,7 +307,7 @@
     [tableView_cell_array addObject:cell];
     
     return cell;
-
+    
 }
 
 #pragma mark - checkButtonTapped
@@ -349,7 +339,7 @@
     NSLog(@"\n checked_filters before= %@",checked_filters);
     
     
-
+    
     if(indexPath.row !=0)
     {
         if([checked_filters objectForKey:[NSNumber numberWithInt:0]]!=nil)
@@ -359,10 +349,10 @@
                 return;
             }
         }
-
+        
     }
     
-        
+    
     
     if([checked_filters objectForKey:[NSNumber numberWithInt:indexPath.row]]!=nil)
     {
@@ -373,7 +363,7 @@
             
             checked = 0;
             [checked_filters setObject:[NSNumber numberWithInt:0] forKey:[NSNumber numberWithInt:indexPath.row]];
-             
+            
         }
         else
         {
@@ -384,7 +374,7 @@
                 [checked_filters removeAllObjects];
             }
             
-           [checked_filters setObject:[NSNumber numberWithInt:1] forKey:[NSNumber numberWithInt:indexPath.row]];
+            [checked_filters setObject:[NSNumber numberWithInt:1] forKey:[NSNumber numberWithInt:indexPath.row]];
         }
         
     }
@@ -393,26 +383,12 @@
         checked = 1;
         [checked_filters setObject:[NSNumber numberWithInt:1] forKey:[NSNumber numberWithInt:indexPath.row]];
     }
-
+    
     
     [search_filter_tableView reloadData];
     
     
-    /*
-    UIImage *newImage;
-	if(checked == 1)
-    {
-        newImage = [UIImage imageNamed:@"checked"] ;
-    }
-    else
-    {
-         newImage = [UIImage imageNamed:@"unchecked"] ;
-    }
     
-    NSLog(@"\n checked_filters after= %@",checked_filters);
-	UIButton *button = (UIButton *)cell.accessoryView;
-	[button setBackgroundImage:newImage forState:UIControlStateNormal];
-     */
 }
 
 
@@ -443,6 +419,23 @@
     
     NSLog(@"\n checked_filters %@",checked_filters);
     
+
+    [responseDataArray removeAllObjects];
+
+    for (int i = 0;i<[initial_question_array count]; i++)
+    {
+        [responseDataArray addObject:[initial_question_array objectAtIndex:i]];
+    }
+    
+    
+    NSLog(@"\n responseDataArray = %@",initial_question_array);
+    
+    
+    [final_question_array removeAllObjects];
+    [search_filters removeAllObjects];
+    
+    NSLog(@"\n responseDataArray = %@",responseDataArray);
+    
     for(int i=0;i<[[checked_filters allKeys] count];i++)
     {
         
@@ -450,85 +443,617 @@
         if([[checked_filters objectForKey:[[checked_filters allKeys] objectAtIndex:i]] intValue]==1)
         {
             
-            /*
-            NSLog(@" Search string =  %@",[filter_types objectAtIndex:[[[checked_filters allKeys] objectAtIndex:i] intValue]]);
-            */
             
-            [search_fiters addObject:[filter_types objectAtIndex:[[[checked_filters allKeys] objectAtIndex:i] intValue]]];
+            
+            [search_filters addObject:[filter_types objectAtIndex:[[[checked_filters allKeys] objectAtIndex:i] intValue]]];
             
             
         }
     }
     
-     NSLog(@"\n search_fiters %@",search_fiters);
+    NSLog(@"\n search_filters %@",search_filters);
     
     
     
-    requestObjects = [NSArray arrayWithObjects:
-                      @"filter_races",
-                      search_fiters,
-                      nil];
-    
-    requestkeys = [NSArray arrayWithObjects:
-                   @"action",
-                   @"search_filters",
-                   nil];
-    
-    
-    
-    
-    
-    requestJSONDict = [NSDictionary dictionaryWithObjects:requestObjects forKeys:requestkeys];
-    
-    requestString = [NSString stringWithFormat:@"data=%@",[requestJSONDict JSONRepresentation]];
-    NSLog(@"\n \n \n \n \n \n ");
-    
-    NSLog(@"\n requestString = %@",requestString);
-    
-    requestData = [NSData dataWithBytes: [requestString UTF8String] length: [requestString length]];
-    urlString = [NSString stringWithFormat:@"%@",WEB_SERVICE_URL];
-    NSLog(@"\n urlString = %@",urlString);
-    request = [[[NSMutableURLRequest alloc] init] autorelease];
-    [request setURL:[NSURL URLWithString:urlString]]; // set URL for the request
-    [request setHTTPMethod:@"POST"]; // set method the request
-    
-    
-    [request setHTTPBody:requestData];
-    
-    
-    
-    
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    
-    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
-     {
-         NSLog(@"\n response we get = %@",response);
-         returnData = data;
-         NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
-         NSLog(@"\n returnString == %@",returnString);
-         json = [[SBJSON new] autorelease];
-         
-         
-         responseDataArray = [json objectWithString:returnString error:&error];
-         [responseDataArray retain];
-         
-         NSLog(@"\n responseDataArray = %@",responseDataArray);
-         
-         
-         [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
-         
-         
-         
-     }];
-    
-    [queue release];
+    if([search_filters containsObject:@"Race with Check In Questions"])
+    {
+        
+        [all_questions_index removeAllObjects];
+        
+        for(int i=0;i<[responseDataArray count];i++)
+        {
+            
+            NSMutableArray*temp_question_array =  [[responseDataArray objectAtIndex:i] objectForKey:@"race_questions"];
+            
+            for(int j=0;j<[temp_question_array count];j++)
+            {
+                
+                if([[[temp_question_array objectAtIndex:j] objectForKey:@"question_type"] intValue]==4)
+                {
+                    
+                    [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+                    [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+                    break;
+                    
+                }
+                
+                
+            }
+        }
+        
+        
+        
+        
+        for(int i=0;i<[all_questions_index count];i++)
+        {
+            [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+        }
+        
+        
+        NSLog(@"\n responseDataArray after = %@",responseDataArray);
+        
+        
+        
+        
+        
+    }
     
     
+    if([search_filters containsObject:@"Race with MCQ"])
+    {
+        
+        [all_questions_index removeAllObjects];
+        
+        for(int i=0;i<[responseDataArray count];i++)
+        {
+            
+            NSMutableArray*temp_question_array =  [[responseDataArray objectAtIndex:i] objectForKey:@"race_questions"];
+            
+            for(int j=0;j<[temp_question_array count];j++)
+            {
+                
+                if([[[temp_question_array objectAtIndex:j] objectForKey:@"question_type"] intValue]==1)
+                {
+                    
+                    [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+                    [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+                    break;
+                    
+                }
+                
+                
+            }
+        }
+        for(int i=0;i<[all_questions_index count];i++)
+        {
+            [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+        }
+        
+        
+        NSLog(@"\n mCQ responseDataArray after = %@",responseDataArray);
+        
+    }
+    
+    
+    
+    //Race with Missing Letter Questions
+    
+    if([search_filters containsObject:@"Race with Missing Letter Questions"])
+    {
+        
+        [all_questions_index removeAllObjects];
+        
+        for(int i=0;i<[responseDataArray count];i++)
+        {
+            
+            NSMutableArray*temp_question_array =  [[responseDataArray objectAtIndex:i] objectForKey:@"race_questions"];
+            
+            for(int j=0;j<[temp_question_array count];j++)
+            {
+                
+                if([[[temp_question_array objectAtIndex:j] objectForKey:@"question_type"] intValue]==3)
+                {
+                    
+                    [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+                    [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+                    break;
+                    
+                }
+                
+                
+            }
+        }
+        for(int i=0;i<[all_questions_index count];i++)
+        {
+            [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+        }
+        
+        
+        
+    }
+    
+    
+    
+    //Race with true or false Questions
+    
+    if([search_filters containsObject:@"Race with true or false Questions"])
+    {
+        
+        [all_questions_index removeAllObjects];
+        
+        for(int i=0;i<[responseDataArray count];i++)
+        {
+            
+            NSMutableArray*temp_question_array =  [[responseDataArray objectAtIndex:i] objectForKey:@"race_questions"];
+            
+            for(int j=0;j<[temp_question_array count];j++)
+            {
+                
+                if([[[temp_question_array objectAtIndex:j] objectForKey:@"question_type"] intValue]==2)
+                {
+                    
+                    [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+                    [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+                    break;
+                    
+                }
+                
+                
+            }
+        }
+        for(int i=0;i<[all_questions_index count];i++)
+        {
+            [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+        }
     
     
     
     
+}
+
+//Race with less than 5 Questions
+
+if([search_filters containsObject:@"Race with less than 5 Questions"])
+{
     
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        NSMutableArray*temp_question_array =  [[responseDataArray objectAtIndex:i] objectForKey:@"race_questions"];
+        
+        
+        if([temp_question_array count]<5)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+    
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+
+}
+
+
+
+
+
+//Race with  5 - 10  Questions
+
+if([search_filters containsObject:@"Race with 5 to 10 Questions"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        NSMutableArray*temp_question_array =  [[responseDataArray objectAtIndex:i] objectForKey:@"race_questions"];
+        
+        
+        if([temp_question_array count]>=5 && [temp_question_array count]<=10)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with  more than 10  Questions
+
+if([search_filters containsObject:@"Race with more than 10 Questions"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        NSMutableArray*temp_question_array =  [[responseDataArray objectAtIndex:i] objectForKey:@"race_questions"];
+        
+        
+        if([temp_question_array count]>10)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with 1 star
+
+if([search_filters containsObject:@"Race with 1 star"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_popularity =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_popularity"] intValue];
+        
+        
+        if(race_popularity == 1)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with 2 star
+
+if([search_filters containsObject:@"Race with 2 star"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_popularity =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_popularity"] intValue];
+        
+        
+        if(race_popularity == 2)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with 3 star
+
+if([search_filters containsObject:@"Race with 3 star"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_popularity =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_popularity"] intValue];
+        
+        
+        if(race_popularity == 3)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+//Race with 4 star
+
+if([search_filters containsObject:@"Race with 4 star"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_popularity =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_popularity"] intValue];
+        
+        
+        if(race_popularity == 4)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with 5 star
+
+if([search_filters containsObject:@"Race with 5 star"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_popularity =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_popularity"] intValue];
+        
+        
+        if(race_popularity == 5)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with difficulty level 1
+
+if([search_filters containsObject:@"Race with difficulty level 1"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_difficulty =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_difficulty"] intValue];
+        
+        
+        if(race_difficulty == 1)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+//Race with difficulty level 2
+
+if([search_filters containsObject:@"Race with difficulty level 2"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_difficulty =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_difficulty"] intValue];
+        
+        
+        if(race_difficulty == 2)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with difficulty level 3
+
+if([search_filters containsObject:@"Race with difficulty level 3"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_difficulty =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_difficulty"] intValue];
+        
+        
+        if(race_difficulty == 3)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+//Race with difficulty level 4
+
+if([search_filters containsObject:@"Race with difficulty level 4"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_difficulty =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_difficulty"] intValue];
+        
+        
+        if(race_difficulty == 4)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+
+
+//Race with difficulty level 5
+
+if([search_filters containsObject:@"Race with difficulty level 5"])
+{
+    
+    [all_questions_index removeAllObjects];
+    
+    for(int i=0;i<[responseDataArray count];i++)
+    {
+        
+        int race_difficulty =  [[[responseDataArray objectAtIndex:i] objectForKey:@"race_difficulty"] intValue];
+        
+        
+        if(race_difficulty == 5)
+        {
+            
+            [final_question_array addObject:[responseDataArray objectAtIndex:i]];
+            [all_questions_index addObject:[responseDataArray objectAtIndex:i]];
+            
+        }
+        
+    }
+    
+    for(int i=0;i<[all_questions_index count];i++)
+    {
+        [responseDataArray removeObject:[all_questions_index objectAtIndex:i]];
+    }
+    
+    
+}
+
+
+
+
+
+
+NSLog(@"\n  final_question_array  = %@",final_question_array);
+
+
+
+
+
+
+
+
+
 }
 
 
