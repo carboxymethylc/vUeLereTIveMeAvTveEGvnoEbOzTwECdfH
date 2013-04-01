@@ -65,6 +65,26 @@
 	switch($action)
 	{
 		
+		case "get_race_reviews":
+		{
+			echo "<pre>";
+			print_r($decodedData);
+			
+			exit;
+			
+			$sql = "SELECT * FROM ";
+			if(count($decodedData->search_filters)>0)
+			{
+				
+				
+				
+				
+			}
+			
+			
+			
+		}
+		
 		case "get_race_detail":
 		{
 			
@@ -378,14 +398,49 @@
 					$resultArray[$i]['race_difficulty'] = $row["race_difficulty"];
 					$resultArray[$i]['race_popularity'] = $row["race_popularity"];
 					$resultArray[$i]['number_of_completion'] = $row["number_of_completion"];
+					$resultArray[$i]['number_of_reviewes'] = $row["number_of_reviewes"];
 					$resultArray[$i]['race_latitude'] = $row["race_latitude"];
 					$resultArray[$i]['race_longitude '] = $row["race_longitude"];
 					$resultArray[$i]['distance'] = $row["distance"];
-					 
+				
+					
+					$question_sql ="SELECT * FROM tbl_race_question WHERE race_id = ".$row["id"];
+					$question_result = mysql_query($question_sql);
+					$question_resultArray = array();
+					$j=0;
+					while ($question_row = mysql_fetch_array($question_result, MYSQL_ASSOC)) 
+					{
+						
+						
+						$question_resultArray[$j]["id"] = $question_row["id"];
+						$question_resultArray[$j]["race_id"] = $question_row["race_id"];
+						$question_resultArray[$j]["race_question_text"] = $question_row["race_question_text"];
+						$question_resultArray[$j]["option_a"] = $question_row["option_a"];
+						$question_resultArray[$j]["option_b"] = $question_row["option_b"];
+						$question_resultArray[$j]["option_c"] = $question_row["option_c"];
+						$question_resultArray[$j]["option_d"] = $question_row["option_d"];
+						$question_resultArray[$j]["correct_answer"] = $question_row["correct_answer"];
+						$question_resultArray[$j]["answer_is_true_false"] = $question_row["answer_is_true_false"];
+						$question_resultArray[$j]["missing_letter_word"] = $question_row["missing_letter_word"];
+						$question_resultArray[$j]["number_of_character_to_show"] = $question_row["number_of_character_to_show"];
+						$question_resultArray[$j]["random_word"] = $question_row["random_word"];
+						$question_resultArray[$j]["question_type"] = $question_row["question_type"];
+						$question_resultArray[$j]["race_lat"] = $question_row["race_lat"];
+						$question_resultArray[$j]["race_lon"] = $question_row["race_lon"];
+						
+						 
+						$j++;
+					}
+						
+					$resultArray[$i]['race_questions'] = $question_resultArray;
 					 
 					
 					$i++;
 				}
+				
+				
+				
+				
 				
 				
 				
