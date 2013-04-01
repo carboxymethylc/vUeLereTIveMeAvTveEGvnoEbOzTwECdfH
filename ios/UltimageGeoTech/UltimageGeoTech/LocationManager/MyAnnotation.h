@@ -15,6 +15,7 @@
 	NSString *title;
     NSString *subtitle;
 	UIImage  *img;
+    NSMutableDictionary*race_detail_dictioanary;
     int currentPoint;
 	int curId;
 	
@@ -27,8 +28,10 @@
 @property (nonatomic, copy) NSString *subtitle;
 
 @property(nonatomic, retain) UIImage *img;
-
 @property(nonatomic, readwrite) int currentPoint;
 @property(nonatomic,readwrite)int curId;
+
+@property(nonatomic,retain)NSMutableDictionary*race_detail_dictioanary;
+
 
 @end

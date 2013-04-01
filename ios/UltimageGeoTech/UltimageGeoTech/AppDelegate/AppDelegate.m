@@ -39,7 +39,7 @@ static NSString* kAppId = @"401301426565681";
 //Race Question information..
 
 @synthesize current_race_question_array,current_question_latitude,current_question_longitued;
-
+@synthesize app_del_current_race_dictionary;
 - (void)dealloc
 {
     [_window release];
@@ -48,7 +48,7 @@ static NSString* kAppId = @"401301426565681";
     [user_information_dictionary release];
     
     [current_question_dictionary release];
-    
+    [app_del_current_race_dictionary release];
     
     [bottomView release];
     [super dealloc];
@@ -61,6 +61,8 @@ static NSString* kAppId = @"401301426565681";
     
     user_information_dictionary = [[NSMutableDictionary alloc] init];
     current_race_question_array = [[NSMutableArray alloc] init];
+    app_del_current_race_dictionary = [[NSMutableDictionary alloc] init];
+    
     
     is_in_question_editing_mode = NO;
     selected_question_index_for_edit = 0;

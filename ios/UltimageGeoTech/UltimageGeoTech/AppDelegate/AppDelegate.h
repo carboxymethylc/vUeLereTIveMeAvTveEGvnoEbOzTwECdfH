@@ -41,6 +41,9 @@
     NSMutableDictionary*current_question_dictionary;
     BOOL is_in_question_editing_mode;//checks whether user currently editing question.
     
+    NSMutableDictionary*app_del_current_race_dictionary;
+    
+    
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -58,6 +61,10 @@
 @property (nonatomic, readwrite) float current_longitued;
 
 @property (nonatomic,retain)UIView* bottomView;
+
+@property (nonatomic, retain) NSMutableDictionary *app_del_current_race_dictionary;
+
+
 -(IBAction)buttonTabBarPressed:(id)sender;
 
 

@@ -8,6 +8,8 @@
 
 #import "RaceViewController.h"
 #import "MyAnnotation.h"
+#import "RaceDetailViewController.h"
+
 @interface RaceViewController ()
 
 @end
@@ -28,8 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    mapView.mapType = MKMapTypeStandard;
-	mapView.showsUserLocation = YES;
+    //mapView.mapType = MKMapTypeStandard;
+	//mapView.showsUserLocation = YES;
     app_delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     
     
@@ -113,8 +115,10 @@
     region.span.latitudeDelta = 0.112872;
     region.span.longitudeDelta = 0.109863;
     
-    
-    
+
+    mapView.mapType = MKMapTypeStandard;
+	//mapView.showsUserLocation = YES;
+
 	[mapView setRegion:region animated:TRUE];
 	[mapView regionThatFits:region];
     
@@ -180,7 +184,7 @@
          
          initial_question_array = [NSMutableArray arrayWithArray:responseDataArray];
          [initial_question_array retain];
-         NSLog(@"\n initial_question_array = %@",initial_question_array);
+         NSLog(@"\n responseDataArray = %@",responseDataArray);
          
          
          [self performSelectorOnMainThread:@selector(enable_user_interaction) withObject:nil waitUntilDone:TRUE];
@@ -222,15 +226,17 @@
                 
                 annotation.coordinate = CLLocationCoordinate2DMake([[[responseDataArray objectAtIndex:i] objectForKey:@"race_latitude"] floatValue],[[[responseDataArray objectAtIndex:i] objectForKey:@"race_longitude"] floatValue]);
                 annotation.currentPoint = 1;
-                
+                annotation.race_detail_dictioanary = [responseDataArray objectAtIndex:i];
                 
                 
                 
                 
                 annotation.title= [[responseDataArray objectAtIndex:i] objectForKey:@"race_name"];
                 annotation.subtitle = [[responseDataArray objectAtIndex:i] objectForKey:@"race_info"];
+                
                 annotation.curId= [[[responseDataArray objectAtIndex:i] objectForKey:@"id"] intValue];
                 [mapView addAnnotation:annotation];
+                
                 [annotation release];
                 
             }
@@ -1040,13 +1046,46 @@ if([search_filters containsObject:@"Race with difficulty level 5"])
 }
 
 
+    [mapView removeAnnotations:mapView.annotations];
+    search_view.hidden = TRUE;
+    [filter_button setTitle:@"Filte" forState:UIControlStateNormal];
 
 
 
+    NSLog(@"\n  final_question_array  = %@",final_question_array);
 
-NSLog(@"\n  final_question_array  = %@",final_question_array);
+
+    if([final_question_array count] == 0)
+    {
+        UIAlertView*no_record_alertView = [[UIAlertView alloc] initWithTitle:@"No race found!" message:@"Please change your search criteria." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [no_record_alertView show];
+        [no_record_alertView release];
+        
+        
+    }
+    else
+    {
+        for(int i=0;i<[final_question_array count];i++)
+        {
+            MyAnnotation *annotation =  [[MyAnnotation alloc] init];
+            
+            annotation.coordinate = CLLocationCoordinate2DMake([[[final_question_array objectAtIndex:i] objectForKey:@"race_latitude"] floatValue],[[[final_question_array objectAtIndex:i] objectForKey:@"race_longitude"] floatValue]);
+            annotation.currentPoint = 1;
+            annotation.race_detail_dictioanary = [final_question_array objectAtIndex:i];
+            annotation.title= [[final_question_array objectAtIndex:i] objectForKey:@"race_name"];
+            annotation.subtitle = [[final_question_array objectAtIndex:i] objectForKey:@"race_info"];
+            annotation.curId= [[[final_question_array objectAtIndex:i] objectForKey:@"id"] intValue];
+            [mapView addAnnotation:annotation];
+            [annotation release];
+            
+        }
+    }
+    
 
 
+    
+    
+    
 
 
 
@@ -1057,6 +1096,68 @@ NSLog(@"\n  final_question_array  = %@",final_question_array);
 }
 
 
+#pragma mark - didSelectAnnotationView
+
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    
+    NSLog(@"\n view.annotation = %@",view);
+    
+    MyAnnotation *annotation = (MyAnnotation*)view.annotation;
+    app_delegate.app_del_current_race_dictionary = annotation.race_detail_dictioanary;
+    
+    
+    /*Might help in adding UIView over pin.
+     UIView*testview = [[UIView alloc] initWithFrame:CGRectMake(0, 0,300,300)];
+     testview.backgroundColor = [UIColor redColor];
+     CGPoint point = [mapView convertPoint:view.frame.origin fromView:view.superview];
+     [testview setHidden:NO];
+     [testview  setCenter:CGPointMake(point.x+5,point.y-(testview.frame.size.height/2))];
+     [self.view addSubview:testview];
+     */
+    
+    //[self animateIn];
+    
+    NSLog(@"\n didSelectAnnotationView %d",annotation.curId);
+}
+
+#pragma mark - viewForAnnotation
+#pragma mark right bar buttton for annotation
+
+
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
+    
+    
+    MyAnnotation *myAnnotation = (MyAnnotation*)annotation;
+    
+    NSLog(@"\n race dictionary = %@",myAnnotation.race_detail_dictioanary);
+    
+    // Button
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [button addTarget:self action:@selector(disclosureButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    button.tag = myAnnotation.curId;
+    button.frame = CGRectMake(0, 0, 23, 23);
+    annotationView.rightCalloutAccessoryView = button;
+    annotationView.canShowCallout = YES;
+    
+    return annotationView;
+}
+
+
+-(void)disclosureButtonClicked:(id)sender
+{
+    UIButton*temp_button = (UIButton*)sender;
+    NSLog(@"\n disclosureButtonClicked %d",temp_button.tag);
+    
+    RaceDetailViewController*viewController = [[RaceDetailViewController alloc] initWithNibName:@"RaceDetailViewController" bundle:nil];
+    [self.navigationController pushViewController:viewController animated:TRUE];
+    [viewController release];
+    
+}
 
 
 - (void)didReceiveMemoryWarning

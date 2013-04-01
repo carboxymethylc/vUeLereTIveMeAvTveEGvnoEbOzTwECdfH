@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppDelegate.h"
 @interface RaceDetailViewController : UIViewController
 {
     IBOutlet UILabel*race_name_lable;
@@ -16,6 +16,9 @@
     IBOutlet UILabel*race_completed_lable;
     IBOutlet UILabel*race_rating_lable;
     IBOutlet UILabel*race_number_of_revies_lable;
+    
+    AppDelegate*appDelegate;
+    
 }
 
 -(IBAction)read_reviews_clicked:(id)sender;
